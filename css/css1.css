@@ -406,7 +406,7 @@ body{
 }
 
 .main__phover:hover{
-    border: 3px solid #000;
+    border-bottom: 1px solid #000;
 }
 
 .main__price{
