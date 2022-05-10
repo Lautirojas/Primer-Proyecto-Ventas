@@ -9,46 +9,135 @@
     <meta name="author" content="Lautaro Rojas">
     <link rel="icon" href="../imagenes/icono.jpg">
     <link rel="stylesheet" href="../css/css1.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/8defc57dbe.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@383&display=swap" rel="stylesheet">
     <title>ForGamers</title>
 </head>
 <body>
     <header class="header">
-        <nav class="nav">
+        <nav class="nav1">
             <div class="nav__buscador">
-                <a class="nav__icono" href="../index.html"><img src="../imagenes/icono.jpg" class="nav__icon" alt="ForGamers" width="100"></a>
+    
+                <div>
+                <nav class="navbar navbar-dark fixed-top navbar-light">
+                    <div>
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Link</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Dropdown
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                    <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                    </li>
+                                </ul>
+                                <form class="d-flex">
+                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="nav__paddleft"><a class="nav__icono" href="../index.html"><img src="../imagenes/icono.jpg" class="nav__icon" alt="ForGamers"></a></div>
+    
+            </div>
+    
                 <div class="nav__searchcontainer">
                     <form>
                         <label for="busqueda" id="busqueda"></label>
-                        <input type="search" name="busqueda" id="busqueda" placeholder="Buscar producto">
-                        <button class="nav__buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input type="search" name="busqueda" id="busqueda" placeholder="Buscar producto" class="nav__buttoncelu">
+                        <button class="nav__buscar nav__buttoncelu"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
                 </div>
+                <div class="nav__flexend">
+                <i class="fa-solid fa-magnifying-glass nav__searchcelu"></i>
                 <a class="nav__compras" href="../paginas/carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a class="nav__perfil" href="#"><i class="fa-solid fa-user"></i></a>
+                <a class="nav__perfil" href="#">
+                <!-- Button trigger modal -->
+                    <i class="fa-solid fa-user" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+                </a>
+                </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Iniciar sesión</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row mb-3">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword3">
+                            </div>
+                        </div>
+                        <div class="nav__iniciosesion">
+                            <button type="submit" class="btn btn-primary" style="background-color: #eeeeee; border-color: #91c612; color: #91c612;">Sign in</button>
+                        </div>
+                        <div class="nav__iniciosesion">
+                            <button type="submit" class="btn btn-primary" style="background-color: #eeeeee; border-color: #91c612; color: #91c612;">Create new Account</button>
+                        </div>
+                    </form>
+                </div>
             </div>
+        </div>
+    </div>
+            </div>
+                </nav>
+                
             <div class="nav__container">
-            <ul class="nav__links">
-                <li class="nav__paginas"><a href="../index.html">Inicio</a></li> 
-                <li class="nav__paginas"><a href="../paginas/productos.html">Productos</a></li> 
-                <li class="nav__paginas"><a href="../paginas/monitores.html">Monitores</a></li>
-                <li class="nav__paginas"><a href="../paginas/teclados.html">Teclados</a></li>
-                <li class="nav__paginas"><a href="../paginas/mouse.html">Mouse</a></li>
-                <li class="nav__paginas"><a href="../paginas/notebooks.html">Notebooks</a></li>
-                <li class="nav__paginas"><a href="../paginas/placasdevideo.html">Placas de video</a></li>    
-            </ul>
+                    <ul class="nav__links">
+                    <li class="nav__paginas"><a href="../index.html">Inicio</a></li> 
+                    <li class="nav__paginas"><a href="../paginas/productos.html">Productos</a></li> 
+                    <li class="nav__paginas"><a href="../paginas/monitores.html">Monitores</a></li>
+                    <li class="nav__paginas"><a href="../paginas/teclados.html">Teclados</a></li>
+                    <li class="nav__paginas"><a href="../paginas/mouse.html">Mouse</a></li>
+                    <li class="nav__paginas"><a href="../paginas/notebooks.html">Notebooks</a></li>
+                    <li class="nav__paginas"><a href="../paginas/placasdevideo.html">Placas de video</a></li>    
+                </ul>
             </div> 
         </nav>
         </header>
     <main class="main">
-        <div class="main__psubtitle"><h2>Productos:</h2></div>
+        <div class="main__psubtitle"><h2 class="main__h2correction">Mouse:</h2></div>
         <section class="main__pcontainer">
             <div class="main__slidebar">
-                <h2>Ordenar por:</h2>
+                <h2 class="main__h2correction">Ordenar por:</h2>
                 <a href="#" class="main__a main__phover">Menor Precio <br></a>
                 <a href="#" class="main__a main__phover">Mayor Precio</a>
-                <br> <h2>Categorias:</h2>
+                <br> <h2 class="main__h2correction">Categorias:</h2>
                     <a href="#" class="main__a1 main__phover">Example</a> <br>
                     <a href="#" class="main__a2 main__phover">Example</a> <br>
                     <a href="#" class="main__a3 main__phover">Example</a> <br>
@@ -60,31 +149,31 @@
                     <a href="#" class="main__a9 main__phover">Example</a> <br>
             </div>
             <div class="main__phijo main__phover">
-                    <h2>Mouse Logitech G203 Gaming Lightsync Black</h2>
+                    <h2 class="main__h2correction">Mouse Logitech G203 Gaming Lightsync Black</h2>
                     <a href="../paginas/gabineteproduct.html"><img src="../imagenes/mouse1.png" alt="Mouse Gamer" width="170"></a>
                     <p class="main__price">$7.499</p>
                     <a href="#"></a><button class="main__buttoncarrito">Sumar al carrito</button></a>
             </div>
             <div class="main__phijo1 main__phover">
-                <h2>Mouse HyperX Pulsefire Surge RGB</h2>
+                <h2 class="main__h2correction">Mouse HyperX Pulsefire Surge RGB</h2>
                 <a href="#"><img src="../imagenes/mouse2.png" alt="Mouse Gamer" width="200"></a>
                 <p class="main__price">$39.999</p>
                 <a href="#"></a><button class="main__buttoncarrito">Sumar al carrito</button></a>
             </div>
             <div class="main__phijo2 main__phover">
-                <h2>Mouse Gamer Razer Viper Mini</h2>
+                <h2 class="main__h2correction">Mouse Gamer Razer Viper Mini</h2>
                 <a href="#"><img src="../imagenes/mouse3.png" alt="Mouse Gamer" width="200"></a>
                 <p class="main__price">$7.999</p>
                 <a href="#"></a><button class="main__buttoncarrito">Sumar al carrito</button></a>
             </div>
             <div class="main__phijo3 main__phover">
-                <h2>Mouse Logitech G403</h2>
+                <h2 class="main__h2correction">Mouse Logitech G403</h2>
                 <a href="#"><img src="../imagenes/mouse.png" alt="Mouse Logitech G403" width="300"></a>
                 <p class="main__price">$4.999</p>
                 <a href="#"></a><button class="main__buttoncarrito">Sumar al carrito</button></a>
             </div>
             <div class="main__phijo4 main__phover">
-                <h2>Mouse Genius Escritorio</h2>
+                <h2 class="main__h2correction">Mouse Genius Escritorio</h2>
                 <a href="#"><img src="../imagenes/mouse4.png" alt="Mouse Genius escritorio" width=170></a>
                 <p class="main__price">$9.999</p>
                 <a href="#"></a><button class="main__buttoncarrito">Sumar al carrito</button></a>
@@ -112,7 +201,7 @@
             <form class="footer__formf">
                 <label for="email" id="email"></label>
                 <input class="footer__input" type="email" form="email" id="email" placeholder="Direccion de Email">
-                <button class="footer__botongmail"><img src="imagenes/enviar.png"alt="enviar" style="max-height: 16px;" class="footer__botonimg"></button>
+                <button class="footer__botongmail"><img src="../imagenes/enviar.png"alt="enviar"  class="footer__botonimg"></button>
             </form>
         </div>
         <div class="footer__redes">
@@ -126,5 +215,6 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52421.685332004214!2d-58.42019202466192!3d-34.797001165400935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd3194a44b3ed%3A0xb3c4c71736efabce!2sParque%20Finky!5e0!3m2!1ses!2sar!4v1649360176041!5m2!1ses!2sar" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </footer>
+    <script src="../js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> class="main__h2correction"
 </body>
 </html>

@@ -11,21 +11,41 @@ a{
 }
 
 body{
-    background-color: #eee;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-.header{
-    background-color:#000;
-    padding-bottom: 45px;
-    min-height: 11vh;
+button{
+    line-height:normal !important;
 }
 
-.nav{
+
+
+
+
+
+
+/*                           NAV/HEADER                                 */
+
+
+
+
+
+
+
+
+.header{
+    background-color:#37373f; 
+}
+
+.nav1{
     margin: 0 auto;
-    max-height:6vh;
+}
+
+.nav__color{
+    background-color: #91C612;
 }
 
 .nav__buscador{
@@ -35,7 +55,7 @@ body{
     align-items: center;
 }
 
-.nav__buscador input{
+.nav__searchcontainer input{
     width: 67em;
     height: 44px;
     font-size: 16px;   
@@ -55,6 +75,12 @@ body{
     border: 0;
 }
 
+.nav__paddleft{
+    padding-left: 20px;
+}
+
+
+
 .nav__buscar{
     color: #0071c9;
     font-size: 33px;
@@ -62,6 +88,10 @@ body{
     border: 0;
     background-color: #eee;
     cursor: pointer;
+}
+
+.nav__flexend{
+    padding-left: 90px;
 }
 
 .nav__icono{
@@ -83,8 +113,23 @@ body{
     color: #c6c6c6;
 }
 
+.nav__searchcelu{
+    font-size: 25px;
+    padding-top: 1px;
+    padding-left: 0px;
+    padding-right: 0px;
+    color: #c6c6c6;
+}
+
+.nav__iniciosesion{
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+
 .nav__container{
-    background-color: #37373f;
+    background-color: #e7e7e7;
     height:55px;
     position: relative;
     top:7px;
@@ -95,10 +140,22 @@ body{
     justify-content:space-evenly;
     list-style: none;
     padding-top: 15px;
+    margin-bottom: 0;
+    padding-left: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    padding-inline-start: 0;
+}
+
+.nav__paginas{
+    display: flex;
+    text-align: unset;
 }
 
 .nav__paginas a{
-    color: #eee;
+    color: #424143;
+    text-decoration: none;
 }
 
 .main{
@@ -137,7 +194,14 @@ body{
 
 
 
-/*Footer*/
+
+
+
+/*                               Footer                          */
+
+
+
+
 
 
 
@@ -179,6 +243,7 @@ body{
 .footer__color{
     color:#eee;
     font-size: 20px;
+    text-decoration: none;
 }
 
 .footer__sociales{
@@ -188,6 +253,16 @@ body{
 }
 
 
+
+
+
+/*                        CARRITO                   */   
+
+
+
+.card {
+    margin-top: 40px;
+}
 
 
 
@@ -276,6 +351,10 @@ body{
 
 
 
+.main__h2correction{
+    font-size: 1.5em;
+}
+
 
 .main__psubtitle{
     font-size: 26px;
@@ -291,6 +370,7 @@ body{
 .main__a{
     color: #666;
     font-size: 11px;
+    text-decoration: none;
 }
 
 .main__a1{
@@ -298,18 +378,21 @@ body{
     cursor: pointer;
     font-size: 13px;
     grid-area: ele1;
+    text-decoration: none;
 }
 .main__a2{
     color: #666;
     cursor: pointer;
     font-size: 13px;
     grid-area: ele1;
+    text-decoration: none;
 }
 .main__a3{
     color: #666;
     cursor: pointer;
     font-size: 13px;
     grid-area: ele1;
+    text-decoration: none;
 }    
 
 .main__a4{
@@ -317,6 +400,7 @@ body{
     cursor: pointer;
     font-size: 13px;
     grid-area: ele1;
+    text-decoration: none;
 }    
 
 .main__a5{
@@ -324,6 +408,7 @@ body{
     cursor: pointer;
     font-size: 13px;
     grid-area: ele1;
+    text-decoration: none;
 }    
 
 .main__a6{
@@ -331,6 +416,7 @@ body{
     cursor: pointer;
     font-size: 13px;
     grid-area: ele1;
+    text-decoration: none;
 }    
 
 .main__a7{
@@ -338,6 +424,7 @@ body{
     cursor: pointer;
     font-size: 13px;
     grid-area: ele1;
+    text-decoration: none;
 }    
 
 .main__a8{
@@ -345,6 +432,7 @@ body{
     cursor: pointer;
     font-size: 13px;
     grid-area: ele1;
+    text-decoration: none;
 }
 
 .main__a9{
@@ -352,6 +440,7 @@ body{
     cursor: pointer;
     font-size: 13px;
     grid-area: ele1;
+    text-decoration: none;
 }    
 
 .main__pcontainer{
@@ -405,8 +494,12 @@ body{
     margin: 10px 0;
 }
 
+.main__phover1:hover{
+    color: #000;
+}
+
 .main__phover:hover{
-    border-bottom: 1px solid #000;
+    color: #000;
 }
 
 .main__price{
@@ -795,6 +888,16 @@ body{
 
 
 
+
+
+.main__subtitle{
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+
+
 .main__containerpublicity{
     padding-top: 50px;
 }
@@ -806,8 +909,23 @@ body{
 }
 
 .main__containslider{
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
     background-color: #e7eaec;
     display: flex;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 425px){
+.main__containslider1{
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+    background-color: #2d2d33;
+}
+
 }
 
 .main__banner{
@@ -815,63 +933,124 @@ body{
 }
 
 .main__productsslider{
+    display: flex;
+    align-items: center;
+    width: 2000px;
     padding: 15px 7.5px;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    margin: 5px 2.5px;
+}
+
+@media (min-width: 768px){}
+.carousel{
+    margin-left: 12.5px;
+    margin-right: 12.5px;
 }
 
 .main__imgslider{
-    width:20%;
-    padding: 50px 40px;
-    background-size: cover;
+    width: 30%;
+    background-size: contain;
+    padding: 132px 90px;
+    background-position:center right;
+    background-repeat: no-repeat;
     background-image:url(https://www.venex.com.ar/mods/html/fil/Model/SpecialSlide/1/612660e32efa5-notebooks.jpg);
 }
 
 .main__sliderproduct{
     display: block;
     margin: 0;
-    width: 10%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .main__sliderflow{
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: flex-start;
-    overflow: hidden;
 }
 
 .main__productsbox{
-    width: 2018px;
+    position: relative;
+    width: 2292px;
 }
 
 .main__productflex{
 
 }
 
-.main__product{
+.main__product-box{
+    padding: 15px;
+    background: linear-gradient(to bottom, #FFFFFF, #D6D6D6);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
 
+.main__gimgcontainer{
+    width: 100%;
+    position: relative;
+}
+
+.main__product{
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 94.66666667%;
 }
 
 .main__boxpricename{
-    padding: 35px 13px 10px;
+    padding: 35px 23px 10px;
+    background-color: #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
     background-color: #fff;
 }
 
 .main__boxpricename-content{
     font-size: 24px;
     text-align: center;
+    color: #333333;
 }
 
 .main__tamaño{
-    width: 100px;
+    background: linear-gradient(to bottom, #FFFFFF, #D6D6D6);
+    padding: 15px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
+
 
 .main__productdescription{
     color: #37373f;
 }
 
+.main__productcontainer{
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.main__color{
+    background-color: #2d2d33;
+}
 
 
-
+.main__subtitle1{
+    background-color: #2d2d33;
+    color:#e7eaec;
+    padding: 25px;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
 
 
 
@@ -969,7 +1148,7 @@ body{
 
 
     
-    .nav__buscador input{
+    .nav__searchcontainer input{
         width: 70em;
         height: 40px;
         font-size: 20px;   
@@ -1003,16 +1182,14 @@ body{
     }
 
     .nav__container{
-        background-color: #37373f;
+        background-color: #e7e7e7;
         height:58px;
         position: relative;
         top:7px;
     }
     
     .header{
-        background-color:#000;
-        padding-bottom: 45px;
-        min-height: 9vh;
+        background-color:#37373f;
     }
 
     .nav__buscar{
@@ -1090,6 +1267,7 @@ body{
                     .footer__color{
                         color:#eee;
                         font-size: 28px;
+                        text-decoration: none;
                     }
                 
                     .footer__formf{
@@ -1132,7 +1310,7 @@ body{
 
 
 @media screen and (max-width:1920px) {
-    .nav__buscador input{
+    .nav__searchcontainer input{
         width: 40em;
         height: 40px;
         font-size: 20px;   
@@ -1147,16 +1325,14 @@ body{
     }
 
     .nav__container{
-        background-color: #37373f;
+        background-color: #e7e7e7;
         height:58px;
         position: relative;
         top:0px;
     }
     
     .header{
-        background-color:#000;
-        padding-bottom: 41px;
-        min-height: 12vh;
+        background-color:#37373f;
     }
 
     .main__psubtitle{
@@ -1195,6 +1371,7 @@ body{
     .footer__color{
         color:#eee;
         font-size: 18px;
+        text-decoration: none;
     }
 
     .footer__formf{
@@ -1241,6 +1418,12 @@ body{
 
 
 @media screen and (max-width:1440px){
+
+    .nav__compras{
+        font-size: 40px;
+        color: #c6c6c6;
+        padding: 20px 0px;
+    }
 
     .main__content {
         padding-bottom: 15px;
@@ -1306,12 +1489,10 @@ body{
 
 
     .header{
-        background-color:#000;
-        padding-bottom: 45px;
-        min-height: 15vh;
+        background-color:#37373f;
     }
 
-    .nav__buscador input{
+    .nav__searchcontainer input{
         width: 40em;
         height: 44px;
         font-size: 16px;   
@@ -1580,6 +1761,7 @@ body{
     .footer__color{
         color:#eee;
         font-size: 17px;
+        text-decoration: none;
     }
 
     .footer__formf{
@@ -1659,7 +1841,7 @@ body{
 
 
 
-    .nav__buscador input{
+    .nav__searchcontainer input{
         width: 25em;
         height: 44px;
         font-size: 16px;   
@@ -1703,16 +1885,14 @@ body{
     }
 
     .nav__container{
-        background-color: #37373f;
+        background-color: #e7e7e7;
         height:45px;
         position: relative;
         top:7px;
     }
     
     .header{
-        background-color:#000;
-        padding-bottom: 45px;
-        min-height: 14vh;
+        background-color:#37373f;
     }
 
     .nav__buscar{
@@ -1911,6 +2091,7 @@ body{
     .footer__color{
         color:#eee;
         font-size: 14px;
+        text-decoration: none;
     }
 
     .footer__formf{
@@ -1949,7 +2130,47 @@ body{
 }
 
 
+
+@media screen and (min-width:768px) {
+    .nav__searchcelu{
+        font-size: 0%;
+    }
+
+    .navbar-dark .navbar-toggler {
+        display: none;
+    }
+}
+
+
+
+
+
+
 @media screen and (max-width:768px) {
+
+
+
+
+/*              INDEX               */
+
+
+
+
+    .main__imgslider{
+        width: 30%;
+        background-size: contain;
+        padding: 132px 90px;
+        background-position:center right;
+        background-repeat: no-repeat;
+        background-image:url(https://www.venex.com.ar/mods/html/fil/Model/SpecialSlide/1/612660e32efa5-notebooks.jpg);
+    }
+
+
+
+
+
+
+
 
     .main__container {
         width: 100%;
@@ -1986,7 +2207,7 @@ body{
     }
 
 
-    .nav__buscador input{
+    .nav__searchcontainer input{
         width: 20em;
         height: 30px;
         font-size: 16px;   
@@ -2003,7 +2224,7 @@ body{
     }
 
     .nav__container{
-        background-color: #37373f;
+        background-color: #e7e7e7;
         height:41px;
         position: relative;
         top:7px;
@@ -2014,9 +2235,7 @@ body{
     }
 
     .header{
-        background-color:#000;
-        padding-bottom: 45px;
-        min-height: 12vh;
+        background-color:#37373f;
     }
 
 
@@ -2397,6 +2616,7 @@ body{
     .footer__color{
         color:#eee;
         font-size: 10px;
+        text-decoration: none;
     }
 
     .footer__formf{
@@ -2436,7 +2656,106 @@ body{
     }
 }
 
+
+
 @media screen and (max-width:425px) {
+    
+    .nav__buttoncelu{
+        display: none;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width:425px) {
+
+        /*                      INDEX              */
+
+
+
+
+        .main__subtitle{
+            background-color: #e7eaec;
+            color: #343a41;
+            padding: 25px;
+            font-size: 15px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+
+        .main__imgslider {
+            display: none;
+        }
+
+        .main__productcontainer {
+            padding-left: 70px;
+            padding-top: 20px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .main__productsslider {
+            display: flex;
+            width: 255px;
+            padding: 15px 1.5px;
+            overflow: hidden;
+        }
+
+        .carousel {
+            margin-left: 5.5px;
+            margin-right: 5.5px;
+        }
+
+        .carousel-inner {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main__boxpricename {
+            padding: 25px 23px 10px;
+            background-color: #fff;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        .main__boxpricename-content {
+            font-size: 17px;
+            text-align: center;
+            color: #333333;
+        }
+
+        .main__productdescription {
+            font-size: 15px;
+            color: #706F6F;
+        }
+
+        .main__containslider {
+            margin-right: 0;
+            margin-left: 0;
+            width: 100%;
+            background-color: #e7eaec;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     .main__text {
         color: #eee;
@@ -2476,9 +2795,7 @@ body{
 
 
     .header{
-        background-color:#000;
-        padding-bottom: 45px;
-        min-height: 11vh;
+        background-color:#37373f;
     }
 
     .nav__icon{
@@ -2500,7 +2817,7 @@ body{
     }
 
 
-    .nav__buscador input{
+    .nav__searchcontainer input{
         width: 10em;
         height: 30px;
         font-size: 16px;   
@@ -2586,7 +2903,6 @@ body{
     .main__pimg4{
         width: 220px;
     }
-
 
 
 
@@ -2909,6 +3225,7 @@ body{
     .footer__color{
         color:#eee;
         font-size: 7px;
+        text-decoration: none;
     }
 
     .footer__formf{
@@ -2988,9 +3305,7 @@ body{
 
 
     .header{
-        background-color:#000;
-        padding-bottom: 45px;
-        min-height: 11vh;
+        background-color:#37373f;
     }
 
     .nav__icon{
@@ -3012,7 +3327,7 @@ body{
     }
 
 
-    .nav__buscador input{
+    .nav__searchcontainer input{
         width: 10em;
         height: 30px;
         font-size: 16px;   
@@ -3386,6 +3701,18 @@ body{
 
 @media screen and (max-width:320px)  {
 
+    .nav__paddleft{
+        padding-left: 40px;
+    }
+
+    .main__productcontainer {
+        padding-left: 35px;
+        padding-top: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
     .main__text {
         color: #eee;
         justify-content: flex-start;
@@ -3419,13 +3746,11 @@ body{
 
 
     .header{
-        background-color:#000;
-        padding-bottom: 45px;
-        min-height: 10vh;
+        background-color:#37373f;
     }
 
     .nav__container{
-        background-color: #37373f;
+        background-color: #e7e7e7;
         height:35px;
         position: relative;
         top:7px;
@@ -3435,27 +3760,8 @@ body{
         font-size: 8px;
     }
 
-    .main__pcontainer{
-        position: relative;
-        width: 100%;
-        display: grid;
-        grid-template-columns: 95px 200px;
-        grid-template-areas: 
-        "ele1 ele2 " /*fila 1*/
-        "ele1 ele4 " /*fila 2*/
-        "ele1 ele6 " /*fila 3*/
-        "ele1 ele3 "
-        "ele1 ele5 "
-        ;
-    }
 
-    .main__pimg2{
-        width: 220px;
-    }
 
-    .main__pimg4{
-        width: 220px;
-    }
 
         
 
@@ -3755,4 +4061,50 @@ body{
                 width: 82px;
             }
 
+
+
+            /*       PRODUCTOS     */
+
+            .main__pcontainer{
+                position: relative;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 110px 200px 0;
+                grid-template-rows: 320px 280px 350px 280px;
+                grid-template-areas: 
+                "ele1 ele2 . " /*fila 1*/
+                "ele1 ele4 . " /*fila 2*/
+                "ele1 ele6 . " /*fila 3*/
+                "ele1 ele3 . "
+                "ele1 ele5 . "
+                ;
+            
+                padding: 0px 10px;
+                font-size: 10px;
+            }
+        
+            .main__phijo{  
+                grid-area: ele2;
+            }
+            .main__phijo1{
+                grid-area: ele3;
+            }
+            .main__phijo2{
+                grid-area: ele4;
+            }
+            .main__phijo3{
+                grid-area: ele5;
+            }
+            .main__phijo4{
+                grid-area: ele6;
+            }
+
+            .main__pimg2{
+                width: 198px;
+            }
+        
+            .main__pimg4{
+                width: 200px;
+            }
+        
 }
