@@ -113,6 +113,25 @@ button{
     color: #c6c6c6;
 }
 
+.modal-title {
+    color: #fff;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.modal-content{
+    box-shadow: 0 11px 15px -7px rgb(0 0 0 / 20%), 0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%);
+}
+
+.col-form-label {
+    color: #ffffff;
+    padding-top: calc(0.375rem + 1px);
+    padding-bottom: calc(0.375rem + 1px);
+    margin-bottom: 0;
+    font-size: inherit;
+    line-height: 1.5;
+}
+
 .nav__searchcelu{
     font-size: 25px;
     padding-top: 1px;
@@ -228,10 +247,6 @@ button{
 .footer__botongmail{
     background-color: #91C612;
     border-color: #91C612;
-}
-
-.botonimg{
-
 }
 
 
@@ -507,6 +522,10 @@ button{
     color: #000;
     font-family: granRegular;
     font-size: 20px;
+}
+
+.main__price1{
+    font-size: 18px;
 }
 
 .main__buttoncarrito{
@@ -1073,6 +1092,26 @@ button{
 
 @media screen and (max-width:2560px){
 
+
+        /*         INDEX       */
+
+
+        .w-100 {
+            width: 100%!important;
+            height: 200px; 
+        }
+    
+    
+    
+    
+
+
+
+
+
+
+
+
     .main__content {
         padding-bottom: 15px;
     }
@@ -1146,6 +1185,15 @@ button{
 
 
 
+
+
+    .main__h2correction {
+        font-size: 2em;
+    }
+
+    .main__phover1{
+        font-size: 18px;
+    }
 
     
     .nav__searchcontainer input{
@@ -1307,9 +1355,73 @@ button{
 
 
 
+@media screen and (max-width:2559px) {
+
+        /*         INDEX       */
 
 
-@media screen and (max-width:1920px) {
+        .w-100 {
+            width: 100%!important;
+            height: 180px; 
+        }
+    
+    
+    
+    
+
+
+
+
+
+
+    
+    .main__pcontainer{
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 330px auto auto auto;
+        padding: 0px 50px;
+        font-size: 10px;
+    }
+
+    .main__h2correction {
+        font-size: 2.4em;
+    }
+
+}
+
+
+
+
+@media screen and (max-width:1928px) {
+
+
+    /*         INDEX       */
+
+
+    .w-100 {
+        width: 100%!important;
+        height: 180px; 
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .main__gdescrption-container {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
     .nav__searchcontainer input{
         width: 40em;
         height: 40px;
@@ -1412,12 +1524,227 @@ button{
 
 
 
+@media screen and (max-width:1810px) {
 
+    /*                                       INDEX              */
+
+
+    .w-100 {
+        width: 100%!important;
+        height: 170px; 
+    }
+
+
+
+    
+    /*                                      GPRODUCTO                             */
+    
+
+
+    .main__gimgproduct{
+        height: 720px;
+        width: 600px;
+    }
+
+    .main__gdescription-img{
+        width: 470px;
+    }
+
+
+    .main__gdescription-img1{
+        width: 500px;
+    }
+
+    .main__gdescription-img3{
+        width: 450px;
+    }
+
+    .main__gimgspace{
+        color: #eeeeee;
+        padding-right: 100px;
+        display: block;
+    }
+
+    .main__gdescrption-container {
+        padding-left: 30px;
+        padding-right: 30px;
+        background-color: #fefefe;
+        display: grid;
+        grid-template-columns: 400px 400px 400px;
+        grid-template-rows: 140px 60px 70px 400px;
+        grid-template-areas:
+            "ele ele ele"
+            "ele1 ele1 ele2"
+            "ele3 ele3 ele2"
+            "ele4 ele4 ele2";
+    }
+
+    .main__gdescrption-container1 {
+        padding-left: 30px;
+        padding-right: 30px;
+        background-color: #fefefe;
+        display: grid;
+        grid-template-columns: 500px 400px 300px;
+        grid-template-rows: 100px 110px 70px 300px;
+        grid-template-areas:
+            ". . ."
+            "ele . ."
+            "ele ele2 ele2"
+            "ele ele3 ele3"
+            "ele . .";
+    }
+
+
+
+
+
+
+
+    /*             META            */
+
+
+
+
+    .main__gmeta{
+        padding: 30px;
+        position: relative;
+        width: 30.3%;
+        height: 55%;
+        background-color: #fefefe;
+    }
+    
+    .main__ptitle{
+        font-size: 17px;
+        margin: 20px 0;
+    }
+    
+    .main__gprice{
+        color: #0071c9;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 30px 0;
+    }
+    
+    .main__gmercado{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 10px 0 20px;
+    }
+    
+    .main__glistprice{
+        padding-top: 25px;
+        align-items: center;
+        color: #999;
+        display: flex;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0 0 20px;
+    }
+    
+    .main__stock{
+        padding: 2px 2px;
+        font-size: 10px;
+        border-radius: 4px;
+        color: #0b8d04;
+        background-color: #5fff6e;
+    }
+
+    .main__gicons-text {
+        padding: 5px 5px;
+        color: #5fff6e;
+        font-size: 20px;
+    }
+
+    .main__gicons-text1 {
+        padding-left: 6px;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        color: #5fff6e;
+        font-size: 16px;
+    }
+    
+    .main__space{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .main__amount{
+        margin: 20px 0 0;
+    }
+    
+    .main__gbutton{
+        border: 2px solid #0071c9;
+        color: #0071c9;
+        font-size: 16px;
+        padding: 3px;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    
+    .main__ginput{
+        border: 1px solid #999;
+        text-align: center;
+        width: 50px;
+        height: 30px;
+        outline: 0;
+        position: relative;
+        padding: 20px;
+        max-width: 100%;
+    }
+    
+    .main__gitem{
+        width: 49%;
+    }
+    
+    .main__goutline{
+        background-color: #eee;
+        border: 2px solid #0071c9;
+        border-radius: 4px;
+        color: #0071c9;
+        cursor:pointer;
+        display:block;
+        font-size: 15px;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+    }
+    
+    .main__gitemcontainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 30px 0 0;
+    }
+}
 
 
 
 
 @media screen and (max-width:1440px){
+
+
+    /*           INDEX        */
+
+
+    .w-100 {
+        width: 100%!important;
+        height: 150px; 
+    }
+
+
+
+
+
+
+
+    /*           HEADER          */
+
+
+
+
+
+
 
     .nav__compras{
         font-size: 40px;
@@ -1555,7 +1882,7 @@ button{
 
 
     .main__gimgproduct{
-        height: 720px;
+        height: 805px;
         width: 600px;
     }
 
@@ -1578,9 +1905,10 @@ button{
         display: block;
     }
 
+
     .main__gdescrption-container {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 0px;
+        padding-right: 0px;
         background-color: #fefefe;
         display: grid;
         grid-template-columns: 400px 400px 400px;
@@ -1592,12 +1920,16 @@ button{
             "ele4 ele4 ele2";
     }
 
+    .main__gdescription-img{
+        width: 380px;
+    }
+
     .main__gdescrption-container1 {
-        padding-left: 30px;
+        padding-left: 0px;
         padding-right: 30px;
         background-color: #fefefe;
         display: grid;
-        grid-template-columns: 500px 400px 300px;
+        grid-template-columns: 500px 300px 300px;
         grid-template-rows: 100px 110px 70px 300px;
         grid-template-areas:
             ". . ."
@@ -1606,6 +1938,15 @@ button{
             "ele ele3 ele3"
             "ele . .";
     }
+
+    .main__gdescription-img1 {
+        width: 400px;
+    }
+
+    .main__gdescription-img3 {
+        width: 380px;
+    }
+    
 
 
 
@@ -1800,7 +2141,424 @@ button{
     }
 }
 
+@media screen and (max-width:1408px) {
+
+
+        /*         INDEX       */
+
+
+        .w-100 {
+            width: 100%!important;
+            height: 160px; 
+        }
+    
+    
+    
+    
+
+
+
+
+
+
+    
+    .main__gdescrption-container {
+        padding-left: 0px;
+        padding-right: 0px;
+        background-color: #fefefe;
+        display: grid;
+        grid-template-columns: 400px 400px 400px;
+        grid-template-rows: 140px 60px 70px 400px;
+        grid-template-areas:
+            "ele ele ele"
+            "ele1 ele1 ele2"
+            "ele3 ele3 ele2"
+            "ele4 ele4 ele2";
+    }
+
+
+    .main__gdescription-img{
+        width: 380px;
+    }
+
+    .main__gdescrption-container1 {
+        padding-left: 0px;
+        padding-right: 30px;
+        background-color: #fefefe;
+        display: grid;
+        grid-template-columns: 500px 300px 300px;
+        grid-template-rows: 100px 110px 70px 300px;
+        grid-template-areas:
+            ". . ."
+            "ele . ."
+            "ele ele2 ele2"
+            "ele ele3 ele3"
+            "ele . .";
+    }
+
+    .main__gdescription-img1 {
+        width: 400px;
+    }
+
+    .main__gdescription-img3 {
+        width: 380px;
+    }
+}
+
+
+@media screen and (max-width:1332px) {
+    .main__content {
+        padding-bottom: 15px;
+    }
+
+    .main__container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding-top: 50px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .main__alturas {
+        height: 360px;
+        font-size: 21px;
+        color: #b5b5b5;
+    }
+
+
+    .main__title {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: #b4b4b4;
+        font-size: 16px;
+        max-width: 100%;
+        border: 2px solid #000;
+        border-radius: 10px;
+    }
+
+
+
+
+
+
+
+    .nav__searchcontainer input{
+        width: 25em;
+        height: 44px;
+        font-size: 16px;   
+    }
+
+    .nav__buscar{
+        color: #0071c9;
+        font-size: 33px;
+        align-items: center;
+        border: 0;
+        background-color: #eee;
+        cursor: pointer;
+    }
+
+
+    .nav__icono{
+        padding-top: 10px;
+        padding-left:1px;
+    }
+
+    .nav__perfil{
+        font-size: 36px;
+        padding-top: 3px;
+        padding-left: 0px;
+        padding-right: 0px;
+        color: #c6c6c6;
+    }
+
+    .nav__compras{
+        font-size: 36px;
+        color: #c6c6c6;
+        padding: 20px 0px;
+    }
+
+    .nav__icon{
+        width: 80px;
+    }
+
+    .nav__paginas{
+        font-size: 12px;
+    }
+
+    .nav__container{
+        background-color: #e7e7e7;
+        height:45px;
+        position: relative;
+        top:7px;
+    }
+    
+
+    .nav__buscar{
+        color: #0071c9;
+        font-size: 33px;
+        align-items: center;
+        border: 0;
+        background-color: #eee;
+        cursor: pointer;
+    }
+
+    .main__psubtitle{
+        font-size: 20px;
+    }
+
+    .main__pcontainer{
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 330px auto auto auto;
+        grid-template-areas: 
+        "ele1 ele2 ele3 ele8" /*fila 1*/
+        "ele1 ele4 ele5 ele9" /*fila 2*/
+        "ele1 ele6 ele7 ele10" /*fila 3*/
+        ;
+    
+        padding: 0px 50px;
+        font-size: 10px;
+    }
+
+    .main__ppublicidad{
+        width: 50%;
+    }
+
+    .main__price{
+        font-size: 18px;
+    }
+    
+    .main__ppublicidad-item1{
+        width: 150px;
+        grid-area: ele8;
+    }
+    
+    .main__ppublicidad-item2{
+        width: 150px;
+        grid-area: ele9;
+        margin: 10px 0;
+    }
+
+    .main__pimg2{
+        width: 220px;
+    }
+
+    .main__pimg4{
+        width: 220px;
+    }
+
+}
+
+
+@media screen and (max-width:1198px) {
+
+    .main__gdescrption-container {
+        padding-left: 0px;
+        padding-right: 0px;
+        background-color: #fefefe;
+        display: grid;
+        grid-template-columns: 400px 400px 400px;
+        grid-template-rows: 140px 60px 70px 400px;
+        grid-template-areas:
+            "ele ele ele"
+            "ele1 ele1 ele2"
+            "ele3 ele3 ele2"
+            "ele4 ele4 ele2";
+    }
+
+    .main__gdescription-img{
+        width: 300px;
+    }
+
+    .main__gdescrption-container1 {
+        padding-left: 0px;
+        padding-right: 30px;
+        background-color: #fefefe;
+        display: grid;
+        grid-template-columns: 500px 300px 300px;
+        grid-template-rows: 100px 110px 70px 300px;
+        grid-template-areas:
+            ". . ."
+            "ele . ."
+            "ele ele2 ele2"
+            "ele ele3 ele3"
+            "ele . .";
+    }
+
+    .main__gdescription-img1 {
+        width: 300px;
+    }
+
+    .main__gdescription-img3 {
+        width: 300px;
+    }
+    
+}
+
+
+@media screen and (max-width:1118px){
+
+
+        /*         INDEX       */
+
+
+        .w-100 {
+            width: 100%!important;
+            height: 130px; 
+        }
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+        /*                  PRODUCTO                       */
+
+
+
+
+        .main__gcontainer {
+            max-width: 1200px;
+            padding-top: 90px;
+            padding-left: 100px;
+        }
+    
+        .main__gimgspace {
+            color: #eeeeee;
+            padding-right: 0px;
+            display: block;
+        }
+    
+        .main__gdescription-space {
+            font-family: 'Roboto Slab', serif;
+            font-weight: 600;
+            font-size: 15px;
+        }
+    
+    
+        .main__gdescrption-container {
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: #fefefe;
+            display: grid;
+            grid-template-columns: 400px 220px 300px;
+            grid-template-rows: 140px 60px 70px 300px;
+            grid-template-areas:
+                "ele ele ele"
+                "ele1 ele1 ele2"
+                "ele3 ele3 ele2"
+                "ele4 ele4 ele2";
+        }
+    
+        .main__gdescription-title {
+            grid-area: ele;
+            margin: auto;
+            font-size: 25px;
+            font-weight: bold;
+        }
+    
+        .main__gdescription-subtitle {
+            grid-area: ele1;
+            padding-top: 90px;
+            font-size: 25px;
+            font-weight: 400;
+        }
+    
+        .main__gdescription-text {
+            grid-area: ele3;
+            padding-top: 100px;
+            color: #666;
+            font-size: 13px;
+            line-height: 27px;
+        }
+    
+        .main__gdescription-items {
+            grid-area: ele4;
+            padding-top: 120px;
+            color: #666;
+            font-size: 13px;
+            line-height: 40px;
+        }
+    
+        .main__gdescription-img {
+            width: 350px;
+        }
+    
+    
+        .main__gdescrption-container1 {
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: #fefefe;
+            display: grid;
+            grid-template-columns: 330px 300px 290px;
+            grid-template-rows: 100px 110px 70px 300px;
+            grid-template-areas:
+                ". . ."
+                "ele . ."
+                "ele ele2 ele2"
+                "ele ele3 ele3"
+                "ele . .";
+        }
+    
+        .main__gdescription-img1 {
+            width: 350px;
+        }
+    
+        .main__gdescription-subtitle1 {
+            grid-area: ele2;
+            font-size: 25px;
+            font-weight: 400;
+        }
+    
+        .main__gdescription-text1{
+            grid-area: ele3;
+            color: #666;
+            font-size: 13px;
+            line-height: 27px;
+        }
+    
+        .main__gdescription-img3 {
+            width: 350px;
+        }
+    
+}
+
+
 @media screen and (max-width:1024px) {
+
+
+        /*         INDEX       */
+
+
+        .w-100 {
+            width: 100%!important;
+            height: 120px; 
+        }
+    
+    
+    
+    
+
+
+
+
+
+
+
 
     .main__content {
         padding-bottom: 15px;
@@ -1954,121 +2712,6 @@ button{
 
 
 
-    
-
-
-
-    /*                  PRODUCTO                       */
-
-
-
-
-    .main__gcontainer {
-        max-width: 1200px;
-        padding-top: 90px;
-        padding-left: 100px;
-    }
-
-    .main__gimgspace {
-        color: #eeeeee;
-        padding-right: 0px;
-        display: block;
-    }
-
-    .main__gdescription-space {
-        font-family: 'Roboto Slab', serif;
-        font-weight: 600;
-        font-size: 15px;
-    }
-
-
-    .main__gdescrption-container {
-        padding-left: 30px;
-        padding-right: 30px;
-        background-color: #fefefe;
-        display: grid;
-        grid-template-columns: 400px 220px 300px;
-        grid-template-rows: 140px 60px 70px 300px;
-        grid-template-areas:
-            "ele ele ele"
-            "ele1 ele1 ele2"
-            "ele3 ele3 ele2"
-            "ele4 ele4 ele2";
-    }
-
-    .main__gdescription-title {
-        grid-area: ele;
-        margin: auto;
-        font-size: 25px;
-        font-weight: bold;
-    }
-
-    .main__gdescription-subtitle {
-        grid-area: ele1;
-        padding-top: 90px;
-        font-size: 25px;
-        font-weight: 400;
-    }
-
-    .main__gdescription-text {
-        grid-area: ele3;
-        padding-top: 100px;
-        color: #666;
-        font-size: 13px;
-        line-height: 27px;
-    }
-
-    .main__gdescription-items {
-        grid-area: ele4;
-        padding-top: 120px;
-        color: #666;
-        font-size: 13px;
-        line-height: 40px;
-    }
-
-    .main__gdescription-img {
-        width: 350px;
-    }
-
-
-    .main__gdescrption-container1 {
-        padding-left: 30px;
-        padding-right: 30px;
-        background-color: #fefefe;
-        display: grid;
-        grid-template-columns: 330px 300px 290px;
-        grid-template-rows: 100px 110px 70px 300px;
-        grid-template-areas:
-            ". . ."
-            "ele . ."
-            "ele ele2 ele2"
-            "ele ele3 ele3"
-            "ele . .";
-    }
-
-    .main__gdescription-img1 {
-        width: 350px;
-    }
-
-    .main__gdescription-subtitle1 {
-        grid-area: ele2;
-        font-size: 25px;
-        font-weight: 400;
-    }
-
-    .main__gdescription-text1{
-        grid-area: ele3;
-        color: #666;
-        font-size: 13px;
-        line-height: 27px;
-    }
-
-    .main__gdescription-img3 {
-        width: 350px;
-    }
-
-
-
 
 
 
@@ -2131,6 +2774,522 @@ button{
 
 
 
+
+@media screen and (max-width:1023px) {
+
+
+
+
+    /*              INDEX               */
+    
+    
+    
+    
+        .main__imgslider{
+            width: 30%;
+            background-size: contain;
+            padding: 132px 90px;
+            background-position:center right;
+            background-repeat: no-repeat;
+            background-image:url(https://www.venex.com.ar/mods/html/fil/Model/SpecialSlide/1/612660e32efa5-notebooks.jpg);
+        }
+    
+    
+    
+    
+    
+    
+    
+    
+        .main__container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            padding-top: 50px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    
+    
+    
+    
+    
+    
+    
+        .nav__icon{
+            width: 70px;
+        }
+    
+        .nav__perfil{
+            font-size: 30px;
+            padding-top: 1px;
+            padding-left: 0px;
+            padding-right: 0px;
+            color: #c6c6c6;
+        }
+    
+        .nav__compras{
+            font-size: 30px;
+            color: #c6c6c6;
+            padding: 20px 0px;
+        }
+    
+    
+        .nav__searchcontainer input{
+            width: 20em;
+            height: 30px;
+            font-size: 16px;   
+        }
+    
+    
+        .nav__buscar{
+            color: #0071c9;
+            font-size: 23px;
+            align-items: center;
+            border: 0;
+            background-color: #eee;
+            cursor: pointer;
+        }
+    
+        .nav__container{
+            background-color: #e7e7e7;
+            height:41px;
+            position: relative;
+            top:7px;
+        }
+    
+        .nav__paginas{
+            font-size: 10px;
+        }
+    
+        .header{
+            background-color:#37373f;
+        }
+    
+    
+    
+    
+        /*           PRODUCTOS PAGINA*/
+    
+    
+    
+    
+        .main__psubtitle{
+            font-size: 16px;
+        }
+    
+        .main__pcontainer{
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 190px 310px ;
+            grid-template-rows: 330px auto auto ;
+            grid-template-areas: 
+            "ele1 ele2 ele3 ele8" /*fila 1*/
+            "ele1 ele4 ele5 ele9" /*fila 2*/
+            "ele1 ele6 ele7 ele10" /*fila 3*/
+            "ele1 ele3 . ."
+            ;
+        
+            padding: 0px 50px;
+            font-size: 10px;
+        }
+    
+        .main__ppublicidad{
+            width: 50%;
+        }
+    
+        .main__price{
+            font-size: 18px;
+        }
+        
+        .main__ppublicidad-item1{
+            width: 0px;
+            grid-area: ele8;
+        }
+        
+        .main__ppublicidad-item2{
+            width: 0px;
+            grid-area: ele9;
+            margin: 10px 0;
+        }
+    
+        .main__pimg2{
+            width: 220px;
+        }
+    
+        .main__pimg4{
+            width: 220px;
+        }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            /*                  PRODUCTO                       */
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            .main__gcontainer {
+                max-width: 1200px;
+                padding-top: 90px;
+                padding-left: 80px;
+            }
+    
+            .main__gsubtitle {
+                font-size: 15px;
+            }
+    
+            .main__gsubtitlep {
+                font-size: 15px;
+                color: #000;
+            }
+        
+            .main__gimgspace {
+                color: #eeeeee;
+                padding-right: 0px;
+                display: none;
+            }
+        
+            .main__gdescription-space {
+                font-family: 'Roboto Slab', serif;
+                font-weight: 600;
+                font-size: 15px;
+            }
+    
+            .main__gimgproduct {
+                height: 600px;
+                width: 500px;
+            }
+    
+            
+    
+    
+    
+    
+        /*             META            */
+    
+    
+    
+        .main__gproduct {
+            margin: auto;
+            width: fit-content;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #fefefe;
+        }
+    
+    
+        .main__gmeta{
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            position: relative;
+            width: 33.3%;
+            height: 55%;
+            background-color: 0px;
+        }
+        
+        .main__ptitle{
+            font-size: 15px;
+            margin: 20px 0;
+        }
+    
+        .main__gdivision {
+            color: #000;
+            opacity:50%;
+        }
+        
+        .main__gprice{
+            color: #0071c9;
+            font-size: 13px;
+            font-weight: 400;
+            margin: 10px 0;
+        }
+        
+        .main__gmercado{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 10px 0 20px;
+        }
+        
+        .main__glistprice{
+            padding-top:10px;
+            align-items: center;
+            color: #999;
+            display: flex;
+            font-size: 13px;
+            font-weight: 400;
+            margin: 0 0 10px;
+        }
+        
+        .main__stock{
+            padding: 2px 2px;
+            font-size: 10px;
+            border-radius: 4px;
+            color: #0b8d04;
+            background-color: #5fff6e;
+        }
+    
+        .main__gicons-text {
+            padding: 5px 5px;
+            color: #5fff6e;
+            font-size: 20px;
+        }
+    
+        .main__gicons-text1 {
+            padding-left: 6px;
+            padding-top: 10px;
+            padding-bottom: 30px;
+            color: #5fff6e;
+            font-size: 16px;
+        }
+        
+        .main__space{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        
+        .main__amount{
+            margin: 10px 0 0;
+        }
+        
+        .main__gbutton{
+            border: 2px solid #0071c9;
+            color: #0071c9;
+            font-size: 16px;
+            padding: 3px;
+            background-color: transparent;
+            cursor: pointer;
+        }
+        
+        .main__ginput{
+            border: 1px solid #999;
+            text-align: center;
+            width: 50px;
+            height: 30px;
+            outline: 0;
+            position: relative;
+            padding: 20px;
+            max-width: 100%;
+        }
+        
+        .main__gitem{
+            width: 49%;
+        }
+        
+        .main__goutline{
+            background-color: #eee;
+            border: 2px solid #0071c9;
+            border-radius: 4px;
+            color: #0071c9;
+            cursor:pointer;
+            display:block;
+            font-size: 15px;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .main__gitemcontainer{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 10px 0 0;
+            padding-bottom: 20px;
+        }
+    
+    
+    
+    
+    
+    
+    
+        .main__gcontainer-description {
+            width: 100%;
+            max-width: 1222px;
+            padding-right: 0px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        
+            .main__gdescrption-container {
+                padding-left: 10px;
+                padding-right: 0px;
+                background-color: #fefefe;
+                display: grid;
+                grid-template-columns: 210px 220px 300px;
+                grid-template-rows: 140px 60px 70px 300px;
+                grid-template-areas:
+                    "ele ele ele"
+                    "ele1 ele1 ele2"
+                    "ele3 ele3 ele2"
+                    "ele4 ele4 ele2";
+            }
+        
+            .main__gdescription-title {
+                grid-area: ele;
+                margin: auto;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        
+            .main__gdescription-subtitle {
+                grid-area: ele1;
+                padding-top: 90px;
+                font-size: 17px;
+                font-weight: 400;
+            }
+        
+            .main__gdescription-text {
+                grid-area: ele3;
+                padding-top: 100px;
+                color: #666;
+                font-size: 12px;
+                line-height: 27px;
+            }
+        
+            .main__gdescription-items {
+                grid-area: ele4;
+                padding-top: 120px;
+                color: #666;
+                font-size: 12px;
+                line-height: 40px;
+            }
+        
+            .main__gdescription-img {
+                width: 310px;
+            }
+        
+        
+            .main__gdescrption-container1 {
+                padding-left: 0px;
+                padding-right: 0px;
+                background-color: #fefefe;
+                display: grid;
+                grid-template-columns: 280px 280px 160px;
+                grid-template-rows: 100px 110px 70px 300px;
+                grid-template-areas:
+                    ". . ."
+                    "ele . ."
+                    "ele ele2 ele2"
+                    "ele ele3 ele3"
+                    "ele . .";
+            }
+        
+            .main__gdescription-img1 {
+                width: 300px;
+            }
+        
+            .main__gdescription-subtitle1 {
+                grid-area: ele2;
+                font-size: 25px;
+                font-weight: 400;
+            }
+        
+            .main__gdescription-text1{
+                grid-area: ele3;
+                color: #666;
+                font-size: 13px;
+                line-height: 27px;
+            }
+        
+            .main__gdescription-img3 {
+                width: 300px;
+            }
+    
+    
+    
+    
+    
+    
+    
+    /*          FOOTER         */
+    
+    
+    
+    
+    
+    
+    
+        .footer{
+            background-color:#37373f;
+            margin-top: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding-top: 40px;
+            min-height: 20vh;
+        }
+        
+        .footer__atencion{
+            color: greenyellow;
+            font-size:12px;
+        }
+    
+        .footer__color{
+            color:#eee;
+            font-size: 10px;
+            text-decoration: none;
+        }
+    
+        .footer__formf{
+            padding-top:5px;
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+    
+        .footer__input{
+            font-size: 9px;
+            height: 16px;
+            width: 100px;
+            border: 0;
+            border-radius: 0%;
+        }
+    
+        .footer__botongmail{
+            background-color: #91C612;
+            border: 0;
+        }
+    
+        .footer__sociales{
+            margin: 0px 10px;
+            font-size: 29px;
+            color: greenyellow;
+        }
+    
+        iframe{
+            width: 100px;
+            height: 100px;
+        }
+    
+        .footer__botongmail{
+            border: 0;
+            max-height:16px;
+        }
+    }
+
+
+
+
 @media screen and (min-width:768px) {
     .nav__searchcelu{
         font-size: 0%;
@@ -2145,126 +3304,383 @@ button{
 
 
 
-
-@media screen and (max-width:768px) {
-
-
-
-
-/*              INDEX               */
+@media screen and (max-width:767px){
+.container-fluid{
+    display: none;
+}
 
 
 
-
-    .main__imgslider{
-        width: 30%;
-        background-size: contain;
-        padding: 132px 90px;
-        background-position:center right;
-        background-repeat: no-repeat;
-        background-image:url(https://www.venex.com.ar/mods/html/fil/Model/SpecialSlide/1/612660e32efa5-notebooks.jpg);
-    }
+    /*              PAGINA   PRODUCTOS        */
 
 
 
-
-
-
-
-
-    .main__container {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        padding-top: 50px;
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-
-
-
-
-
-
-    .nav__icon{
-        width: 70px;
-    }
-
-    .nav__perfil{
-        font-size: 30px;
-        padding-top: 1px;
-        padding-left: 0px;
-        padding-right: 0px;
-        color: #c6c6c6;
-    }
-
-    .nav__compras{
-        font-size: 30px;
-        color: #c6c6c6;
-        padding: 20px 0px;
-    }
-
-
-    .nav__searchcontainer input{
-        width: 20em;
-        height: 30px;
-        font-size: 16px;   
-    }
-
-
-    .nav__buscar{
-        color: #0071c9;
-        font-size: 23px;
-        align-items: center;
-        border: 0;
-        background-color: #eee;
-        cursor: pointer;
-    }
-
-    .nav__container{
-        background-color: #e7e7e7;
-        height:41px;
+    .main__pcontainer {
         position: relative;
-        top:7px;
-    }
-
-    .nav__paginas{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 210px 290px auto;
+        grid-template-rows: 340px 320px 410px 300px;
+        grid-template-areas:
+            "ele1 ele2 . " /*fila 1*/
+            "ele1 ele4 . " /*fila 2*/
+            "ele1 ele6 . " /*fila 3*/
+            "ele1 ele3 . "
+            "ele1 ele5 . ";
+        padding: 0px 20px;
         font-size: 10px;
     }
 
-    .header{
-        background-color:#37373f;
+
+    
+    
+
+
+            /*                  PRODUCTO                       */
+
+
+
+
+
+
+
+
+
+            .main__gcontainer {
+                max-width: 1200px;
+                padding-top: 50px;
+                padding-left: 10px;
+            }
+    
+            .main__gsubtitle {
+                font-size: 12px;
+            }
+    
+            .main__gsubtitlep {
+                font-size: 12px;
+                color: #000;
+            }
+        
+            .main__gimgspace {
+                color: #eeeeee;
+                padding-right: 0px;
+                display: none;
+            }
+        
+            .main__gdescription-space {
+                font-family: 'Roboto Slab', serif;
+                font-weight: 600;
+                font-size: 15px;
+            }
+    
+            .main__gimgproduct {
+                height: 400px;
+                width: 500px;
+            }
+    
+            
+    
+    
+    
+    
+        /*             META            */
+    
+    
+    
+        .main__gproduct {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #fefefe;
+            justify-content: center;
+        }
+    
+    
+        .main__gmeta{
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            position: relative;
+            width: 100%;
+            height: 55%;
+            background-color: 0px;
+        }
+        
+        .main__ptitle{
+            text-align: center;
+            font-size: 15px;
+            margin: 20px 0;
+        }
+    
+        .main__gdivision {
+            color: #000;
+            opacity:50%;
+        }
+        
+        .main__gprice{
+            text-align: center;
+            color: #0071c9;
+            font-size: 13px;
+            font-weight: 400;
+            margin: 10px 0;
+        }
+        
+        .main__gmercado{
+            display: flex;
+            justify-content: center;
+            margin: 10px 0 20px;
+        }
+        
+        .main__glistprice{
+            padding-top:10px;
+            color: #999;
+            display: flex;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 400;
+            margin: 0 0 10px;
+        }
+        
+        .main__stock{
+            padding: 2px 2px;
+            font-size: 14px;
+            border-radius: 4px;
+            color: #0b8d04;
+            background-color: #5fff6e;
+        }
+    
+        .main__gicons-text {
+            text-align: center;
+            padding: 5px 0px;
+            color: #5fff6e;
+            font-size: 25px;
+        }
+    
+        .main__gicons-text1 {
+            text-align: center;
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 30px;
+            color: #5fff6e;
+            font-size: 23px;
+        }
+        
+        .main__space{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        
+        .main__amount{
+            margin: 10px 0 0;
+        }
+        
+        .main__gbutton{
+            border: 2px solid #0071c9;
+            color: #0071c9;
+            font-size: 16px;
+            padding: 3px;
+            background-color: transparent;
+            cursor: pointer;
+        }
+        
+        .main__ginput{
+            border: 1px solid #999;
+            text-align: center;
+            width: 50px;
+            height: 30px;
+            outline: 0;
+            position: relative;
+            padding: 20px;
+            max-width: 100%;
+        }
+        
+        .main__gitem{
+            width: 49%;
+        }
+        
+        .main__goutline{
+            background-color: #eee;
+            border: 2px solid #0071c9;
+            border-radius: 4px;
+            color: #0071c9;
+            cursor:pointer;
+            display:block;
+            font-size: 15px;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .main__gitemcontainer{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 10px 0 0;
+            padding-bottom: 20px;
+        }
+    
+    
+    
+    
+    
+    
+    
+        .main__gcontainer-description {
+            width: 100%;
+            max-width: 1222px;
+            padding-right: 0px;
+            padding-left: 5px;
+            margin-right: auto;
+            margin-left: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        
+            .main__gdescrption-container {
+                padding-left: 8px;
+                padding-right: 0px;
+                background-color: #fefefe;
+                display: grid;
+                grid-template-columns: 150px 160px 90px;
+                grid-template-rows: 140px 60px 70px 300px;
+                grid-template-areas:
+                    "ele ele ele"
+                    "ele1 ele1 ."
+                    "ele3 ele3 ele2"
+                    "ele4 ele4 ele2";
+            }
+        
+            .main__gdescription-title {
+                grid-area: ele;
+                margin: auto;
+                font-size: 17px;
+                font-weight: bold;
+            }
+        
+            .main__gdescription-subtitle {
+                grid-area: ele1;
+                padding-top: 30px;
+                font-size: 13px;
+                font-weight: 400;
+            }
+        
+            .main__gdescription-text {
+                grid-area: ele3;
+                padding-top: 20px;
+                color: #666;
+                font-size: 10px;
+                line-height: 27px;
+            }
+        
+            .main__gdescription-items {
+                grid-area: ele4;
+                padding-top: 55px;
+                color: #666;
+                font-size: 10px;
+                line-height: 30px;
+            }
+        
+            .main__gdescription-img {
+                padding-top: 30px;
+                width: 100px;
+            }
+        
+        
+            .main__gdescrption-container1 {
+                padding-left: 0px;
+                padding-right: 0px;
+                background-color: #fefefe;
+                display: grid;
+                grid-template-columns: 100px 240px 60px;
+                grid-template-rows: 100px 50px 50px 267px;
+                grid-template-areas:
+                    ". . ."
+                    "ele . ."
+                    "ele ele2 ele2"
+                    "ele ele3 ele3"
+                    "ele . .";
+            }
+        
+            .main__gdescription-img1{
+                padding-top: 60px;
+                width: 100px;
+            }
+        
+            .main__gdescription-subtitle1 {
+                grid-area: ele2;
+                font-size: 16px;
+                font-weight: 400;
+            }
+        
+            .main__gdescription-text1{
+                grid-area: ele3;
+                color: #666;
+                font-size: 11px;
+                line-height: 27px;
+            }
+        
+            .main__gdescription-img3 {
+                width: 100px;
+            }
+    
+
+
+
+}
+
+
+
+@media screen and (max-width:712px) {
+    
+    .main__psubtitle{
+        font-size: 13px;
+        padding-left: 50px;
     }
 
+    .main__h2correction {
+        font-size: 1.7em;
+    }
 
+    .main__a{
+        font-size: 12px;
+    }
 
-
-    /*           PRODUCTOS PAGINA*/
-
-
-
-
-    .main__psubtitle{
-        font-size: 16px;
+    .main__phover1 {
+        font-size: 12px;
     }
 
     .main__pcontainer{
         position: relative;
         width: 100%;
         display: grid;
-        grid-template-columns: 130px 310px auto ;
-        grid-template-rows: 330px auto auto ;
+        grid-template-columns: 160px 290px auto ;
+        grid-template-rows: 330px 280px 410px 280px;
         grid-template-areas: 
-        "ele1 ele2 ele3 ele8" /*fila 1*/
-        "ele1 ele4 ele5 ele9" /*fila 2*/
-        "ele1 ele6 ele7 ele10" /*fila 3*/
-        "ele1 ele3 . ."
+        "ele1 ele2 . " /*fila 1*/
+        "ele1 ele4 . " /*fila 2*/
+        "ele1 ele6 . " /*fila 3*/
+        "ele1 ele3 . "
+        "ele1 ele5 . "
         ;
     
-        padding: 0px 50px;
+        padding: 0px 20px;
         font-size: 10px;
+    }
+
+    .main__phijo{  
+        grid-area: ele2;
+    }
+    .main__phijo1{
+        grid-area: ele3;
+    }
+    .main__phijo2{
+        grid-area: ele4;
+    }
+    .main__phijo3{
+        grid-area: ele5;
+    }
+    .main__phijo4{
+        grid-area: ele6;
     }
 
     .main__ppublicidad{
@@ -2294,375 +3710,22 @@ button{
         width: 220px;
     }
 
-
-
-
-
-
-
-
-
-
-        /*                  PRODUCTO                       */
-
-
-
-
-
-
-
-
-
-        .main__gcontainer {
-            max-width: 1200px;
-            padding-top: 90px;
-            padding-left: 80px;
-        }
-
-        .main__gsubtitle {
-            font-size: 15px;
-        }
-
-        .main__gsubtitlep {
-            font-size: 15px;
-            color: #000;
-        }
-    
-        .main__gimgspace {
-            color: #eeeeee;
-            padding-right: 0px;
-            display: none;
-        }
-    
-        .main__gdescription-space {
-            font-family: 'Roboto Slab', serif;
-            font-weight: 600;
-            font-size: 15px;
-        }
-
-        .main__gimgproduct {
-            height: 600px;
-            width: 500px;
-        }
-
-        
-
-
-
-
-    /*             META            */
-
-
-
-    .main__gproduct {
-        display: flex;
-        flex-wrap: wrap;
-        background-color: #fefefe;
-    }
-
-
-    .main__gmeta{
-        padding-left: 0px;
-        padding-right: 0px;
-        padding-bottom: 0px;
-        position: relative;
-        width: 33.3%;
-        height: 55%;
-        background-color: 0px;
-    }
-    
-    .main__ptitle{
-        font-size: 15px;
-        margin: 20px 0;
-    }
-
-    .main__gdivision {
-        color: #000;
-        opacity:50%;
-    }
-    
-    .main__gprice{
-        color: #0071c9;
-        font-size: 13px;
-        font-weight: 400;
-        margin: 10px 0;
-    }
-    
-    .main__gmercado{
-        display: flex;
-        align-items: center;
-        text-align: center;
-        margin: 10px 0 20px;
-    }
-    
-    .main__glistprice{
-        padding-top:10px;
-        align-items: center;
-        color: #999;
-        display: flex;
-        font-size: 13px;
-        font-weight: 400;
-        margin: 0 0 10px;
-    }
-    
-    .main__stock{
-        padding: 2px 2px;
-        font-size: 10px;
-        border-radius: 4px;
-        color: #0b8d04;
-        background-color: #5fff6e;
-    }
-
-    .main__gicons-text {
-        padding: 5px 5px;
-        color: #5fff6e;
-        font-size: 20px;
-    }
-
-    .main__gicons-text1 {
-        padding-left: 6px;
-        padding-top: 10px;
-        padding-bottom: 30px;
-        color: #5fff6e;
-        font-size: 16px;
-    }
-    
-    .main__space{
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    
-    .main__amount{
-        margin: 10px 0 0;
-    }
-    
-    .main__gbutton{
-        border: 2px solid #0071c9;
-        color: #0071c9;
-        font-size: 16px;
-        padding: 3px;
-        background-color: transparent;
-        cursor: pointer;
-    }
-    
-    .main__ginput{
-        border: 1px solid #999;
-        text-align: center;
-        width: 50px;
-        height: 30px;
-        outline: 0;
-        position: relative;
-        padding: 20px;
-        max-width: 100%;
-    }
-    
-    .main__gitem{
-        width: 49%;
-    }
-    
-    .main__goutline{
-        background-color: #eee;
-        border: 2px solid #0071c9;
-        border-radius: 4px;
-        color: #0071c9;
-        cursor:pointer;
-        display:block;
-        font-size: 15px;
-        padding: 10px;
-        text-align: center;
-        text-decoration: none;
-    }
-    
-    .main__gitemcontainer{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin: 10px 0 0;
-        padding-bottom: 20px;
-    }
-
-
-
-
-
-
-
-    .main__gcontainer-description {
-        width: 100%;
-        max-width: 1222px;
-        padding-right: 0px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    
-        .main__gdescrption-container {
-            padding-left: 10px;
-            padding-right: 0px;
-            background-color: #fefefe;
-            display: grid;
-            grid-template-columns: 210px 220px 300px;
-            grid-template-rows: 140px 60px 70px 300px;
-            grid-template-areas:
-                "ele ele ele"
-                "ele1 ele1 ele2"
-                "ele3 ele3 ele2"
-                "ele4 ele4 ele2";
-        }
-    
-        .main__gdescription-title {
-            grid-area: ele;
-            margin: auto;
-            font-size: 18px;
-            font-weight: bold;
-        }
-    
-        .main__gdescription-subtitle {
-            grid-area: ele1;
-            padding-top: 90px;
-            font-size: 17px;
-            font-weight: 400;
-        }
-    
-        .main__gdescription-text {
-            grid-area: ele3;
-            padding-top: 100px;
-            color: #666;
-            font-size: 12px;
-            line-height: 27px;
-        }
-    
-        .main__gdescription-items {
-            grid-area: ele4;
-            padding-top: 120px;
-            color: #666;
-            font-size: 12px;
-            line-height: 40px;
-        }
-    
-        .main__gdescription-img {
-            width: 310px;
-        }
-    
-    
-        .main__gdescrption-container1 {
-            padding-left: 0px;
-            padding-right: 0px;
-            background-color: #fefefe;
-            display: grid;
-            grid-template-columns: 280px 280px 160px;
-            grid-template-rows: 100px 110px 70px 300px;
-            grid-template-areas:
-                ". . ."
-                "ele . ."
-                "ele ele2 ele2"
-                "ele ele3 ele3"
-                "ele . .";
-        }
-    
-        .main__gdescription-img1 {
-            width: 300px;
-        }
-    
-        .main__gdescription-subtitle1 {
-            grid-area: ele2;
-            font-size: 25px;
-            font-weight: 400;
-        }
-    
-        .main__gdescription-text1{
-            grid-area: ele3;
-            color: #666;
-            font-size: 13px;
-            line-height: 27px;
-        }
-    
-        .main__gdescription-img3 {
-            width: 300px;
-        }
-
-
-
-
-
-
-
-/*          FOOTER         */
-
-
-
-
-
-
-
-    .footer{
-        background-color:#37373f;
-        margin-top: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        padding-top: 40px;
-        min-height: 20vh;
-    }
-    
-    .footer__atencion{
-        color: greenyellow;
-        font-size:12px;
-    }
-
-    .footer__color{
-        color:#eee;
-        font-size: 10px;
-        text-decoration: none;
-    }
-
-    .footer__formf{
-        padding-top:5px;
-        display: flex;
-        align-items: center;
-        margin: 0;
-    }
-
-    .footer__input{
-        font-size: 9px;
-        height: 16px;
-        width: 100px;
-        border: 0;
-        border-radius: 0%;
-    }
-
-    .footer__botongmail{
-        background-color: #91C612;
-        border: 0;
-    }
-
-    .footer__sociales{
-        margin: 0px 10px;
-        font-size: 29px;
-        color: greenyellow;
-    }
-
-    iframe{
-        width: 100px;
-        height: 100px;
-    }
-
-    .footer__botongmail{
-        border: 0;
-        max-height:16px;
-    }
 }
 
 
 
-@media screen and (max-width:425px) {
+
+
+@media screen and (max-width:627px) {
     
     .nav__buttoncelu{
         display: none;
     }
+
+    .container-fluid{
+        display: block;
+    }
+
 }
 
 
@@ -2670,7 +3733,7 @@ button{
 
 
 
-@media screen and (max-width:425px) {
+@media screen and (max-width:568px) {
 
         /*                      INDEX              */
 
@@ -2744,6 +3807,17 @@ button{
 
 
 
+        .w-100 {
+            width: 100%!important;
+            height: 100px; 
+        } 
+
+
+
+
+
+
+
 
 
 
@@ -2802,6 +3876,10 @@ button{
         width: 50px;
     }
 
+    .nav__paddleft {
+        padding-left: 50px;
+    }
+
     .nav__perfil{
         font-size: 26px;
         padding-top: 1px;
@@ -2847,8 +3925,8 @@ button{
         position: relative;
         width: 100%;
         display: grid;
-        grid-template-columns: 110px 290px auto ;
-        grid-template-rows: 300px 280px 410px 280px;
+        grid-template-columns: 130px 260px auto ;
+        grid-template-rows: 330px 280px 410px 280px;
         grid-template-areas: 
         "ele1 ele2 . " /*fila 1*/
         "ele1 ele4 . " /*fila 2*/
@@ -2966,6 +4044,7 @@ button{
             flex-wrap: wrap;
             background-color: #fefefe;
             justify-content: center;
+            width: auto;
         }
     
     
@@ -3016,20 +4095,20 @@ button{
         
         .main__stock{
             padding: 2px 2px;
-            font-size: 10px;
+            font-size: 14px;
             border-radius: 4px;
             color: #0b8d04;
             background-color: #5fff6e;
         }
     
         .main__gicons-text {
-            padding: 5px 80px;
+            padding: 5px 0px;
             color: #5fff6e;
             font-size: 20px;
         }
     
         .main__gicons-text1 {
-            padding-left: 80px;
+            padding-left: 15px;
             padding-top: 10px;
             padding-bottom: 30px;
             color: #5fff6e;
@@ -3211,20 +4290,27 @@ button{
         background-color:#37373f;
         margin-top: auto;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-around;
+        align-items: center;
         padding-top: 40px;
         min-height: 20vh;
+    }
+
+    .footer__izquierda {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 15px;
     }
     
     .footer__atencion{
         color: greenyellow;
-        font-size:9px;
+        font-size:16px;
     }
 
     .footer__color{
         color:#eee;
-        font-size: 7px;
+        font-size: 12px;
         text-decoration: none;
     }
 
@@ -3236,16 +4322,29 @@ button{
     }
 
     .footer__input{
-        font-size: 5px;
-        height: 16px;
-        width: 40px;
+        font-size: 9px;
+        height: 17px;
+        width: 200px;
         border: 0;
         border-radius: 0%;
+    }
+
+    .footer__botonimg {
+        border: 0;
+        max-height: 10px;
+        height: 10px;
     }
 
     .footer__botongmail{
         background-color: #91C612;
         border: 0;
+        width: 15px;
+        height: 20px;
+    }
+
+    .footer__redes{
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 
     .footer__sociales{
@@ -3255,8 +4354,8 @@ button{
     }
 
     .footer__maps{
-        width: 80px;
-        height: 80px;
+        width: 150px;
+        height: 150px;
     }
 
     .footer__botongmail{
@@ -3268,7 +4367,9 @@ button{
 
 
 
-@media screen and (max-width:375px) {
+
+
+@media screen and (max-width:424px) {
 
     .main__text {
         color: #eee;
@@ -3365,6 +4466,25 @@ button{
 
 
     
+
+
+    .main__pcontainer{
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 130px 240px auto ;
+        grid-template-rows: 330px 280px 410px 280px;
+        grid-template-areas: 
+        "ele1 ele2 . " /*fila 1*/
+        "ele1 ele4 . " /*fila 2*/
+        "ele1 ele6 . " /*fila 3*/
+        "ele1 ele3 . "
+        "ele1 ele5 . "
+        ;
+    
+        padding: 0px 0px;
+        font-size: 10px;
+    }
 
 
 
@@ -3669,29 +4789,14 @@ button{
 
 
 
-    .footer__input{
-        font-size: 7px;
-        height: 15px;
-        width: 70px;
-        border: 0;
-        border-radius: 0%;
-    }
+
 
     .footer__botongmail{
         background-color: #91C612;
         border: 0;
     }
 
-    .footer__sociales{
-        margin: 0px 10px;
-        font-size: 15px;
-        color: greenyellow;
-    }
 
-    .footer__maps{
-        width: 60px;
-        height: 100px;
-    }
 
     .footer__botonimg{
         border: 0;
@@ -3699,10 +4804,14 @@ button{
     }
 }
 
-@media screen and (max-width:320px)  {
+
+
+
+
+@media screen and (max-width:374px)  {
 
     .nav__paddleft{
-        padding-left: 40px;
+        padding-left: 65px;
     }
 
     .main__productcontainer {
@@ -3979,7 +5088,7 @@ button{
                 background-color: #fefefe;
                 display: grid;
                 grid-template-columns: 110px 120px 50px;
-                grid-template-rows: 70px 40px 70px 150px;
+                grid-template-rows: 70px 50px 70px 150px;
                 grid-template-areas:
                     "ele ele ele"
                     "ele1 ele1 ."
@@ -4020,7 +5129,7 @@ button{
         
             .main__gdescription-img {
                 padding-top: 30px;
-                width: 86px;
+                width: 83px;
             }
         
         
@@ -4070,7 +5179,7 @@ button{
                 width: 100%;
                 display: grid;
                 grid-template-columns: 110px 200px 0;
-                grid-template-rows: 320px 280px 350px 280px;
+                grid-template-rows: 320px 310px 320px 280px;
                 grid-template-areas: 
                 "ele1 ele2 . " /*fila 1*/
                 "ele1 ele4 . " /*fila 2*/
