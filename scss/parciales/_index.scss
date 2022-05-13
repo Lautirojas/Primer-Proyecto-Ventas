@@ -1,0 +1,140 @@
+.main__subtitle{
+    text-align: center;
+    padding-top: 30px;
+}
+
+.main__containerpublicity{
+    padding-top: 50px;
+}
+
+.main__titlepublicity{
+    font-size: 14px;
+    text-align: center;
+}
+
+.main__containslider{
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    background-color: #e7eaec;
+    display: flex;
+    align-items: center;
+}
+
+.main__banner{
+    height: 60px;
+}
+
+.main__productsslider{
+    display: flex;
+    align-items: center;
+    width: 2000px;
+    padding: 15px 7.5px;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    margin: 5px 2.5px;
+}
+
+.main__imgslider{
+    width: 30%;
+    background-size: contain;
+    padding: 132px 90px;
+    background-position:center right;
+    background-repeat: no-repeat;
+    background-image:url(https://www.venex.com.ar/mods/html/fil/Model/SpecialSlide/1/612660e32efa5-notebooks.jpg);
+}
+
+.main__sliderproduct{
+    display: block;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.main__sliderflow{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+}
+
+.main__productsbox{
+    position: relative;
+    width: 2292px;
+}
+
+.main__productflex{
+
+}
+
+.main__product-box{
+    padding: 15px;
+    background: linear-gradient(to bottom, #FFFFFF, #D6D6D6);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.main__gimgcontainer{
+    width: 100%;
+    position: relative;
+}
+
+.main__product{
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 94.66666667%;
+}
+
+.main__boxpricename{
+    padding: 35px 23px 10px;
+    background-color: #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: #fff;
+}
+
+.main__boxpricename-content{
+    font-size: 24px;
+    text-align: center;
+    color: #333333;
+}
+
+.main__tamaño{
+    background: linear-gradient(to bottom, #FFFFFF, #D6D6D6);
+    padding: 15px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+
+.main__productdescription{
+    color: #37373f;
+}
+
+.main__productcontainer{
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.main__color{
+    background-color: #2d2d33;
+}
+
+
+.main__subtitle1{
+    background-color: #2d2d33;
+    color:#e7eaec;
+    padding: 25px;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+}

@@ -1,0 +1,174 @@
+.main__h2correction{
+    font-size: 1.5em;
+}
+
+
+.main__psubtitle{
+    font-size: 26px;
+    color: #424143;
+    padding: 50px;
+    padding-left: 100px;
+}
+
+.main__slidebar{
+    line-height: 33px;
+}
+
+.main__a{
+    color: #666;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.main__a1{
+    color: #666;
+    cursor: pointer;
+    font-size: 13px;
+    grid-area: ele1;
+    text-decoration: none;
+}
+.main__a2{
+    color: #666;
+    cursor: pointer;
+    font-size: 13px;
+    grid-area: ele1;
+    text-decoration: none;
+}
+.main__a3{
+    color: #666;
+    cursor: pointer;
+    font-size: 13px;
+    grid-area: ele1;
+    text-decoration: none;
+}    
+
+.main__a4{
+    color: #666;
+    cursor: pointer;
+    font-size: 13px;
+    grid-area: ele1;
+    text-decoration: none;
+}    
+
+.main__a5{
+    color: #666;
+    cursor: pointer;
+    font-size: 13px;
+    grid-area: ele1;
+    text-decoration: none;
+}    
+
+.main__a6{
+    color: #666;
+    cursor: pointer;
+    font-size: 13px;
+    grid-area: ele1;
+    text-decoration: none;
+}    
+
+.main__a7{
+    color: #666;
+    cursor: pointer;
+    font-size: 13px;
+    grid-area: ele1;
+    text-decoration: none;
+}    
+
+.main__a8{
+    color: #666;
+    cursor: pointer;
+    font-size: 13px;
+    grid-area: ele1;
+    text-decoration: none;
+}
+
+.main__a9{
+    color: #666;
+    cursor: pointer;
+    font-size: 13px;
+    grid-area: ele1;
+    text-decoration: none;
+}    
+
+.main__pcontainer{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "ele1 ele2 ele3 ." /*fila 1*/
+    "ele1 ele4 ele5 ele8" /*fila 2*/
+    "ele1 ele6 ele7 ele9" /*fila 3*/
+    ;
+
+    padding: 0px 50px;
+    font-size: 14px;
+}
+
+.main__ppadre{
+
+}
+
+.main__phijo{  
+    grid-area: ele2;
+}
+.main__phijo1{
+    grid-area: ele3;
+}
+.main__phijo2{
+    grid-area: ele4;
+}
+.main__phijo3{
+    grid-area: ele5;
+}
+.main__phijo4{
+    grid-area: ele6;
+}
+
+.main__ppublicidad{
+    
+}
+
+.main__ppublicidad-item1{
+
+    grid-area: ele8;
+}
+
+.main__ppublicidad-item2{
+
+    grid-area: ele9;
+    margin: 10px 0;
+}
+
+.main__phover1:hover{
+    color: #000;
+}
+
+.main__phover:hover{
+    color: #000;
+}
+
+.main__price{
+    margin: 15px 0;
+    color: #000;
+    font-family: granRegular;
+    font-size: 20px;
+}
+
+.main__price1{
+    font-size: 18px;
+}
+
+.main__buttoncarrito{
+    background-color:#0071c9;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+}

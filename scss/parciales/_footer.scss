@@ -1,0 +1,42 @@
+.footer{
+    background-color:#37373f;
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 40px;
+    min-height: 30vh;
+}
+.footer__izquierda{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__input{
+    height: 24px;
+    width: 300px;
+    border-radius: 2px;
+}
+
+.footer__botongmail{
+    background-color: #91C612;
+    border-color: #91C612;
+}
+
+
+.footer__atencion{
+    color: greenyellow;
+    font-size: 25px;
+}
+
+.footer__color{
+    color:#eee;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer__sociales{
+    margin: 0px 10px;
+    font-size: 69px;
+    color: greenyellow;
+}

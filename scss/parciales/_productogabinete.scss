@@ -1,0 +1,324 @@
+.main__gcontainer{
+    max-width: 1200px;
+    padding-top: 90px;
+    padding-left: 400px;
+}
+
+.main__gvolver{
+    display: flex;
+    font-size: 27px;
+    margin: 0 0 10px;
+    text-decoration: none;
+}
+
+.main__gvolver a{
+    color: rgb(84, 79, 79);
+    display: flex;
+    font-size: 16px;
+    margin: 0 0 10px;
+    text-decoration: none;
+}
+
+.main__item{
+    margin: 0 10px;
+}
+
+.main__gproduct{
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.main__gimg{
+    background-color:#fefefe;
+    width: 40%;
+    
+    
+}
+
+.main__gimgspace{
+    color: #eeeeee;
+    padding-right: 300px;
+    display: block;
+}
+
+
+.main__gmeta{
+    padding: 30px;
+    position: relative;
+    width: 31.3%;
+    background-color: #fefefe;
+}
+
+.main__ptitle{
+    margin: 20px 0;
+}
+
+.main__gprice{
+    color: #0071c9;
+    font-size: 26px;
+    font-weight: 400;
+    margin: 30px 0;
+}
+
+.main__gmercado{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0 20px;
+}
+
+.main__glistprice{
+    padding-top: 25px;
+    align-items: center;
+    color: #999;
+    display: flex;
+    font-size: 23px;
+    font-weight: 400;
+    margin: 0 0 20px;
+}
+
+.main__stock{
+    padding: 5px 5px;
+    font-size: 16px;
+    border-radius: 4px;
+    color: #0b8d04;
+    background-color: #5fff6e;
+}
+
+.main__space{
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+
+.main__amount{
+    margin: 20px 0 0;
+}
+
+.main__gbutton{
+    border: 2px solid #0071c9;
+    color: #0071c9;
+    font-size: 16px;
+    padding: 10px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.main__ginput{
+    border: 1px solid #999;
+    text-align: center;
+    width: 100px;
+    outline: 0;
+    position: relative;
+    padding: 20px;
+    max-width: 100%;
+}
+
+.main__gitem{
+    width: 49%;
+}
+
+.main__goutline{
+    background-color: #eee;
+    border: 2px solid #0071c9;
+    border-radius: 4px;
+    color: #0071c9;
+    cursor:pointer;
+    display:block;
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.main__gitemcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px 0 0;
+}
+
+.main__gsubtitle{
+    font-size: 19px;
+}
+
+.main__gsubtitlep{
+    font-size: 19px;
+    color: #000;
+}
+
+.main__gicons-text{
+    padding: 10px 10px;
+    color: #5fff6e;
+    font-size: 23px;
+}
+
+.main__gicons-text1{
+    padding-left: 6px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    color: #5fff6e;
+    font-size: 20px;
+}
+
+.main__gcontainer-description{
+    width: 100%;
+    max-width: 1222px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main__gdivision{
+    color: #000;
+    opacity: 30%;
+}
+
+.main__goptions{
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+    border-top: 4px solid #1bcc14;
+}
+
+.main__goptions1{
+    color: #666;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.main__goptions:hover{
+    border-top: 4px solid #1bcc14;
+    transition: 90ms;
+}
+
+.main__goptions1:hover{
+    border-top: 4px solid #1bcc14;
+    transition: 90ms;
+    color: #000;
+}
+
+.main__gdescription{
+    width: 100%;
+}
+
+.main__gdescriptioncenter{
+    width: 100%;
+    background-color: #fefefe;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.main__gdescriptionflex{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.main__gdescription-space{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.main__gdescrption-container{
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #fefefe;
+    display: grid;
+    grid-template-columns:400px 400px 700px ;
+    grid-template-rows:140px 60px 70px 500px;
+    grid-template-areas: 
+    "ele ele ele"
+    "ele1 ele1 ele2"
+    "ele3 ele3 ele2"
+    "ele4 ele4 ele2"
+    ;
+}
+
+.main__gdescription-title{
+    grid-area:ele;
+    margin: auto;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.main__gdescription-subtitle{
+    grid-area:ele1;
+    padding-top: 90px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.main__gdescription-img{
+    grid-area:ele2;
+}
+
+.main__gdescription-img3{
+    grid-area: ele2;
+}
+
+.main__gdescription-text{
+    grid-area:ele3;
+    padding-top: 100px;
+    color: #666;
+    font-size: 17px;
+    line-height: 27px;
+}
+
+.main__gdescription-items{
+    grid-area:ele4;
+    padding-top: 120px;
+    color: #666;
+    font-size: 17px;
+    line-height: 40px;
+}
+
+.main__gdescription-itemsspace{
+    padding-bottom: 0px;
+}
+
+.main__gdivision-description{
+    margin: auto;
+    width: 80%;
+    color: #000;
+    opacity: 30%;
+}
+
+.main__gdescrption-container1{
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #fefefe;
+    display: grid;
+    grid-template-columns:600px 400px 400px ;
+    grid-template-rows:100px 110px 70px 520px;
+    grid-template-areas: 
+    ". . ."
+    "ele . ."
+    "ele ele2 ele2"
+    "ele ele3 ele3"
+    "ele . ."
+    ;
+}
+
+.main__gdescription-subtitle1{
+    grid-area:ele2;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.main__gdescription-img1{
+    grid-area:ele;
+}
+
+.main__gdescription-text1{
+    grid-area: ele3;
+    color: #666;
+    font-size:18px;
+    line-height: 30px;
+}
