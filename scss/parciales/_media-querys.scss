@@ -1,6 +1,33 @@
 @media screen and (max-width:2560px){
 
 
+    //          HEADER        //
+
+
+
+    .navbar {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .nav__searchcontainer {
+        display: flex;
+    }
+
+    .nav__searchcelu {
+        display: none;
+    }
+
+
+
+
+
+
     /*         INDEX       */
 
 
@@ -158,7 +185,6 @@
 }
 
 .main__pcontainer{
-    position: relative;
     width: 100%;
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -200,6 +226,21 @@
 
 .main__gdescription-img3{
     width: 600px;
+}
+
+
+/*                       Descripcion PRODUCTO                   */
+
+
+.main__gcontainer-description {
+    width: 100%;
+    max-width: 1552px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
@@ -284,7 +325,6 @@
 
 
 .main__pcontainer{
-    position: relative;
     width: 100%;
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -450,7 +490,7 @@
 
 
 .main__gimgproduct{
-    height: 720px;
+    height: 805px;
     width: 600px;
 }
 
@@ -624,7 +664,28 @@
     justify-content: space-between;
     margin: 30px 0 0;
 }
+
+            // DESCRIPCION  //
+
+
+            .main__gcontainer-description {
+                width: 100%;
+                max-width: 1352px;
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+
+
+
+
 }
+
+
 
 
 
@@ -854,6 +915,22 @@
 .main__gdescription-img3 {
     width: 380px;
 }
+
+
+                // DESCRIPCION  //
+
+
+                .main__gcontainer-description {
+                    width: 100%;
+                    max-width: 1222px;
+                    padding-right: 15px;
+                    padding-left: 15px;
+                    margin-right: auto;
+                    margin-left: auto;
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+    
 
 
 
@@ -1219,7 +1296,6 @@
 }
 
 .main__pcontainer{
-    position: relative;
     width: 100%;
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -1266,6 +1342,15 @@
 
 @media screen and (max-width:1198px) {
 
+
+    .main__gimgproduct {
+        height: 850px;
+        width: 600px;
+    }
+
+
+
+
 .main__gdescrption-container {
     padding-left: 0px;
     padding-right: 0px;
@@ -1306,6 +1391,26 @@
 .main__gdescription-img3 {
     width: 300px;
 }
+
+            // DESCRIPCION  //
+
+
+            .main__gcontainer-description {
+                width: 100%;
+                max-width: 1132px;
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+
+
+
+
+
 
 }
 
@@ -1448,6 +1553,32 @@
 
 @media screen and (max-width:1024px) {
 
+    .main__gimgproduct {
+        height: 874px;
+        width: 600px;
+    }
+
+    .main__gcontainer-description {
+        width: 100%;
+        max-width: 1132px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .main__gdescription-img {
+        width: 340px;
+    }
+
+    .main__gdescription-img3 {
+        width: 340px;
+    }
+
+
+
 
     /*         INDEX       */
 
@@ -1575,7 +1706,6 @@
 }
 
 .main__pcontainer{
-    position: relative;
     width: 100%;
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -1788,7 +1918,6 @@
     }
 
     .main__pcontainer{
-        position: relative;
         width: 100%;
         display: grid;
         grid-template-columns: 190px 310px ;
@@ -2023,13 +2152,15 @@
 
 
 
+                //       DESCRIPCION PRODUCTO        //
+
 
 
 
     .main__gcontainer-description {
         width: 100%;
-        max-width: 1222px;
-        padding-right: 0px;
+        max-width: 840px;
+        padding-right: 15px;
         padding-left: 15px;
         margin-right: auto;
         margin-left: auto;
@@ -2092,7 +2223,7 @@
             padding-right: 0px;
             background-color: #fefefe;
             display: grid;
-            grid-template-columns: 280px 280px 160px;
+            grid-template-columns: 300px 280px 160px;
             grid-template-rows: 100px 110px 70px 300px;
             grid-template-areas:
                 ". . ."
@@ -2229,7 +2360,6 @@ display: none;
 
 
 .main__pcontainer {
-    position: relative;
     width: 100%;
     display: grid;
     grid-template-columns: 210px 290px auto;
@@ -2325,6 +2455,7 @@ display: none;
     }
 
     .main__gdivision {
+        width: 100%;
         color: #000;
         opacity:50%;
     }
@@ -2384,6 +2515,8 @@ display: none;
     
     .main__amount{
         margin: 10px 0 0;
+        display: flex;
+        justify-content: center;
     }
     
     .main__gbutton{
@@ -2439,7 +2572,7 @@ display: none;
 
     .main__gcontainer-description {
         width: 100%;
-        max-width: 1222px;
+        max-width: 800px;
         padding-right: 0px;
         padding-left: 5px;
         margin-right: auto;
@@ -2451,10 +2584,10 @@ display: none;
     
         .main__gdescrption-container {
             padding-left: 8px;
-            padding-right: 0px;
+            padding-right: 8px;
             background-color: #fefefe;
             display: grid;
-            grid-template-columns: 150px 160px 90px;
+            grid-template-columns: 200px 250px 200px;
             grid-template-rows: 140px 60px 70px 300px;
             grid-template-areas:
                 "ele ele ele"
@@ -2473,7 +2606,7 @@ display: none;
         .main__gdescription-subtitle {
             grid-area: ele1;
             padding-top: 30px;
-            font-size: 13px;
+            font-size: 17px;
             font-weight: 400;
         }
     
@@ -2481,30 +2614,30 @@ display: none;
             grid-area: ele3;
             padding-top: 20px;
             color: #666;
-            font-size: 10px;
+            font-size: 13px;
             line-height: 27px;
         }
     
         .main__gdescription-items {
             grid-area: ele4;
-            padding-top: 55px;
+            padding-top: 59px;
             color: #666;
-            font-size: 10px;
+            font-size: 13px;
             line-height: 30px;
         }
     
         .main__gdescription-img {
-            padding-top: 30px;
-            width: 100px;
+            padding-top: 0px;
+            width: 210px;
         }
     
     
         .main__gdescrption-container1 {
-            padding-left: 0px;
-            padding-right: 0px;
+            padding-left: 8px;
+            padding-right: 8px;
             background-color: #fefefe;
             display: grid;
-            grid-template-columns: 100px 240px 60px;
+            grid-template-columns: 200px 240px 200px;
             grid-template-rows: 100px 50px 50px 267px;
             grid-template-areas:
                 ". . ."
@@ -2515,30 +2648,139 @@ display: none;
         }
     
         .main__gdescription-img1{
-            padding-top: 60px;
-            width: 100px;
+            padding-top: 10px;
+            width: 200px;
         }
     
         .main__gdescription-subtitle1 {
             grid-area: ele2;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 400;
         }
     
         .main__gdescription-text1{
             grid-area: ele3;
             color: #666;
-            font-size: 11px;
+            font-size: 14px;
             line-height: 27px;
         }
     
         .main__gdescription-img3 {
-            width: 100px;
+            width: 200px;
         }
 
 
 
 
+}
+
+
+
+@media screen and (max-width:675px) {
+
+    .main__gcontainer-description {
+        width: 100%;
+        max-width: 800px;
+        padding-right: 0px;
+        padding-left: 5px;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    
+        .main__gdescrption-container {
+            padding-left: 8px;
+            padding-right: 8px;
+            background-color: #fefefe;
+            display: grid;
+            grid-template-columns: 140px 250px 150px;
+            grid-template-rows: 140px 60px 70px 300px;
+            grid-template-areas:
+                "ele ele ele"
+                "ele1 ele1 ."
+                "ele3 ele3 ele2"
+                "ele4 ele4 ele2";
+        }
+    
+        .main__gdescription-title {
+            grid-area: ele;
+            margin: auto;
+            font-size: 17px;
+            font-weight: bold;
+        }
+    
+        .main__gdescription-subtitle {
+            grid-area: ele1;
+            padding-top: 30px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    
+        .main__gdescription-text {
+            grid-area: ele3;
+            padding-top: 13px;
+            color: #666;
+            font-size: 13px;
+            line-height: 27px;
+        }
+    
+        .main__gdescription-items {
+            grid-area: ele4;
+            padding-top: 110px;
+            color: #666;
+            font-size: 13px;
+            line-height: 30px;
+        }
+    
+        .main__gdescription-img {
+            padding-top: 0px;
+            width: 150px;
+        }
+    
+    
+        .main__gdescrption-container1 {
+            padding-left: 8px;
+            padding-right: 8px;
+            background-color: #fefefe;
+            display: grid;
+            grid-template-columns: 150px 240px 160px;
+            grid-template-rows: 100px 50px 50px 267px;
+            grid-template-areas:
+                ". . ."
+                "ele . ."
+                "ele ele2 ele2"
+                "ele ele3 ele3"
+                "ele . .";
+        }
+    
+        .main__gdescription-img1{
+            padding-top: 10px;
+            width: 150px;
+        }
+    
+        .main__gdescription-subtitle1 {
+            grid-area: ele2;
+            font-size: 18px;
+            font-weight: 400;
+        }
+    
+        .main__gdescription-text1{
+            grid-area: ele3;
+            color: #666;
+            font-size: 14px;
+            line-height: 27px;
+        }
+    
+        .main__gdescription-img3 {
+            width: 150px;
+        }
+
+
+
+
+    
 }
 
 
@@ -2563,7 +2805,6 @@ display: none;
 }
 
 .main__pcontainer{
-    position: relative;
     width: 100%;
     display: grid;
     grid-template-columns: 160px 290px auto ;
@@ -2635,7 +2876,38 @@ display: none;
     display: none;
 }
 
+.nav__menuhamburguesa{
+    padding-left: 20px;
+}
+
 .container-fluid{
+    display: block;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+}
+
+.nav__container {
+    display: none;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.nav__paddright {
+    padding-right: 220px;
+}
+
+.nav__searchcelu {
     display: block;
 }
 
@@ -2835,7 +3107,6 @@ display: none;
 }
 
 .main__pcontainer{
-    position: relative;
     width: 100%;
     display: grid;
     grid-template-columns: 130px 260px auto ;
@@ -3281,6 +3552,15 @@ display: none;
 
 
 
+@media screen and (max-width:460px){
+    .nav__paddright {
+        padding-right: 100px;
+    }
+}
+
+
+
+
 
 @media screen and (max-width: 425px){
 
@@ -3395,7 +3675,6 @@ display: none;
 
 
 .main__pcontainer{
-    position: relative;
     width: 100%;
     display: grid;
     grid-template-columns: 130px 240px auto ;
@@ -3735,6 +4014,11 @@ display: none;
 
 
 @media screen and (max-width:374px)  {
+
+
+    .nav__paddright {
+        padding-right: 50px;
+    }
 
 .nav__paddleft{
     padding-left: 65px;
@@ -4101,7 +4385,6 @@ display: none;
         /*       PRODUCTOS     */
 
         .main__pcontainer{
-            position: relative;
             width: 100%;
             display: grid;
             grid-template-columns: 110px 200px 0;

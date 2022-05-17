@@ -8,10 +8,10 @@
         <meta name="keywords" content="">
         <meta name="author" content="Lautaro Rojas">
         <link rel="icon" href="imagenes/icono.jpg">
-        <link rel="stylesheet" href="css/estilos.css">
         <script src="https://kit.fontawesome.com/8defc57dbe.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@383&display=swap" rel="stylesheet">
         <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/estilos.css">
         <title>ForGamers</title>
 </head>
 <body>
@@ -19,67 +19,87 @@
                 <nav class="nav1">
         <div class="nav__buscador">
 
-                <div>
-                        <nav class="navbar navbar-dark fixed-top navbar-light">
+                <div class="nav__menuhamburguesa"> 
+                        <nav class="navbar navbar-dark sticky-top navbar-light" style="flex-wrap:nowrap;">
                                 <div>
                                         <div class="container-fluid">
                                                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                                                         <span class="navbar-toggler-icon"></span>
                                                 </button>
-                                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="background-color: #424143 ;">
                                         <div class="offcanvas-header">
-                                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">ForGamers</h5>
                                                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                         </div>
                                         <div class="offcanvas-body">
-                                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                                        <li class="nav-item">
-                                                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                                <a class="nav-link" href="#">Link</a>
-                                                        </li>
+                                                <form class="d-flex">
+                                                        <input class="form-control me-2" type="search" placeholder="Buscar ..." aria-label="Search">
+                                                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                                                </form>
+                                                <ul class="navbar-nav justify-content-end flex-grow-1 ">
                                                         <li class="nav-item dropdown">
                                                                 <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                                Dropdown
+                                                                Categorias
                                                                 </a>
                                                 <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                        <li><a class="dropdown-item" href="#">Example</a></li>
+                                                        <li><a class="dropdown-item" href="#">Example</a></li>
                                                         <li>
                                                         <hr class="dropdown-divider">
                                                         </li>
-                                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                        <li><a class="dropdown-item" href="#">Example</a></li>
                                                 </ul>
                                                         </li>
-                                </ul>
-                                <form class="d-flex">
-                                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                        <button class="btn btn-outline-success" type="submit">Search</button>
-                                </form>
-                        </div>
+                                                </ul>
+                                                        <li class="nav-item">
+                                                                <a class="nav-link active" aria-current="page" href="paginas/productos.html"> Productos </a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                                <a class="nav-link" href="paginas/monitores.html">Monitores</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                                <a class="nav-link" href="paginas/notebooks.html">Notebooks</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                                <a class="nav-link" href="paginas/gabineteproduct.html">Gabinetes</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                                <a class="nav-link" href="paginas/placasdevideo.html">Placas de Video</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                                <a class="nav-link" href="paginas/mouse.html">Mouse</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                                <a class="nav-link" href="paginas/teclados.html">Teclados</a>
+                                                        </li>
+                                </div>
+                                        </div>
+                                </div>
+                        
                 </div>
+                <div class="nav__paddright"><a class="nav__icono" href="index.html"><img src="imagenes/icono.jpg" class="nav__icon" alt="ForGamers"></a></div>
+
+
+                <div class="nav__searchcontainer">
+                        <form>
+                                <label for="busqueda" id="busqueda"></label>
+                                <input type="search" name="busqueda" id="busqueda" placeholder="Buscar producto" class="nav__buttoncelu">
+                                <button class="nav__buscar nav__buttoncelu"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
                 </div>
-        </nav>
-        <div class="nav__paddleft">                <a class="nav__icono" href="index.html"><img src="imagenes/icono.jpg" class="nav__icon" alt="ForGamers"></a></div>
 
-        </div>
-
-        <div class="nav__searchcontainer">
-                <form>
-                        <label for="busqueda" id="busqueda"></label>
-                        <input type="search" name="busqueda" id="busqueda" placeholder="Buscar producto" class="nav__buttoncelu">
-                        <button class="nav__buscar nav__buttoncelu"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
-        </div>
-        <div class="nav__flexend">
-                <i class="fa-solid fa-magnifying-glass nav__searchcelu"></i>
-                <a class="nav__compras" href="paginas/carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a class="nav__perfil" href="#">
-                <!-- Button trigger modal -->
-                <i class="fa-solid fa-user" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+                <div class="nav__flexend">
+                        <i class="fa-solid fa-magnifying-glass nav__searchcelu"></i>
+                        <a class="nav__compras" href="paginas/carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a class="nav__perfil" href="#">
+                        <!-- Button trigger modal -->
+                        <i class="fa-solid fa-user" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
                 </a>
         </div>
+                        </nav>
+
+
+
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -138,9 +158,9 @@
             <div class="main__productcontainer">
                     <div class="main__imgslider"></div>
                     <div class="main__productsslider">
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;">
+                                    <div class="carousel-inner" style="position:unset;">
+                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset;position:unset;">
                                                     <img src="imagenes/notebook.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                             </div>
                                             <div class="main__boxpricename">
@@ -149,9 +169,9 @@
                                             </div>
                                     </div>    
                             </div>
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;">
+                                    <div class="carousel-inner" style="position:unset;">
+                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                     <img src="imagenes/notebook1.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                             </div>
                                             <div class="main__boxpricename">
@@ -160,9 +180,9 @@
                                             </div>
                                     </div>    
                             </div>
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;" >
+                                    <div class="carousel-inner" style="position:unset;">
+                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                     <img src="imagenes/notebook2.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                             </div>
                                             <div class="main__boxpricename">
@@ -171,10 +191,10 @@
                                             </div>
                                     </div>    
                             </div>
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;">
+                                <div class="carousel-inner" style="position:unset;">
                                     <a href="paginas/gabineteproduct.html" style="text-decoration:none;">
-                                        <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                                        <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                 <img src="imagenes/notebook3.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                         </div>
                                         <div class="main__boxpricename">
@@ -192,9 +212,9 @@
             <div class="main__productcontainer">
                     <div class="main__imgslider"></div>
                     <div class="main__productsslider">
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;">
+                                    <div class="carousel-inner" style="position:unset;">
+                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                     <img src="imagenes/notebook3.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                             </div>
                                             <div class="main__boxpricename">
@@ -203,9 +223,9 @@
                                             </div>
                                     </div>    
                             </div>
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;">
+                                    <div class="carousel-inner" style="position:unset;">
+                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                     <img src="imagenes/notebook4.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                             </div>
                                             <div class="main__boxpricename">
@@ -214,9 +234,9 @@
                                             </div>
                                     </div>    
                             </div>
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;">
+                                    <div class="carousel-inner" style="position:unset;">
+                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                     <img src="imagenes/notebook5.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                             </div>
                                             <div class="main__boxpricename">
@@ -225,10 +245,10 @@
                                             </div>
                                     </div>    
                             </div>
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;">
+                                <div class="carousel-inner" style="position:unset;">
                                     <a href="paginas/gabineteproduct.html" style="text-decoration:none;">
-                                        <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                                        <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                 <img src="imagenes/mouse.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                         </div>
                                         <div class="main__boxpricename">
@@ -246,9 +266,9 @@
             <div class="main__productcontainer">
                     <div class="main__imgslider"></div>
                     <div class="main__productsslider">
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;">
+                                    <div class="carousel-inner" style="position:unset;">
+                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                     <img src="imagenes/mouse.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                             </div>
                                             <div class="main__boxpricename">
@@ -257,9 +277,9 @@
                                             </div>
                                     </div>    
                             </div>
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;">
+                                    <div class="carousel-inner" style="position:unset;">
+                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                     <img src="imagenes/mouse.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                             </div>
                                             <div class="main__boxpricename">
@@ -268,9 +288,9 @@
                                             </div>
                                     </div>    
                             </div>
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;">
+                                    <div class="carousel-inner" style="position:unset;">
+                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                     <img src="imagenes/mouse.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                             </div>
                                             <div class="main__boxpricename">
@@ -279,10 +299,10 @@
                                             </div>
                                     </div>    
                             </div>
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;">
+                                <div class="carousel-inner" style="position:unset;">
                                     <a href="paginas/gabineteproduct.html" style="text-decoration:none;">
-                                        <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                                        <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                 <img src="imagenes/mouse.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                         </div>
                                         <div class="main__boxpricename">
@@ -297,16 +317,16 @@
         </section>
 
         <div class="main__subtitle1">
-            <h3 style="font-weight: 600; font-size: 21px;">ESO QUE QUERÉS, <b>ENCONTRALO EN FORGAMERS</b></h3>                
+                <h3 style="font-weight: 600; font-size: 21px;">ESO QUE QUERÉS, <b>ENCONTRALO EN FORGAMERS</b></h3>                
         </div>
 
         <section class="main__containslider1 main__color">
             <div class="main__productcontainer">
                     <div class="main__imgslider"></div>
                     <div class="main__productsslider">
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;">
+                                    <div class="carousel-inner" style="position:unset;">
+                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                     <img src="imagenes/mouse.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                             </div>
                                             <div class="main__boxpricename">
@@ -315,9 +335,9 @@
                                             </div>
                                     </div>    
                             </div>
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;">
+                                    <div class="carousel-inner" style="position:unset;">
+                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                     <img src="imagenes/mouse.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                             </div>
                                             <div class="main__boxpricename">
@@ -326,9 +346,9 @@
                                             </div>
                                     </div>    
                             </div>
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;">
+                                    <div class="carousel-inner" style="position:unset;">
+                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                     <img src="imagenes/mouse.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                             </div>
                                             <div class="main__boxpricename">
@@ -337,10 +357,10 @@
                                             </div>
                                     </div>    
                             </div>
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;">
+                                <div class="carousel-inner" style="position:unset;">
                                     <a href="paginas/gabineteproduct.html" style="text-decoration:none;">
-                                        <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                                        <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                 <img src="imagenes/mouse.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                         </div>
                                         <div class="main__boxpricename">
@@ -358,9 +378,9 @@
             <div class="main__productcontainer">
                     <div class="main__imgslider"></div>
                     <div class="main__productsslider">
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;"> 
+                                    <div class="carousel-inner" style="position:unset;">
+                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                     <img src="imagenes/mouse.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                             </div>
                                             <div class="main__boxpricename">
@@ -369,9 +389,9 @@
                                             </div>
                                     </div>    
                             </div>
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;">
+                                    <div class="carousel-inner" style="position:unset;">
+                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                     <img src="imagenes/mouse.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                             </div>
                                             <div class="main__boxpricename">
@@ -380,9 +400,9 @@
                                             </div>
                                     </div>    
                             </div>
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;">
+                                    <div class="carousel-inner" style="position:unset;">
+                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                     <img src="imagenes/mouse.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                             </div>
                                             <div class="main__boxpricename">
@@ -391,10 +411,10 @@
                                             </div>
                                     </div>    
                             </div>
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;">
+                                <div class="carousel-inner" style="position:unset;">
                                     <a href="paginas/gabineteproduct.html" style="text-decoration:none;">
-                                        <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                                        <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                 <img src="imagenes/mouse.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                         </div>
                                         <div class="main__boxpricename">
@@ -412,9 +432,9 @@
             <div class="main__productcontainer">
                     <div class="main__imgslider"></div>
                     <div class="main__productsslider">
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;">
+                                    <div class="carousel-inner" style="position:unset;">
+                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                     <img src="imagenes/mouse.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                             </div>
                                             <div class="main__boxpricename">
@@ -423,9 +443,9 @@
                                             </div>
                                     </div>    
                             </div>
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;">
+                                    <div class="carousel-inner" style="position:unset;">
+                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                     <img src="imagenes/mouse.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                             </div>
                                             <div class="main__boxpricename">
@@ -434,9 +454,9 @@
                                             </div>
                                     </div>    
                             </div>
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;">
+                                    <div class="carousel-inner" style="position:unset;">
+                                            <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                     <img src="imagenes/mouse.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                             </div>
                                             <div class="main__boxpricename">
@@ -445,10 +465,10 @@
                                             </div>
                                     </div>    
                             </div>
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="position:unset;">
+                                <div class="carousel-inner" style="position:unset;">
                                     <a href="paginas/gabineteproduct.html" style="text-decoration:none;">
-                                        <div class="carousel-item active" data-bs-interval="10000" style="float: unset">
+                                        <div class="carousel-item active" data-bs-interval="10000" style="float: unset ;position:unset;">
                                                 <img src="imagenes/mouse.png" alt="Notebook Test" class="d-block w-100 main__tamaño">
                                         </div>
                                         <div class="main__boxpricename">
@@ -462,16 +482,16 @@
             </div>
         </section>
         </main>
-    <footer class="footer">
+        <footer class="footer">
         <div class="footer__izquierda">
-            <span class="footer__atencion">ATENCIÓN AL CLIENTE:</span>
-            <p class="footer__color">
-            0810-555-8892 <br>
-            </p>
-            <a class="footer__color" href="#">ForGamers@gmail.com</a>
-            <span class="footer__color">Whatsapp:</span> <a class="footer__color" href="https://wa.me/+541159542242">+54 11 59542242</a>
+                <span class="footer__atencion">ATENCIÓN AL CLIENTE:</span>
+                <p class="footer__color">
+                0810-555-8892 <br>
+                </p>
+                <a class="footer__color" href="#">ForGamers@gmail.com</a>
+                <span class="footer__color">Whatsapp:</span> <a class="footer__color" href="https://wa.me/+541159542242">+54 11 59542242</a>
         </div>
-            <div>
+        <div>
                 <h2 class="footer__atencion">SE EL PRIMERO EN ENTERARTE!</h2>
                 <h3 class="footer__color">Recibi las mejores promos y noticias!</h3>
                 <form class="footer__formf">
@@ -479,18 +499,18 @@
                         <input class="footer__input" type="email" form="email" id="email" placeholder="Direccion de Email">
                         <button class="footer__botongmail"><img src="imagenes/enviar.png"alt="enviar" class="footer__botonimg"></button>
                 </form>
-            </div>
+        </div>
         <div class="footer__redes">
-            <h2 class="footer__color">Copyright© 2021- ForGamers</h2>
-            <a class="footer__sociales" href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
-            <a class="footer__sociales" href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
-            <a class="footer__sociales" href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                <h2 class="footer__color">Copyright© 2021- ForGamers</h2>
+                <a class="footer__sociales" href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <a class="footer__sociales" href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a class="footer__sociales" href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
         </div>
         <div>
-            <h2 class="footer__atencion">Encontranos aca!</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52421.685332004214!2d-58.42019202466192!3d-34.797001165400935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd3194a44b3ed%3A0xb3c4c71736efabce!2sParque%20Finky!5e0!3m2!1ses!2sar!4v1649360176041!5m2!1ses!2sar"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="footer__maps"></iframe>
+                <h2 class="footer__atencion">Encontranos aca!</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52421.685332004214!2d-58.42019202466192!3d-34.797001165400935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd3194a44b3ed%3A0xb3c4c71736efabce!2sParque%20Finky!5e0!3m2!1ses!2sar!4v1649360176041!5m2!1ses!2sar"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="footer__maps"></iframe>
         </div>
-    </footer>
-    <script src="js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

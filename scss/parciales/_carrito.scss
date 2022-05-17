@@ -1,3 +1,34 @@
 .card {
     margin-top: 40px;
 }
+
+.nav-item {
+    list-style: none;
+    padding: 0 10px;
+    color: #fff;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+.nav-item:hover{
+}
+
+.nav-link {
+    transition: none;
+}
+
+.nav-link1{
+    background: 0 0;
+    border: 0;
+    border-radius: 0.25rem;
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link1:hover{
+    background-color: #0d6efd;
+    color: #fff;
+    border-radius: 0.25rem;
+}

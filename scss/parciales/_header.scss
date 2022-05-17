@@ -1,5 +1,5 @@
 .header{
-    background-color:#37373f; 
+    background-color:#37373f;
 }
 
 .nav1{
@@ -11,10 +11,28 @@
 }
 
 .nav__buscador{
-    display:flex;
-    flex-direction:row;
-    justify-content:space-evenly;
     align-items: center;
+}
+
+.fixed-top {
+    background-color: #37373f;
+}
+
+.d-flex {
+    display: flex!important;
+    padding-bottom: 15px;
+}
+
+.offcanvas-title {
+    color: #e7e7e7;
+}
+
+.nav-item {
+    list-style: none;
+}
+
+.nav-link {
+    color: #eee;
 }
 
 .nav__searchcontainer input{
@@ -37,8 +55,8 @@
     border: 0;
 }
 
-.nav__paddleft{
-    padding-left: 20px;
+.nav__paddright{
+    padding-right: 20px;
 }
 
 
@@ -53,7 +71,9 @@
 }
 
 .nav__flexend{
-    padding-left: 90px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .nav__icono{
