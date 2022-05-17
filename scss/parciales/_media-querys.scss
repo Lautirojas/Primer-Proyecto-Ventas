@@ -175,12 +175,19 @@
     background-color:#37373f;
 }
 
+.nav__searchcontainer input {
+    width: 50em;
+    height: 50px;
+    font-size: 20px;
+}
+
 .nav__buscar{
-    color: #0071c9;
-    font-size: 31px;
+    color: #37373f;
+    font-size: 30px;
     align-items: center;
     border: 0;
     background-color: #eee;
+    padding: 5.5px 12px;
     cursor: pointer;
 }
 
@@ -372,8 +379,12 @@
 
 .nav__searchcontainer input{
     width: 40em;
-    height: 40px;
+    height: 44px;
     font-size: 20px;   
+}
+
+.nav__buscar{
+    font-size: 25px;
 }
 
 .nav__icon{
@@ -812,11 +823,12 @@
 }
 
 .nav__buscar{
-    color: #0071c9;
-    font-size: 33px;
+    color: #37373f;
+    font-size: 25px;
     align-items: center;
     border: 0;
     background-color: #eee;
+    padding: 5.5px 12px;
     cursor: pointer;
 }
 
@@ -1232,14 +1244,14 @@
 
 
 .nav__searchcontainer input{
-    width: 25em;
+    width: 35em;
     height: 44px;
     font-size: 16px;   
 }
 
 .nav__buscar{
-    color: #0071c9;
-    font-size: 33px;
+    color: #37373f;
+    font-size: 25px;
     align-items: center;
     border: 0;
     background-color: #eee;
@@ -1281,15 +1293,6 @@
     top:7px;
 }
 
-
-.nav__buscar{
-    color: #0071c9;
-    font-size: 33px;
-    align-items: center;
-    border: 0;
-    background-color: #eee;
-    cursor: pointer;
-}
 
 .main__psubtitle{
     font-size: 20px;
@@ -1645,8 +1648,8 @@
 }
 
 .nav__buscar{
-    color: #0071c9;
-    font-size: 33px;
+    color: #37373f;
+    font-size: 25px;
     align-items: center;
     border: 0;
     background-color: #eee;
@@ -1692,14 +1695,6 @@
     background-color:#37373f;
 }
 
-.nav__buscar{
-    color: #0071c9;
-    font-size: 33px;
-    align-items: center;
-    border: 0;
-    background-color: #eee;
-    cursor: pointer;
-}
 
 .main__psubtitle{
     font-size: 20px;
@@ -1875,15 +1870,15 @@
 
 
     .nav__searchcontainer input{
-        width: 20em;
-        height: 30px;
+        width: 22em;
+        height: 35px;
         font-size: 16px;   
     }
 
 
     .nav__buscar{
-        color: #0071c9;
-        font-size: 23px;
+        color: #37373f;
+        font-size: 18px;
         align-items: center;
         border: 0;
         background-color: #eee;
@@ -3088,7 +3083,7 @@ display: none;
 
 
 .nav__buscar{
-    color: #0071c9;
+    color: #37373f;
     font-size: 23px;
     align-items: center;
     border: 0;
@@ -3642,7 +3637,7 @@ display: none;
 
 
 .nav__buscar{
-    color: #0071c9;
+    color: #37373f;
     font-size: 23px;
     align-items: center;
     border: 0;
