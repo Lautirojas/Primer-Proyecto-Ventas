@@ -140,6 +140,42 @@
   background-color: #37373f;
 }
 
+.navup {
+  background-color: #2d2d33;
+}
+
+/*     MAPA      */
+/*   USANDO EL   MAPA      */
+.navupcontentcontenido {
+  color: #f8f9fa;
+}
+
+.navupcontenticons {
+  color: #91c612;
+}
+
+.navupspace {
+  display: inline-block;
+  padding: 0px 10px;
+}
+
+.navupcontainer {
+  padding: 7px 100px;
+}
+
+.dropdown-menu {
+  color: #eee;
+  border: 1px solid #eee;
+}
+
+.dropdown-item {
+  color: #eee;
+}
+
+.navupcontact {
+  text-align: right;
+}
+
 .nav1 {
   margin: 0 auto;
 }
@@ -210,6 +246,10 @@
   padding-right: 10px;
   display: flex;
   align-items: center;
+}
+
+.nav__spacebtwnicons {
+  padding: 0 20px;
 }
 
 .nav__icono {
@@ -884,7 +924,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
@@ -893,6 +933,13 @@ button {
   }
   .nav__searchcelu {
     display: none;
+  }
+  .navupcontainer {
+    padding: 7px 200px;
+  }
+  .navupcontact {
+    font-size: 23px;
+    text-align: right;
   }
   /*         INDEX       */
   .w-100 {
@@ -1139,6 +1186,13 @@ button {
   .header {
     background-color: #37373f;
   }
+  .navupcontainer {
+    padding: 7px 100px;
+  }
+  .navupcontact {
+    font-size: 20px;
+    text-align: right;
+  }
   .main__psubtitle {
     font-size: 23px;
     color: #424143;
@@ -1356,6 +1410,13 @@ button {
     height: 150px;
   }
   /*           HEADER          */
+  .navupcontainer {
+    padding: 7px 80px;
+  }
+  .navupcontact {
+    font-size: 18px;
+    text-align: right;
+  }
   .nav__compras {
     font-size: 40px;
     color: #c6c6c6;
@@ -1792,6 +1853,13 @@ button {
 }
 
 @media screen and (max-width: 1198px) {
+  .navupcontainer {
+    padding: 7px 60px;
+  }
+  .navupcontact {
+    font-size: 16px;
+    text-align: right;
+  }
   .main__gimgproduct {
     height: 850px;
     width: 600px;
@@ -1924,6 +1992,13 @@ button {
 }
 
 @media screen and (max-width: 1024px) {
+  .navupcontainer {
+    padding: 7px 50px;
+  }
+  .navupcontact {
+    font-size: 15px;
+    text-align: right;
+  }
   .main__gimgproduct {
     height: 874px;
     width: 600px;
@@ -2452,6 +2527,13 @@ button {
 }
 
 @media screen and (min-width: 768px) {
+  .navupcontainer {
+    padding: 7px 40px;
+  }
+  .navupcontact {
+    font-size: 13px;
+    text-align: right;
+  }
   .nav__searchcelu {
     font-size: 0%;
   }
@@ -2466,6 +2548,9 @@ button {
 
 @media screen and (max-width: 767px) {
   .container-fluid {
+    display: none;
+  }
+  .navup {
     display: none;
   }
   /*              PAGINA   PRODUCTOS        */

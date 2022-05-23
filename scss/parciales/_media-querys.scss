@@ -10,7 +10,7 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
     }
@@ -21,6 +21,15 @@
 
     .nav__searchcelu {
         display: none;
+    }
+
+    .navupcontainer {
+        padding: 7px 200px;
+    }
+
+    .navupcontact {
+        font-size: 23px;
+        text-align: right;
     }
 
 
@@ -406,6 +415,17 @@
     background-color:#37373f;
 }
 
+.navupcontainer {
+    padding: 7px 100px;
+}
+
+.navupcontact {
+    font-size: 20px;
+    text-align: right;
+}
+
+
+
 .main__psubtitle{
     font-size: 23px;
     color: #424143;
@@ -723,6 +743,17 @@
 
 
 
+
+
+
+.navupcontainer {
+    padding: 7px 80px;
+}
+
+.navupcontact {
+    font-size: 18px;
+    text-align: right;
+}
 
 
 
@@ -1346,6 +1377,22 @@
 @media screen and (max-width:1198px) {
 
 
+    .navupcontainer {
+        padding: 7px 60px;
+    }
+
+    .navupcontact {
+        font-size: 16px;
+        text-align: right;
+    }
+
+
+
+
+
+
+
+
     .main__gimgproduct {
         height: 850px;
         width: 600px;
@@ -1555,6 +1602,28 @@
 
 
 @media screen and (max-width:1024px) {
+
+
+
+
+    .navupcontainer {
+        padding: 7px 50px;
+    }
+
+    .navupcontact {
+        font-size: 15px;
+        text-align: right;
+    }
+
+
+
+
+
+
+
+
+
+
 
     .main__gimgproduct {
         height: 874px;
@@ -2325,6 +2394,25 @@
 
 
 @media screen and (min-width:768px) {
+
+
+
+
+    .navupcontainer {
+        padding: 7px 40px;
+    }
+
+    .navupcontact {
+        font-size: 13px;
+        text-align: right;
+    }
+
+
+
+
+
+
+
 .nav__searchcelu{
     font-size: 0%;
 }
@@ -2346,6 +2434,10 @@
 @media screen and (max-width:767px){
 .container-fluid{
 display: none;
+}
+
+.navup{
+    display: none;
 }
 
 

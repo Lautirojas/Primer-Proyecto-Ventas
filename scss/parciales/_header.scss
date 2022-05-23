@@ -2,6 +2,56 @@
     background-color:#37373f;
 }
 
+.navup{
+    background-color: #2d2d33;
+}
+
+
+
+    /*     MAPA      */
+
+
+
+$mapaheader: (
+    contenido: #f8f9fa,
+    icons: #91c612,
+    );
+
+
+    /*   USANDO EL   MAPA      */
+
+    @each $clave, $valor in $mapaheader {
+        .navupcontent#{$clave} {
+            color: $valor;
+            
+        }
+    } 
+
+
+
+
+.navupspace{
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.navupcontainer{
+    padding: 7px 100px;
+}
+
+.dropdown-menu{
+    color: #eee;
+    border: 1px solid #eee;
+}
+
+.dropdown-item{
+    color: #eee;
+}
+
+.navupcontact{
+    text-align: right;
+}
+
 .nav1{
     margin: 0 auto;
 }
@@ -74,6 +124,10 @@
     padding-right: 10px;
     display: flex;
     align-items: center;
+}
+
+.nav__spacebtwnicons{
+    padding: 0 20px;
 }
 
 .nav__icono{
