@@ -513,29 +513,39 @@
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-template-rows: auto auto auto auto;
-  grid-template-areas: "ele1 ele2 ele3 ." "ele1 ele4 ele5 ele8" "ele1 ele6 ele7 ele9";
+  grid-template-areas: "ele1 ele2 ele3 ele8" "ele1 ele4 ele5 ele10" "ele1 ele6 ele7 ele9";
   padding: 0px 50px;
   font-size: 14px;
 }
 
 .main__phijo {
   grid-area: ele2;
+  background: #ffffff;
 }
 
 .main__phijo1 {
   grid-area: ele3;
+  background: #ffffff;
 }
 
 .main__phijo2 {
   grid-area: ele4;
+  background: #ffffff;
 }
 
 .main__phijo3 {
   grid-area: ele5;
+  background: #ffffff;
 }
 
 .main__phijo4 {
   grid-area: ele6;
+  background: #ffffff;
+}
+
+.main__hijo5 {
+  grid-area: ele7;
+  background: #ffffff;
 }
 
 .main__ppublicidad-item1 {
@@ -1825,7 +1835,7 @@ button {
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-template-rows: 330px auto auto auto;
-    grid-template-areas: "ele1 ele2 ele3 ele8" "ele1 ele4 ele5 ele9" "ele1 ele6 ele7 ele10";
+    grid-template-areas: "ele1 ele2 ele3 ele8" "ele1 ele4 ele5 ele10" "ele1 ele6 ele7 ele9";
     padding: 0px 50px;
     font-size: 10px;
   }
@@ -1836,11 +1846,11 @@ button {
     font-size: 18px;
   }
   .main__ppublicidad-item1 {
-    width: 150px;
+    width: 200px;
     grid-area: ele8;
   }
   .main__ppublicidad-item2 {
-    width: 150px;
+    width: 200px;
     grid-area: ele9;
     margin: 10px 0;
   }
@@ -2526,14 +2536,17 @@ button {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .navupcontainer {
-    padding: 7px 40px;
-  }
+@media screen and (max-width: 768px) {
   .navupcontact {
     font-size: 13px;
     text-align: right;
   }
+  .navupcontainer {
+    padding: 7px 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .nav__searchcelu {
     font-size: 0%;
   }
@@ -2960,6 +2973,9 @@ button {
 }
 
 @media screen and (max-width: 568px) {
+  .nav__paddright {
+    padding-right: 150px;
+  }
   /*                      INDEX              */
   .main__subtitle {
     background-color: #e7eaec;

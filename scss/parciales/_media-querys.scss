@@ -1336,8 +1336,8 @@
     grid-template-rows: 330px auto auto auto;
     grid-template-areas: 
     "ele1 ele2 ele3 ele8" /*fila 1*/
-    "ele1 ele4 ele5 ele9" /*fila 2*/
-    "ele1 ele6 ele7 ele10" /*fila 3*/
+    "ele1 ele4 ele5 ele10" /*fila 2*/
+    "ele1 ele6 ele7 ele9" /*fila 3*/
     ;
 
     padding: 0px 50px;
@@ -1353,12 +1353,12 @@
 }
 
 .main__ppublicidad-item1{
-    width: 150px;
+    width: 200px;
     grid-area: ele8;
 }
 
 .main__ppublicidad-item2{
-    width: 150px;
+    width: 200px;
     grid-area: ele9;
     margin: 10px 0;
 }
@@ -2392,20 +2392,27 @@
 
 
 
+@media screen and (max-width:768px) {
+    
+    .navupcontact {
+        font-size: 13px;
+        text-align: right;
+    }
+
+    .navupcontainer {
+        padding: 7px 40px;
+    }
+
+
+}
+
 
 @media screen and (min-width:768px) {
 
 
 
 
-    .navupcontainer {
-        padding: 7px 40px;
-    }
 
-    .navupcontact {
-        font-size: 13px;
-        text-align: right;
-    }
 
 
 
@@ -3008,6 +3015,18 @@ display: none;
 
 
 @media screen and (max-width:568px) {
+
+
+
+    .nav__paddright {
+        padding-right: 150px;
+    }
+
+
+
+
+
+
 
     /*                      INDEX              */
 

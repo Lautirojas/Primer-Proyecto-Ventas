@@ -96,8 +96,8 @@
     grid-template-columns: auto auto auto auto;
     grid-template-rows: auto auto auto auto;
     grid-template-areas: 
-    "ele1 ele2 ele3 ." /*fila 1*/
-    "ele1 ele4 ele5 ele8" /*fila 2*/
+    "ele1 ele2 ele3 ele8" /*fila 1*/
+    "ele1 ele4 ele5 ele10" /*fila 2*/
     "ele1 ele6 ele7 ele9" /*fila 3*/
     ;
 
@@ -111,23 +111,31 @@
 
 .main__phijo{  
     grid-area: ele2;
+    background: #ffffff;
 }
 .main__phijo1{
     grid-area: ele3;
+    background: #ffffff;
 }
 .main__phijo2{
     grid-area: ele4;
+    background: #ffffff;
 }
 .main__phijo3{
     grid-area: ele5;
+    background: #ffffff;
 }
 .main__phijo4{
     grid-area: ele6;
+    background: #ffffff;
 }
 
-.main__ppublicidad{
-    
+.main__hijo5{
+    grid-area: ele7;
+    background: #ffffff;
 }
+
+
 
 .main__ppublicidad-item1{
 
@@ -135,7 +143,7 @@
 }
 
 .main__ppublicidad-item2{
-
+    
     grid-area: ele9;
     margin: 10px 0;
 }
