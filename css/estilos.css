@@ -21,7 +21,6 @@
   width: 100%;
   background-color: #e7eaec;
   display: flex;
-  align-items: center;
 }
 
 .main__banner {
@@ -30,8 +29,7 @@
 
 .main__productsslider {
   display: flex;
-  align-items: center;
-  width: 2000px;
+  width: 1650px;
   padding: 15px 7.5px;
   overflow: hidden;
 }
@@ -39,15 +37,47 @@
 .carousel {
   position: relative;
   margin: 5px 2.5px;
+  width: 252.25px;
 }
 
 .main__imgslider {
   width: 30%;
   background-size: contain;
-  padding: 132px 90px;
   background-position: center right;
   background-repeat: no-repeat;
   background-image: url(https://www.venex.com.ar/mods/html/fil/Model/SpecialSlide/1/612660e32efa5-notebooks.jpg);
+}
+
+.main__imgslider1 {
+  width: 30%;
+  background-size: contain;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-image: url(https://www.venex.com.ar/mods/html/fil/Model/SpecialSlide/3/612662d2dcd64-destacados-gamer.jpg);
+}
+
+.main__imgslider2 {
+  width: 30%;
+  background-size: contain;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-image: url(https://www.venex.com.ar/mods/html/fil/Model/SpecialSlide/6/6126624f31c35-almacenamiento.jpg);
+}
+
+.main__imgslider3 {
+  width: 30%;
+  background-size: contain;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-image: url(https://www.venex.com.ar/mods/html/fil/Model/SpecialSlide/4/612663b78d994-tech.jpg);
+}
+
+.main__imgslider4 {
+  width: 30%;
+  background-size: contain;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-image: url(../../imagenes/Sillagamerpagina.png);
 }
 
 .main__sliderproduct {
@@ -114,6 +144,12 @@
 
 .main__productdescription {
   color: #37373f;
+  font-size: 23px;
+}
+
+.main__productdescription1 {
+  color: #37373f;
+  font-size: 23px;
 }
 
 .main__productcontainer {
@@ -134,6 +170,12 @@
   font-size: 15px;
   text-transform: uppercase;
   text-align: center;
+}
+
+.main__subtitle2 {
+  background: #fff;
+  text-align: center;
+  padding: 25px;
 }
 
 .header {
@@ -278,7 +320,7 @@
 }
 
 .modal-content {
-  box-shadow: 0 11px 15px -7px rgb 0 0 0 20%, 0 24px 38px 3px rgb 0 0 0 14%, 0 9px 46px 8px rgb 0 0 0 12%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
 }
 
 .form-control:focus {
@@ -563,6 +605,7 @@
 
 .main__phover:hover {
   color: #000;
+  box-shadow: 5px 5px 30px black;
 }
 
 .main__price {
@@ -956,6 +999,27 @@ button {
     width: 100% !important;
     height: 200px;
   }
+  .main__productsslider {
+    display: flex;
+    width: 1950px;
+    padding: 15px 7.5px;
+    overflow: hidden;
+  }
+  .main__imgslider {
+    width: 50%;
+  }
+  .main__imgslider1 {
+    width: 50%;
+  }
+  .main__imgslider2 {
+    width: 50%;
+  }
+  .main__imgslider3 {
+    width: 50%;
+  }
+  .main__imgslider4 {
+    width: 50%;
+  }
   .main__content {
     padding-bottom: 15px;
   }
@@ -1150,6 +1214,21 @@ button {
     width: 100% !important;
     height: 180px;
   }
+  .main__imgslider {
+    width: 35%;
+  }
+  .main__imgslider1 {
+    width: 35%;
+  }
+  .main__imgslider2 {
+    width: 35%;
+  }
+  .main__imgslider3 {
+    width: 35%;
+  }
+  .main__imgslider4 {
+    width: 35%;
+  }
   .main__pcontainer {
     width: 100%;
     display: grid;
@@ -1168,6 +1247,21 @@ button {
   .w-100 {
     width: 100% !important;
     height: 180px;
+  }
+  .main__imgslider {
+    width: 30%;
+  }
+  .main__imgslider1 {
+    width: 30%;
+  }
+  .main__imgslider2 {
+    width: 30%;
+  }
+  .main__imgslider3 {
+    width: 30%;
+  }
+  .main__imgslider4 {
+    width: 30%;
   }
   .main__gdescrption-container {
     padding-left: 0px;
@@ -1418,6 +1512,21 @@ button {
   .w-100 {
     width: 100% !important;
     height: 150px;
+  }
+  .main__imgslider {
+    width: 20%;
+  }
+  .main__imgslider1 {
+    width: 20%;
+  }
+  .main__imgslider2 {
+    width: 20%;
+  }
+  .main__imgslider3 {
+    width: 20%;
+  }
+  .main__imgslider4 {
+    width: 20%;
   }
   /*          PRODUCTOS        */
   .main__a1 {
@@ -2217,6 +2326,46 @@ button {
     background-repeat: no-repeat;
     background-image: url(https://www.venex.com.ar/mods/html/fil/Model/SpecialSlide/1/612660e32efa5-notebooks.jpg);
   }
+  .main__imgslider {
+    width: 30%;
+    background-size: contain;
+    padding: 132px 90px;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-image: url(https://www.venex.com.ar/mods/html/fil/Model/SpecialSlide/1/612660e32efa5-notebooks.jpg);
+  }
+  .main__imgslider1 {
+    width: 30%;
+    background-size: contain;
+    padding: 132px 90px;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-image: url(https://www.venex.com.ar/mods/html/fil/Model/SpecialSlide/3/612662d2dcd64-destacados-gamer.jpg);
+  }
+  .main__imgslider2 {
+    width: 30%;
+    background-size: contain;
+    padding: 132px 90px;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-image: url(https://www.venex.com.ar/mods/html/fil/Model/SpecialSlide/6/6126624f31c35-almacenamiento.jpg);
+  }
+  .main__imgslider3 {
+    width: 30%;
+    background-size: contain;
+    padding: 132px 90px;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-image: url(https://www.venex.com.ar/mods/html/fil/Model/SpecialSlide/4/612663b78d994-tech.jpg);
+  }
+  .main__imgslider4 {
+    width: 30%;
+    background-size: contain;
+    padding: 132px 90px;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-image: url(../../imagenes/Sillagamerpagina.png);
+  }
   .main__container {
     width: 100%;
     display: flex;
@@ -2571,6 +2720,13 @@ button {
   }
   .navupcontainer {
     padding: 7px 40px;
+  }
+  .main__productsslider {
+    width: 699px;
+  }
+  .main__productdescription1 {
+    color: #37373f;
+    font-size: 18px;
   }
 }
 
@@ -3016,6 +3172,18 @@ button {
   .main__imgslider {
     display: none;
   }
+  .main__imgslider1 {
+    display: none;
+  }
+  .main__imgslider2 {
+    display: none;
+  }
+  .main__imgslider3 {
+    display: none;
+  }
+  .main__imgslider4 {
+    display: none;
+  }
   .main__productcontainer {
     padding-left: 70px;
     padding-top: 20px;
@@ -3025,7 +3193,7 @@ button {
   }
   .main__productsslider {
     display: flex;
-    width: 255px;
+    width: 240px;
     padding: 15px 1.5px;
     overflow: hidden;
   }
@@ -3049,14 +3217,17 @@ button {
     color: #333333;
   }
   .main__productdescription {
-    font-size: 15px;
+    font-size: 13px;
+    color: #706F6F;
+  }
+  .main__productdescription1 {
+    font-size: 12px;
     color: #706F6F;
   }
   .main__containslider {
     margin-right: 0;
     margin-left: 0;
     width: 100%;
-    background-color: #e7eaec;
   }
   .w-100 {
     width: 100% !important;

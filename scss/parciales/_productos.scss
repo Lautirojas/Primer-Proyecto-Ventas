@@ -138,12 +138,10 @@
 
 
 .main__ppublicidad-item1{
-
     grid-area: ele8;
 }
 
 .main__ppublicidad-item2{
-    
     grid-area: ele9;
     margin: 10px 0;
 }
@@ -154,6 +152,7 @@
 
 .main__phover:hover{
     color: #000;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 1.9);
 }
 
 .main__price{
