@@ -2059,7 +2059,7 @@
         padding: 132px 90px;
         background-position:center right;
         background-repeat: no-repeat;
-        background-image: url(../../imagenes/Sillagamerpagina.png);
+        background-image: url(../imagenes/Sillagamerpagina.png);
     }
 
 
@@ -2570,12 +2570,17 @@
     }
 
     .main__productsslider {
-        width: 699px;
+        width: 670px;
     }
 
     .main__productdescription1 {
         color: #37373f;
         font-size: 18px;
+    }
+
+    .main__productdescription {
+        color: #37373f;
+        font-size: 13px;
     }
 
 
