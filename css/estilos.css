@@ -80,6 +80,14 @@
   background-image: url(../imagenes/Sillagamerpagina.png);
 }
 
+.main__imgslider5 {
+  width: 30%;
+  background-size: contain;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-image: url(../imagenes/Auricularesgamerpagina.png);
+}
+
 .main__sliderproduct {
   display: block;
   margin: 0;
@@ -1020,6 +1028,9 @@ button {
   .main__imgslider4 {
     width: 50%;
   }
+  .main__imgslider5 {
+    width: 50%;
+  }
   .main__content {
     padding-bottom: 15px;
   }
@@ -1229,6 +1240,9 @@ button {
   .main__imgslider4 {
     width: 35%;
   }
+  .main__imgslider5 {
+    width: 35%;
+  }
   .main__pcontainer {
     width: 100%;
     display: grid;
@@ -1261,6 +1275,9 @@ button {
     width: 30%;
   }
   .main__imgslider4 {
+    width: 30%;
+  }
+  .main__imgslider5 {
     width: 30%;
   }
   .main__gdescrption-container {
@@ -1526,6 +1543,9 @@ button {
     width: 20%;
   }
   .main__imgslider4 {
+    width: 20%;
+  }
+  .main__imgslider5 {
     width: 20%;
   }
   /*          PRODUCTOS        */
@@ -2171,6 +2191,14 @@ button {
     width: 100% !important;
     height: 120px;
   }
+  .main__productdescription {
+    color: #37373f;
+    font-size: 16px;
+  }
+  .main__productdescription1 {
+    color: #37373f;
+    font-size: 16px;
+  }
   .main__content {
     padding-bottom: 15px;
   }
@@ -2365,6 +2393,14 @@ button {
     background-position: center right;
     background-repeat: no-repeat;
     background-image: url(../imagenes/Sillagamerpagina.png);
+  }
+  .main__imgslider5 {
+    width: 30%;
+    background-size: contain;
+    padding: 132px 90px;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-image: url(../imagenes/Auricularesgamerpagina.png);
   }
   .main__container {
     width: 100%;
@@ -3188,6 +3224,9 @@ button {
   .main__imgslider4 {
     display: none;
   }
+  .main__imgslider5 {
+    display: none;
+  }
   .main__productcontainer {
     padding-left: 70px;
     padding-top: 20px;
@@ -3652,6 +3691,22 @@ button {
   .nav__menuhamburguesa {
     padding-left: 10px;
   }
+  .carousel-inner {
+    width: 170px;
+  }
+  .main__productcontainer {
+    padding-left: 30px;
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .main__productsslider {
+    display: flex;
+    width: 369px;
+    padding: 15px 1.5px;
+    overflow: hidden;
+  }
 }
 
 @media screen and (max-width: 424px) {
@@ -3961,19 +4016,43 @@ button {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .carousel-inner {
+    width: 170px;
+  }
+  .main__productcontainer {
+    padding-left: 5px;
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .main__productsslider {
+    display: flex;
+    width: 369px;
+    padding: 15px 1.5px;
+    overflow: hidden;
+  }
+}
+
 @media screen and (max-width: 374px) {
+  .carousel-inner {
+    width: 145px;
+  }
+  .main__productcontainer {
+    padding-left: 5px;
+  }
+  .main__productsslider {
+    display: flex;
+    width: 369px;
+    padding: 15px 1.5px;
+    overflow: hidden;
+  }
   .nav__paddright {
     padding-right: 50px;
   }
   .nav__paddleft {
     padding-left: 65px;
-  }
-  .main__productcontainer {
-    padding-left: 35px;
-    padding-top: 20px;
-    width: 100%;
-    display: flex;
-    align-items: center;
   }
   .main__text {
     color: #eee;

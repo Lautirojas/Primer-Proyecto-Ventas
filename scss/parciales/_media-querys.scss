@@ -73,6 +73,10 @@
         width: 50%;
     }
     
+    .main__imgslider5{
+        width: 50%;
+    }
+    
 
 
 
@@ -379,6 +383,10 @@
         width: 35%;
     }
     
+    .main__imgslider5{
+        width: 35%;
+    }
+    
 
 
 
@@ -433,6 +441,9 @@
 }
 
 .main__imgslider4{
+    width: 30%;
+}
+.main__imgslider5{
     width: 30%;
 }
 
@@ -815,6 +826,10 @@
 }
 
 .main__imgslider4{
+    width: 20%;
+}
+
+.main__imgslider5{
     width: 20%;
 }
 
@@ -1780,6 +1795,16 @@
         height: 120px; 
     }
 
+    .main__productdescription {
+        color: #37373f;
+        font-size: 16px;
+    }
+
+    .main__productdescription1{
+        color: #37373f;
+        font-size: 16px;
+    }
+
 
 
 
@@ -2060,6 +2085,15 @@
         background-position:center right;
         background-repeat: no-repeat;
         background-image: url(../imagenes/Sillagamerpagina.png);
+    }
+
+    .main__imgslider5{
+        width: 30%;
+        background-size: contain;
+        padding: 132px 90px;
+        background-position:center right;
+        background-repeat: no-repeat;
+        background-image: url(../imagenes/Auricularesgamerpagina.png);
     }
 
 
@@ -3243,6 +3277,10 @@ display: none;
         display: none;
     }
 
+    .main__imgslider5{
+        display: none;
+    }
+
     .main__productcontainer {
         padding-left: 70px;
         padding-top: 20px;
@@ -3891,6 +3929,25 @@ display: none;
     padding-left: 10px;
 }
 
+.carousel-inner {
+    width: 170px;
+}
+
+.main__productcontainer {
+    padding-left: 30px;
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.main__productsslider {
+    display: flex;
+    width: 369px;
+    padding: 15px 1.5px;
+    overflow: hidden;
+}
+
 }
 
 
@@ -4331,9 +4388,52 @@ display: none;
 
 
 
+@media screen and (max-width:375px){
+
+    .carousel-inner {
+        width: 170px;
+    }
+    
+    .main__productcontainer {
+        padding-left: 5px;
+        padding-top: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .main__productsslider {
+        display: flex;
+        width: 369px;
+        padding: 15px 1.5px;
+        overflow: hidden;
+    }
+
+}
+
+
 
 
 @media screen and (max-width:374px)  {
+
+
+    .carousel-inner {
+        width: 145px;
+    }
+    
+    .main__productcontainer {
+        padding-left: 5px;
+    }
+    
+    .main__productsslider {
+        display: flex;
+        width: 369px;
+        padding: 15px 1.5px;
+        overflow: hidden;
+    }
+
+
+
 
 
     .nav__paddright {
@@ -4344,13 +4444,6 @@ display: none;
     padding-left: 65px;
 }
 
-.main__productcontainer {
-    padding-left: 35px;
-    padding-top: 20px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
 
 .main__text {
     color: #eee;
@@ -4746,3 +4839,7 @@ display: none;
         }
     
 }
+
+
+
+
