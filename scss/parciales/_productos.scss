@@ -16,7 +16,7 @@
 
 .main__a{
     color: #666;
-    font-size: 11px;
+    font-size: 12px;
     text-decoration: none;
 }
 
@@ -177,4 +177,132 @@
     padding: 8px;
     text-align: center;
     text-decoration: none;
+}
+
+
+
+
+
+/*     NUEVO PRODUCTOS  */
+
+
+
+.main__newcontainer{
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 50px 0;
+}
+
+.main__products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.products__slidebar{
+    width: 20%;
+}
+
+.space{
+    padding-top: 35px;
+}
+
+.main__h2correction1{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.products{
+    width: 78%;
+}
+
+.products_list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list__item{
+    width: 100%;
+}
+
+.product{
+    align-items: flex-start;
+    background-color: #fff;
+    border-bottom: 2px solid #eae6e6;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.image{
+    width: 20%;
+}
+
+.info{
+    margin: 0 0 0 10px;
+    width: 75%;
+}
+
+.product__title{
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.main__price1{
+    margin: 15px 0;
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.price__promo{
+    color: #b7b7b7 ;
+    text-decoration: line-through;
+}
+
+.main__gitemcontainer1{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px 0 0;
+    padding: 10px 0;
+}
+
+.main__goutline1{
+    background-color: #0071c9;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    padding: 8px;
+    text-align: center;
+    margin: 0 15px 0 0;
+}
+
+.main__goutline2{
+    background-color: #fff;
+    border: 2px solid #0077f9;
+    border-radius: 4px;
+    color: #0077f9;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+.main__gitem1{
+    width: 39%;
+}
+
+.dropdown{
+    position: unset;
+    display: none !important; 
 }

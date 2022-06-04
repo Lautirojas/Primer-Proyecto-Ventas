@@ -839,34 +839,9 @@
 
 
 
-
-.main__a1{
-    font-size: 13px;
-}
-
-.main__a2{
-    font-size: 13px;
-}
-.main__a3{
-    font-size: 13px;
-}
-.main__a4{
-    font-size: 13px;
-}
-.main__a5{
-    font-size: 13px;
-}
-.main__a6{
-    font-size: 13px;
-}
-.main__a7{
-    font-size: 13px;
-}
-.main__a8{
-    font-size: 13px;
-}
-.main__a9{
-    font-size: 13px;
+.main__a {
+    color: #666;
+    font-size: 14px;
 }
 
 
@@ -998,10 +973,7 @@
     cursor: pointer;
 }
 
-.main__a {
-    color: #666;
-    font-size: 13px;
-}
+
 
 .main__pimg2{
     width: 220px;
@@ -1048,7 +1020,7 @@
 
 .main__gimgspace{
     color: #eeeeee;
-    padding-right: 100px;
+    padding-right: 114px;
     display: block;
 }
 
@@ -1161,7 +1133,7 @@
 
 .main__stock{
     padding: 2px 2px;
-    font-size: 10px;
+    font-size: 13px;
     border-radius: 4px;
     color: #0b8d04;
     background-color: #5fff6e;
@@ -1740,6 +1712,22 @@
 
 
 
+    /*     PAGINAS PRODUCTOS  */
+
+.main__newcontainer{
+    max-width: 940px;
+}
+
+
+
+
+
+
+
+    /*       HEADER      */
+
+
+
 
     .navupcontainer {
         padding: 7px 50px;
@@ -1756,7 +1744,7 @@
 
 
 
-
+/*     PAGINA GABINETE PRODUCT  */
 
 
 
@@ -2339,7 +2327,7 @@
     
     .main__stock{
         padding: 2px 2px;
-        font-size: 10px;
+        font-size: 12px;
         border-radius: 4px;
         color: #0b8d04;
         background-color: #5fff6e;
@@ -2615,6 +2603,36 @@
     .main__productdescription {
         color: #37373f;
         font-size: 13px;
+    }
+
+    /*        PAGINAS PRODUCTOS   */
+
+
+    .d-flex{
+        display: flex !important;
+    }
+
+
+
+    .products__slidebar {
+        display: none;
+    }
+
+    .products {
+        width: 100%;
+    }
+
+    .main__gcontainer1{
+        padding-left: 20px;
+    }
+
+    .products-dropdown{
+        padding-right: 30px;
+    }
+
+    .btn-secondary{
+        background-color: #91c612;
+        border-color: #fff;
     }
 
 
@@ -3535,7 +3553,7 @@ display: none;
         }
 
         .main__gsubtitle {
-            font-size: 12px;
+            font-size: 15px;
         }
 
         .main__gsubtitlep {
@@ -3948,6 +3966,14 @@ display: none;
     overflow: hidden;
 }
 
+    /*    PAGINA GABINETE PRODUCT */
+
+    .main__gimgproduct {
+        width: 900px;
+        background: #fff;
+        padding: 10px;
+    }
+
 }
 
 
@@ -4091,7 +4117,7 @@ display: none;
         }
 
         .main__gsubtitle {
-            font-size: 10px;
+            font-size: 15px;
         }
 
         .main__gsubtitlep {
@@ -4408,6 +4434,25 @@ display: none;
         padding: 15px 1.5px;
         overflow: hidden;
     }
+
+
+    /*    PAGINA PRODUCTOS  */
+
+    .main__goutline2 {
+        font-size: 15px;
+        padding: 7px;
+    }
+
+    .main__goutline1 {
+        font-size: 15px;
+        padding: 7px;
+    }
+
+    .products-dropdown {
+        padding-right: 10px;
+    }
+
+
 
 }
 
@@ -4840,6 +4885,32 @@ display: none;
     
 }
 
+
+
+
+@media screen and (max-width:320px) {
+    .products-dropdown {
+        padding-right: 5px;
+    }
+
+    .btn{
+        font-size: 13.5px;
+    }
+
+    .main__gsubtitle {
+        font-size: 13px;
+    }
+
+    .main__goutline2 {
+        font-size: 12px;
+        padding: 7px;
+    }
+
+    .main__goutline1 {
+        font-size: 12px;
+        padding: 7px;
+    }
+}
 
 
 
