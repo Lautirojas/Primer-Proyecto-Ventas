@@ -2581,6 +2581,16 @@
 
 
 @media screen and (max-width:768px) {
+
+
+    .main__publicidadindex{
+        display: none;
+    }
+
+
+
+
+
     
     .navupcontact {
         font-size: 13px;
@@ -2677,6 +2687,10 @@ display: none;
 
 .navup{
     display: none;
+}
+
+.unset{
+    flex-direction: column;
 }
 
 

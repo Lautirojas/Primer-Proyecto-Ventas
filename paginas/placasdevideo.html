@@ -178,65 +178,218 @@
                 </nav>
 </header>
         
+        
         <main class="main">
-        <div class="main__psubtitle"><h1 class="main__h2correction">Placas de video:</h1></div>
-        <section class="main__pcontainer">
-                <div class="main__slidebar">
-                        <h2 class="main__h2correction">Ordenar por:</h2>
-                        <a href="#" class="main__a main__phover1">Menor Precio <br></a>
-                        <a href="#" class="main__a main__phover1">Mayor Precio</a>
-                        <br> <h2 class="main__h2correction">Categorias:</h2>
-                        <a href="#" class="main__a1 main__phover1 ">Apple</a> <br>
-                        <a href="#" class="main__a2 main__phover1 ">Combos</a> <br>
-                        <a href="#" class="main__a3 main__phover1 ">Consolas</a> <br>
-                        <a href="#" class="main__a4 main__phover1 ">Fuentes</a> <br>
-                        <a href="#" class="main__a5 main__phover1 ">Gabinetes</a> <br> 
-                        <a href="#" class="main__a6 main__phover1 ">Software</a> <br>
-                        <a href="#" class="main__a7 main__phover1 ">Refrigeración</a> <br>
-                        <a href="#" class="main__a8 main__phover1 ">Parlantes</a> <br>
-                        <a href="#" class="main__a9 main__phover1 ">Impresoras</a> <br>
-                </div>
-        <div class="main__phijo main__phover">
-                <h2 class="main__h2correction">Placa de video MSI NVIDIA Geforce RTX 3090 Ventus</h2>
-                <a href="../paginas/gabineteproduct.html"><img src="../imagenes/placadevideo.png" alt="Placa de video Geforce RTX 3090" width="160"></a>
-                <p class="main__price">$7.499</p>
-                <a href="#"></a><button class="main__buttoncarrito">Sumar al carrito</button></a>
-        </div>
-        <div class="main__phijo1 main__phover">
-                <h2 class="main__h2correction">Placa de video Gygabyte Geforce RTX 1050Ti</h2>
-                <a href="#"><img src="../imagenes/placadevideo1.png" alt="Placa de video Geforce RTX 1050ti" width="130"></a>
-                <p class="main__price">$39.999</p>
-                <a href="#"></a><button class="main__buttoncarrito">Sumar al carrito</button></a>
-        </div>
-        <div class="main__phijo2 main__phover">
-                <h2 class="main__h2correction">Placa de video Asus Dual Amd Radeon Rx 6700 Xt 12gb</h2>
-                <a href="#"><img src="../imagenes/placadevideo2.png" alt="Placa de video Radeon Rx 6700 Xt" width="120"></a>
-                <p class="main__price">$7.999</p>
-                <a href="#"></a><button class="main__buttoncarrito">Sumar al carrito</button></a>
-        </div>
-        <div class="main__phijo3 main__phover">
-                <h2 class="main__h2correction">Placa de video Gygabyte Geforce 1030</h2>
-                <a href="#"><img src="../imagenes/placadevideo3.png" alt="Placa de video Geforce 1030" width="200"></a>
-                <p class="main__price">$4.999</p>
-                <a href="#"></a><button class="main__buttoncarrito">Sumar al carrito</button></a>
-        </div>
-        <div class="main__phijo4 main__phover">
-                <h2 class="main__h2correction">Placa de video Zotac Gaming Geforce Gtx 1660 Twin 6gb</h2>
-                <a href="#"><img src="../imagenes/placadevideo4.png" alt="Placa de video Geforce Gtx 1660" width=170></a>
-                <p class="main__price">$9.999</p>
-                <a href="#"></a><button class="main__buttoncarrito">Sumar al carrito</button></a>
-        </div>
-        <div class="main__hijo5">
+        <div class="main__newcontainer">
+                <div class="main__products">
+                        <div class="products__slidebar">
+                                <div class="main__slidebar">
+                                        <h2 class="main__h2correction1 space">Ordenar por:</h2>
+                                        <ul>
+                                                <li><a href="#" class="main__a main__phover1">Menor Precio <br></a> </li> 
+                                                <li><a href="#" class="main__a main__phover1">Mayor Precio</a> </li> 
+                                        </ul>
+                                        <ul>    
+                                                <li><br><h2 class="main__h2correction1"> Categorias:</h2></li> 
+                                                <li> <a href="#" class="main__a main__phover1 ">Apple</a> <br> </li>
+                                                <li> <a href="#" class="main__a main__phover1 ">Combos</a> <br> </li>
+                                                <li> <a href="#" class="main__a main__phover1 ">Consolas</a> <br> </li>
+                                                <li> <a href="#" class="main__a main__phover1 ">Fuentes</a> <br> </li>
+                                                <li> <a href="#" class="main__a main__phover1 ">Gabinetes</a> <br> </li>
+                                                <li> <a href="#" class="main__a main__phover1 ">Software</a> <br> </li>
+                                                <li> <a href="#" class="main__a main__phover1 ">Refrigeración</a> <br>
+                                                <li> <a href="#" class="main__a main__phover1 ">Parlantes</a> <br> </li>
+                                                <li> <a href="#" class="main__a main__phover1 ">Impresoras</a> <br> </li>
+                                        </ul>
+                                </div>
+                        </div>
+                        <div class="products">
+                                <div class="dropdown d-flex justify-content-end">
+                                        <div class="products-dropdown">
+                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Ordenar Por:
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                                                        <li><a class="dropdown-item active" href="#">Mayor Precio</a></li>
+                                                        <li><a class="dropdown-item" href="#">Menor Precio</a></li>
+                                                </ul>
+                                        </div>
 
+                                        <div class="products-dropdown">
+                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Categorias:
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                                                        <li><a class="dropdown-item" href="../index.html">Inicio</a></li>
+                                                        <li><hr class="dropdown-divider"></li>
+                                                        <li><a class="dropdown-item active" href="#">Apple</a></li>
+                                                        <li><a class="dropdown-item" href="#">Combos</a></li>
+                                                        <li><a class="dropdown-item" href="#">Fuentes</a></li>
+                                                        <li><a class="dropdown-item" href="#">Gabinetes</a></li>
+                                                        <li><a class="dropdown-item" href="#">Software</a></li>
+                                                        <li><a class="dropdown-item" href="#">Refrigeración</a></li>
+                                                        <li><a class="dropdown-item" href="#">Parlantes</a></li>
+                                                        <li><a class="dropdown-item" href="#">Impresoras</a></li>
+                                                </ul>
+                                        </div>
+                                </div>
+                                <div class="main__gcontainer1">
+                                        <div class="main__gvolver">
+                                                <a href="../index.html">
+                                                        <span>
+                                                                <h2 class="main__gsubtitle">Home</h2>
+                                                        </span>
+                                                                <span class="main__item">/</span>
+                                                </a>
+                                                <a href="../paginas/placasdevideo.html">
+                                                        <span>
+                                                                <h1 class="main__gsubtitle">Placas de video</h1>
+                                                        </span>
+                                                </a>
+                                        </div>
+                                </div>
+                                <div class="products_list">
+                                        <div class="list__item">
+                                                <a href="../paginas/gabineteproduct.html" class="product">
+                                                        <div class="image">
+                                                                <img src="../imagenes/placadevideo.png" alt="Placa de video MSI NVIDIA Geforce RTX 3090 Ventus">
+                                                        </div>
+                                                        <div class="info">
+                                                                <h3 class="product__title">PLACA DE VIDEO MSI NVIDIA GEFORCE RTX 3090 VENTUS</h3>
+                                                                <div class="main__price1">
+                                                                        $7.499
+                                                                        <span class="price__promo">$8.499</span>
+                                                                </div>
+                                                                <div>
+                                                                        <div class="main__gitemcontainer1">
+                                                                                <div class="main__gitem1">
+                                                                                        <span class="main__goutline1">Comprar</span>
+                                                                                </div>
+                                                                                <div class="main__gitem1">
+                                                                                        <span class="main__goutline2"><i class="fas fa-shopping-cart"></i> Agregar</span>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </a>
+                                        </div>
+                                        <div class="list__item">
+                                                <a href="../paginas/gabineteproduct.html" class="product">
+                                                        <div class="image">
+                                                                <img src="../imagenes/placadevideo1.png" alt="Placa de video Geforce RTX 1050ti">
+                                                        </div>
+                                                        <div class="info">
+                                                                <h3 class="product__title">PLACA DE VIDEO GYGABYTE GEFORCE RTX 1050TI</h3>
+                                                                <div class="main__price1">
+                                                                        $39.999
+                                                                        <span class="price__promo">$41.499</span>
+                                                                </div>
+                                                                <div>
+                                                                        <div class="main__gitemcontainer1">
+                                                                                <div class="main__gitem1">
+                                                                                        <span class="main__goutline1">Comprar</span>
+                                                                                </div>
+                                                                                <div class="main__gitem1">
+                                                                                        <span class="main__goutline2"><i class="fas fa-shopping-cart"></i> Agregar</span>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </a>
+                                        </div>
+                                        <div class="list__item">
+                                                <a href="../paginas/gabineteproduct.html" class="product">
+                                                        <div class="image">
+                                                                <img src="../imagenes/placadevideo2.png" alt="Placa de video Asus Dual Amd Radeon Rx 6700 Xt 12gb">
+                                                        </div>
+                                                        <div class="info">
+                                                                <h3 class="product__title">PLACA DE VIDEO ASUS DUAL AMD RADEON RX 6700 XT 12GB</h3>
+                                                                <div class="main__price1">
+                                                                        $7.999
+                                                                        <span class="price__promo">$8.999</span>
+                                                                </div>
+                                                                <div>
+                                                                        <div class="main__gitemcontainer1">
+                                                                                <div class="main__gitem1">
+                                                                                        <span class="main__goutline1">Comprar</span>
+                                                                                </div>
+                                                                                <div class="main__gitem1">
+                                                                                        <span class="main__goutline2"><i class="fas fa-shopping-cart"></i> Agregar</span>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </a>
+                                        </div>
+                                        <div class="list__item">
+                                                <a href="../paginas/gabineteproduct.html" class="product">
+                                                        <div class="image">
+                                                                <img src="../imagenes/placadevideo3.png" alt="Placa de video Gygabyte Geforce 1030">
+                                                        </div>
+                                                        <div class="info">
+                                                                <h3 class="product__title">PLACA DE VIDEO GYGABYTE GEFORCE 1030</h3>
+                                                                <div class="main__price1">
+                                                                        $4.999
+                                                                        <span class="price__promo">$5.499</span>
+                                                                </div>
+                                                                <div>
+                                                                        <div class="main__gitemcontainer1">
+                                                                                <div class="main__gitem1">
+                                                                                        <span class="main__goutline1">Comprar</span>
+                                                                                </div>
+                                                                                <div class="main__gitem1">
+                                                                                        <span class="main__goutline2"><i class="fas fa-shopping-cart"></i> Agregar</span>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </a>
+                                        </div>
+                                        <div class="list__item">
+                                                <a href="../paginas/gabineteproduct.html" class="product">
+                                                        <div class="image">
+                                                                <img src="../imagenes/placadevideo4.png" alt="Placa de video Zotac Gaming Geforce Gtx 1660 Twin 6gb">
+                                                        </div>
+                                                        <div class="info">
+                                                                <h3 class="product__title">PLACA DE VIDEO ZOTAC GAMING GEFORCE GTX 1660 TWIN 6GB</h3>
+                                                                <div class="main__price1">
+                                                                        $9.999
+                                                                        <span class="price__promo">$10.999</span>
+                                                                </div>
+                                                                <div>
+                                                                        <div class="main__gitemcontainer1">
+                                                                                <div class="main__gitem1">
+                                                                                        <span class="main__goutline1">Comprar</span>
+                                                                                </div>
+                                                                                <div class="main__gitem1">
+                                                                                        <span class="main__goutline2"><i class="fas fa-shopping-cart"></i> Agregar</span>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </a>
+                                        </div>
+                                </div>
+                                <nav aria-label="Search results pages" class="bg-white pb-5">
+                                        <ul class="pagination justify-content-center space">
+                                                <li class="page-item disabled ">
+                                                        <a class="page-link">Previous</a>
+                                                </li>
+                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item " aria-current="page">
+                                                        <a class="page-link" href="#">2</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item">
+                                                        <a class="page-link" href="#">Next</a>
+                                                </li>
+                                        </ul>
+                                </nav>
+                        </div>
+                </div>
         </div>
-        <div class="main__ppublicidad-item1">
-                <a href="#" class="main__ppublicidad-item1"><img src="../imagenes/imagen columna publicidad.jpg" alt="Imagen Publicitaria columna1" class="main__ppublicidad-item1"></a>
-        </div>
-        <div class="main__ppublicidad-item2">
-                <a href="#" class="main__ppublicidad-item2"><img src="../imagenes/imagen columna publicidad 2.jpg" alt="Imagen Publicitaria columna2" class="main__ppublicidad-item2"></a>
-        </div>
-        </section>
 </main>
+        
         
         <footer class="footer">
         <div class="footer__izquierda">
