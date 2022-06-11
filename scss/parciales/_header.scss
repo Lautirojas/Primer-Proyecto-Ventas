@@ -103,6 +103,7 @@ $mapaheader: (
 
 .nav__searchcontainer form input{
     border: 0;
+    padding: 15px;
 }
 
 .nav__paddright{
@@ -194,8 +195,6 @@ $mapaheader: (
 .nav__container{
     background-color: #e7e7e7;
     height:55px;
-    position: relative;
-    top:7px;
 }
 
 .nav__links{
