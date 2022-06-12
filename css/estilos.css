@@ -811,6 +811,7 @@
   font-size: 16px;
   margin: 0 0 10px;
   text-decoration: none;
+  align-items: center;
 }
 
 .main__item {
@@ -4161,7 +4162,7 @@ img {
     overflow: hidden;
   }
   .nav__paddright {
-    padding-right: 50px;
+    padding-right: 0px;
   }
   .nav__paddleft {
     padding-left: 65px;
