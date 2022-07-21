@@ -21,11 +21,11 @@ function Login (){
 }
 
 const newUser = () => {
-    let username = prompt("Ingrese su nombre");
-    let email = prompt("Ingrese su correo electronico");
-    let password = prompt("Ingrese su contraseña deseada");
-    let dni = prompt("Ingrese su numero de dni");
-    let phone = prompt("Ingrese su numero de telefono");
+    let username = prompt("Ingrese su nombre").toLowerCase;
+    let email = prompt("Ingrese su correo electronico").toLowerCase;
+    let password = prompt("Ingrese su contraseña deseada").toLowerCase;
+    let dni = parseInt(prompt("Ingrese su numero de dni"));
+    let phone = prompt("Ingrese su numero de telefono").toLowerCase;
 
     let register = new member(username,email,password,dni,phone);
     members.push(register);
