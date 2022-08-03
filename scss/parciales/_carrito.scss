@@ -32,3 +32,75 @@
     color: #fff;
     border-radius: 0.25rem;
 }
+
+.boton-agregar {
+    color: #0077f9;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px;
+    border: none;
+}
+
+.boton-comprar{
+    cursor: pointer;
+    background-color: #0071c9;
+    border: none;
+    color: white;
+}
+
+.boton-eliminar {
+    background-color: white;
+    color: red;
+    border: none;
+    font-size: 20px;
+}
+
+
+//CARRITO
+
+.product__title_carrito{
+    display: flex;
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.main__price__carrito {
+    display: flex;
+    margin: 15px 0;
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.price__promo__carrito {
+    color: #b7b7b7;
+    text-decoration: line-through;
+    padding: 0 10px;
+}
+
+.contador__carrito{
+    color: #fff;
+    background-color: #91C612;
+    border: 0 solid transparent;
+    border-radius: 8px;
+    height: 16px;
+    width: 16px;
+    line-height: 16px;
+    font-size: 8px;
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top:3px;
+    right:10px;
+    font-size: 11px;
+}
+
+.cart{
+    position: relative;
+}

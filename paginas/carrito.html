@@ -40,15 +40,20 @@
                         </div>
                 </nav>
 
-                <!-- MID HEADER -->
+                        <!-- MID HEADER -->
 
-                <nav class="nav1">
+                        <nav class="nav1">
 
                         <!-- ALL MID HEADER -->
-                <div class="nav__buscador">
+
+                        <div class="nav__buscador">
 
                         <!-- MENU HAMBURGUESA + CONTENIDO-->
-                <div class="nav__menuhamburguesa"> 
+
+                        <div class="nav__menuhamburguesa"> 
+
+                                <!-- MENU HAMBURGUESA -->
+
                         <nav class="navbar navbar-dark sticky-top navbar-light" style="flex-wrap:nowrap;">
                                         <div>
                                                 <div class="container-fluid">
@@ -106,6 +111,7 @@
                                         </div>
                                 
                         </div>
+
                         <div class="nav__paddright"><a class="nav__icono" href="../index.html"><img src="../imagenes/ForGamers2.png" alt="ForGamers"></a></div>
 
 
@@ -118,59 +124,113 @@
                         </div>
 
                         <div class="nav__flexend">
-                                <div>
-                                        <i class="fa-solid fa-magnifying-glass nav__searchcelu"></i>
-                                </div>
-                                <div class="nav__spacebtwnicons">
-                                        <a class="nav__compras" href="../paginas/carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                                </div >
-                                <div class="nav__spacebtwnicons"> 
-                                        <a class="nav__perfil" href="#">
-                                                <!-- Button trigger modal -->
-                                                <i class="fa-solid fa-user" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
-                                        </a>
-                                </div>
+                                <ul class="d-flex">
+                                        <li class="nav__spacebtwnicons">
+                                                <i class="fa-solid fa-magnifying-glass nav__searchcelu"></i>
+                                        </li>
+                                        <li class="nav__spacebtwnicons">
+                                                <a class="nav__compras " href="../paginas/carrito.html"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                                                <span id="contadorCarrito" class="contador__carrito">0</span>
+                                        </li>
+                                        <li class="nav__spacebtwnicons">
+                                                <a class="nav__perfil" href="#">
+                                                        <!-- Button trigger modal -->
+                                                        <i class="fa-solid fa-user"  id="triggerbutton" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+                                                </a>
+                                        </li>
+                                </ul>
                         </div>
-                                </nav>
-
-
-
+                        </nav>
+                                        <!-- Modal login e register -->
 
                                         <!-- Modal -->
-                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content" style="background-color: #37373f;">
-                <div class="modal-header" style="border-bottom:1px solid #91c612;  ;">
-                        <h5 class="modal-title" id="exampleModalLabel">Iniciar sesión</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                <form>
-                <div class="row mb-3">
-                        <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                        <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
-                        </div>
-                </div>
-                <div class="row mb-3">
-                        <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                        <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputPassword3">
-                        </div>
-                </div>
-                <div class="nav__iniciosesion">
-                        <button type="submit" class="btn btn-primary" style="background-color: #eeeeee; border-color: #91c612; color: #91c612;">Sign in</button>
-                </div>
-                <div class="nav__iniciosesion">
-                        <button type="submit" class="btn btn-primary" style="background-color: #eeeeee; border-color: #91c612; color: #91c612;">Create new Account</button>
-                </div>
-                </form>
-                </div>
-        </div>
-        </div>
+
+                                        
+                                        <!-- LOGIN -->
+
+                                        <div class="overlaymodal" id="overlay">
+                                                <div class="modalcontainer logindisappear" id="modalloogin">
+                                                        <div>
+                                                                <div class="modal__header">
+                                                                        <h5 class="text-light">Iniciar Sesion</h5>
+                                                                        <div id="modalclose">
+                                                                                <a href="#" ><i class="fa-solid fa-xmark text-light" ></i></a>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                        <form class="modal__body">
+                                                                <div class="d-flex flex-column">
+                                                                        <label for="email" class="text-light"> Email :</label>
+                                                                        <input type="email" class="modal__input modal__email" placeholder="Email@gmail.com">
+                                                                </div>
+                                                                <div class="d-flex flex-column"> 
+                                                                        <label for="password" class="text-light"> Contraseña :</label>
+                                                                        <input type="password" class="modal__input modal__pass" placeholder="Password">
+                                                                </div>
+                                                                <div class="modal__buttoncontain">
+                                                                        <div class="modal__botonlogin">
+                                                                                <button class="modal__button">
+                                                                                        Iniciar Sesion
+                                                                                </button>
+                                                                        </div>
+                                                                        <div class="modal__botonlogin">
+                                                                                <button id="buttonregister" class="modal__button">
+                                                                                        Registrarse
+                                                                                </button>
+                                                                        </div>
+                                                                </div>
+                                                        </form>
+                                                </div>
+
+                                                                                <!-- REGISTER -->
+
+                                                <div class="modalcontainer registerappear" id="modalregister">
+                                                        <div>
+                                                                <div class="modal__header">
+                                                                        <h5 class="text-light">Registrarse</h5>
+                                                                        <div id="modalcloseregister">
+                                                                                <a href="#" ><i class="fa-solid fa-xmark text-light" ></i></a>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                        <form class="modal__body" id="formulario">
+                                                                <div class="d-flex flex-column">
+                                                                        <label for="email" class="text-light"> Nombre Completo :</label>
+                                                                        <input type="text" class="modal__input modal__username" placeholder="Juan Carlos" id="nombre">
+                                                                </div>
+                                                                <div class="d-flex flex-column">
+                                                                        <label for="email" class="text-light"> Email :</label>
+                                                                        <input type="email" class="modal__input modal__email" placeholder="Email@gmail.com" id="email">
+                                                                </div>
+                                                                <div class="d-flex flex-column">
+                                                                        <label for="password" class="text-light"> Contraseña :</label>
+                                                                        <input type="password" class="modal__input modal__pass" placeholder="Password" id="password">
+                                                                </div>
+                                                                <div class="modal__buttoncontain">
+                                                                        <div class="modal__botonlogin">
+                                                                                <button  type="submit" class="modal__button" id="finishregigister">
+                                                                                        Registrarse
+                                                                                </button>
+                                                                        </div>
+                                                                        <div class="modal__botonlogin"> 
+                                                                                <button  id="registervolver" class="modal__button">
+                                                                                        Volver
+                                                                                </button>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="modal__buttoncontain"> 
+                                                                        <p class="warnings" id="warnings"></p>
+                                                                </div>
+                                                        </form>
+                                                        <p id="saludo" class="text-light"></p>
+                                                        <div class="modal__botonlogin not-show" id="logoutcontainer"> 
+                                                                <button type=submit class="modal__button " id="logout">
+                                                                        Cerrar Sesion
+                                                                </button>
+                                                        </div>
+                                                </div>
                                         </div>
-                                </div>
-                        </nav>
+
 
                         <!-- A PAGINAS -->
 
@@ -192,59 +252,70 @@
         <!-- MAIN -->
         <main class="main">
 
-        <div class="card text-center container" style="position:unset ;">
-            <div class="card-header">
-                <ul class="nav nav-pills card-header-pills">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#" style="padding: 0.8rem 1rem;"><h1 style="font-size:16px; line-height:1; margin-bottom: auto; ">Carrito</h1></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link1" href="#" style="padding: 0.57rem 1rem;" >Guardados</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled"></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="card-body" style="padding: 12rem 1rem;">
+        <div id="contenedor-productos" class="products_list">
+
+        </div>
+
+        <div class="card text-center container mb-5" style="position:unset;" >
+                <div class="card-header">
+                        <ul class="nav nav-pills card-header-pills">
+                        <li class="nav-item">
+                                <a class="nav-link active" href="#" style="padding: 0.8rem 1rem;"><h1 style="font-size:16px; line-height:1; margin-bottom: auto; ">Carrito</h1></a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link1" href="#" style="padding: 0.57rem 1rem;" >Guardados</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link disabled"></a>
+                        </li>
+                        </ul>
+        </div>
+        <div id="carrito-contenedor">
+
+        </div>
+        <!-- <div class="card-body" style="padding: 12rem 1rem;" id="carritoVacio" >
                 <h5 class="card-title" style="color: #666;">Tu Carrito esta vacio</h5>
                 <p class="card-text" style="color: #999;">¿No sabés qué comprar? ¡Miles de productos te esperan!</p>
                 <a href="../index.html" class="btn btn-primary">Seguir Comprando</a>
-            </div>
+        </div> -->
+                <div class="d-flex justify-content-evenly pt-4 pb-4">
+                        <a href="../index.html" class="btn btn-primary">Seguir Comprando</a>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
         </div>
 
 </main>
         <!-- FOOTER -->
         <footer class="footer">
         <div class="footer__izquierda">
-            <span class="footer__atencion">ATENCIÓN AL CLIENTE:</span>
-            <p class="footer__color">
-            0810-555-8892 <br>
-            </p>
-            <a class="footer__color" href="#">ForGamers@gmail.com</a>
-            <span class="footer__color">Whatsapp:</span> <a class="footer__color" href="https://wa.me/+541159542242">+54 11 59542242</a>
+                <span class="footer__atencion">ATENCIÓN AL CLIENTE:</span>
+                <p class="footer__color">
+                0810-555-8892 <br>
+                </p>
+                <a class="footer__color" href="#">ForGamers@gmail.com</a>
+                <span class="footer__color">Whatsapp:</span> <a class="footer__color" href="https://wa.me/+541159542242">+54 11 59542242</a>
         </div>
         <div>
-            <h2 class="footer__atencion">SE EL PRIMERO EN ENTERARTE!</h2>
-            <h3 class="footer__color">Recibi las mejores promos y noticias!</h3>
-            <form class="footer__formf">
-                <label for="email" id="email"></label>
-                <input class="footer__input" type="email" form="email" id="email" placeholder="Direccion de Email">
-                <button class="footer__botongmail"><img src="../imagenes/enviar.png"alt="enviar"  class="footer__botonimg"></button>
-            </form>
+                <h2 class="footer__atencion">SE EL PRIMERO EN ENTERARTE!</h2>
+                <h3 class="footer__color">Recibi las mejores promos y noticias!</h3>
+                <form class="footer__formf">
+                        <label for="email" id="email"></label>
+                        <input class="footer__input" type="email" form="email"  placeholder="Direccion de Email">
+                        <button class="footer__botongmail"><img src="../imagenes/enviar.png"alt="enviar"  class="footer__botonimg"></button>
+                </form>
         </div>
         <div class="footer__redes">
-            <h2 class="footer__color">Copyright© 2021- ForGamers</h2>
-            <a class="footer__sociales" href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
-            <a class="footer__sociales" href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
-            <a class="footer__sociales" href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                <h2 class="footer__color">Copyright© 2021- ForGamers</h2>
+                <a class="footer__sociales" href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <a class="footer__sociales" href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a class="footer__sociales" href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
         </div>
         <div>
-            <h2 class="footer__atencion">Encontranos aca!</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52421.685332004214!2d-58.42019202466192!3d-34.797001165400935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd3194a44b3ed%3A0xb3c4c71736efabce!2sParque%20Finky!5e0!3m2!1ses!2sar!4v1649360176041!5m2!1ses!2sar" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <h2 class="footer__atencion">Encontranos aca!</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52421.685332004214!2d-58.42019202466192!3d-34.797001165400935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd3194a44b3ed%3A0xb3c4c71736efabce!2sParque%20Finky!5e0!3m2!1ses!2sar!4v1649360176041!5m2!1ses!2sar" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 </footer>
-        
+        <script src="../js/main.js"></script>
         <script src="../js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
