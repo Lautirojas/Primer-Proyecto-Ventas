@@ -207,9 +207,10 @@ const contadorCarrito = document.querySelector("#contadorCarrito")
 const carritoVacio = document.querySelector("#carritoVacio");
 // DIV CREADO EN EL CARRITO
 const productoEnCarrito = document.querySelector(".productoEnCarrito");
+// contenedor carrito
+const contenedorCarrito = document.querySelector("#carrito-contenedor");
 
 // ARRAY CARRITO
-
 let carrito = [];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -219,8 +220,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 })
 
-// contenedor carrito
-const contenedorCarrito = document.querySelector("#carrito-contenedor");
 
 // SE CREAN LOS PRODUCTOS AL HTML
 stockProductos.forEach((producto) => {
