@@ -185,16 +185,16 @@ const parrafo = document.querySelector("#warnings");
     // STOCK
 
     let stockProductos = [
-        {id: 1, nombre: "Buzo 1", tipo: "buzo", cantidad: 1,  precio: 1200,  img: '../imagenes/mouse.png'},
-        {id: 2, nombre: "Buzo 2", tipo: "buzo", cantidad: 1,  precio: 1100,  img: '../imagenes/monitor.png'},
-        {id: 3, nombre: "Buzo 3", tipo: "buzo", cantidad: 1,  precio: 1200,  img: '../imagenes/placadevideo.png'},
-        {id: 4, nombre: "Buzo 4", tipo: "buzo", cantidad: 1,  precio: 1400,  img: '../imagenes/notebook4.png'},
-        {id: 5, nombre: "Buzo 5", tipo: "buzo", cantidad: 1,  precio: 1200,  img: '../imagenes/sillagamer3_adobe_express.png'},
-        {id: 6, nombre: "Buzo 6", tipo: "buzo", cantidad: 1,  precio: 1500,  img: '../imagenes/teclado1.png'},
-        {id: 7, nombre: "Remera 1", tipo: "remera", cantidad: 1,  precio: 500,  img: '../imagenes/sillagamer4_adobe_express.png'},
-        {id: 8, nombre: "Remera 2", tipo: "remera", cantidad: 1,  precio: 500, img: '../imagenes/procesador-ryzen.png'},
-        {id: 9, nombre: "Remera 3", tipo: "remera", cantidad: 1,  precio: 500, img: '../imagenes/ssd_240gb_kingston_adobe_express.png'},
-        {id: 10, nombre: "Remera 4", tipo: "remera", cantidad: 1,  precio: 700,  img: '../imagenes/notebook1.png'},
+        {id: 1, nombre: "Mouse logitech g403", tipo: "mouse", cantidad: 1,  precio: 1200,  img: '../imagenes/mouse.png'},
+        {id: 2, nombre: "Monitor Msi 144Hz", tipo: "monitor", cantidad: 1,  precio: 1100,  img: '../imagenes/monitor.png'},
+        {id: 3, nombre: "PLACA DE VIDEO MSI NVIDIA GEFORCE RTX 3090 VENTUS", tipo: "placa", cantidad: 1,  precio: 1200,  img: '../imagenes/placadevideo.png'},
+        {id: 4, nombre: "Notebook Intel Cloudbook", tipo: "notebook", cantidad: 1,  precio: 1400,  img: '../imagenes/notebook4.png'},
+        {id: 5, nombre: "Silla Gamer Game House Naranja", tipo: "silla", cantidad: 1,  precio: 1200,  img: '../imagenes/sillagamer3_adobe_express.png'},
+        {id: 6, nombre: "Teclado Redragon", tipo: "teclado", cantidad: 1,  precio: 1500,  img: '../imagenes/teclado1.png'},
+        {id: 7, nombre: "Silla Gamer Primus Thronos", tipo: "silla", cantidad: 1,  precio: 500,  img: '../imagenes/sillagamer4_adobe_express.png'},
+        {id: 8, nombre: "Procesador Ryzen 5600g", tipo: "procesador", cantidad: 1,  precio: 500, img: '../imagenes/procesador-ryzen.png'},
+        {id: 9, nombre: "Disco Solido Ssd 240Gb Kingston", tipo: "disco", cantidad: 1,  precio: 500, img: '../imagenes/ssd_240gb_kingston_adobe_express.png'},
+        {id: 10, nombre: "Notebook Samsung Plus V2", tipo: "notebook", cantidad: 1,  precio: 700,  img: '../imagenes/notebook1.png'},
     ]
 
     // VARIABLES
