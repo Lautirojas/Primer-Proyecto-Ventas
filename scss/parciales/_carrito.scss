@@ -74,6 +74,8 @@
     color: #000;
     font-size: 20px;
     font-weight: 400;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .price__promo__carrito {
@@ -103,4 +105,35 @@
 
 .cart{
     position: relative;
+}
+
+.product__sumaresta{
+    border: 1px solid #b7b7b7;
+    padding: 10px;
+    border-radius: 90px;
+    width: 17%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product__buttons{
+    background-color: #fff;
+    color: #0077f9;
+    border: 0px;
+    outline: 0;
+    cursor: pointer;
+}
+
+.product__input{
+    color: #000;
+    border: 0;
+    text-align: center;
+    width: 50%;
+}
+
+.buyadvertisment{
+    width: 69%;
+    color:  #f73;
+    text-align: end;
 }

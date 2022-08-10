@@ -102,11 +102,7 @@ const parrafo = document.querySelector("#warnings");
             warnings += `La contraseña no es valida <br>`
             entrar = true;
         }
-        if(entrar){
-            parrafo.innerHTML = warnings
-        }else if(entrar === false){
-            saludo();
-        }
+        (entrar === true) ? parrafo.innerHTML = warnings : saludo();
 
 })
 
@@ -209,7 +205,8 @@ const carritoVacio = document.querySelector("#carritoVacio");
 const productoEnCarrito = document.querySelector(".productoEnCarrito");
 // contenedor carrito
 const contenedorCarrito = document.querySelector("#carrito-contenedor");
-
+//precio total
+const precioTotal = document.querySelector("#precioTotal");
 // ARRAY CARRITO
 let carrito = [];
 
@@ -277,6 +274,7 @@ const agregarAlCarrito = (prodId) => {
             // map encuentre cual es el q igual al que está agregado, le suma la cantidad
             if (prod.id === prodId){
                 prod.cantidad++
+                // cantidadcarrito = prod.cantidad
             }
         })
     } else { //EN CASO DE QUE NO ESTÉ, LO AGREGAMOS AL CARRITO
@@ -294,20 +292,26 @@ const agregarAlCarrito = (prodId) => {
 
 // HAGO QUE EL ICONO TACHO LO BORRE
 
-const eliminarDelCarrito = (prodId) => {
+const eliminarDelCarrito = (prodId)  => {
     const item = carrito.find((prod) => prod.id === prodId)
     const indice = carrito.indexOf(item);
     carrito.splice(indice, 1);
-    // if (prodId > 0){
-    //     carritoVacio.classList.remove("not-show");
-        
-    // }else{
-    //     carritoVacio.classList.add("not-show");
-    // }
-    
     actualizarCarrito()
 }
-
+// Suma la cantidad del producto en 1
+const Botonsuma = () => {
+    carrito.forEach((prod) =>{
+        if(prod.cantidad >= 1){
+            prod.cantidad += 1
+        }else{
+            prod.cantidad += 1
+        }
+        console.log(carrito);
+        actualizarCarrito();
+    })
+}
+//
+let Botonresta;
 
 //
 
@@ -321,35 +325,69 @@ const actualizarCarrito = () => {
         div.classList.add("productoEnCarrito");
 
         div.innerHTML = `
-<a href="#" class="product">
+<div class="product" >
             <div class="image">
                 <img src=${prod.img} alt= "">
             </div>
         <div class="info">
                 <h3 class="product__title_carrito">${prod.nombre}</h3>
             <div class="main__price__carrito">
-                $${prod.precio}
-                <span class="price__promo__carrito">$8.499</span>
-            </div>
-            <div>
+                <div>
+                    $${prod.precio}
+                    <span class="price__promo__carrito">$8.499</span>
+                </div>
+                <div class="product__sumaresta">
+                    <form action="">
+                        <button class="product__buttons" onclick="Botonresta(${prod.cantidad})"><i class="fa-solid fa-minus"></i></button>
+                    </form>
+                        <input type="tel" autocomplete="off" disabled class="product__input" value="${prod.cantidad}">
+                    <form action="">
+                        <button class="product__buttons" onclick="Botonsuma(${prod.cantidad})"><i class="fa-solid fa-plus"></i></button>
+                    </form>
+                </div>
                 <div class="main__gitemcontainer1">
-                            <div class="main__gitem1">
-                                <p> Cantidad: <span id="cantidad"> ${prod.cantidad} </span> </p>
-                            </div>
-                            <div class="main__gitem1">
-                                <button  onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
-                            </div>
+                    <div class="main__gitem1">
+                        <button  onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+                    </div>
                 </div>
             </div>
+            <div >
+                <p class="buyadvertisment" onclick="Botonresta(${prod.cantidad}></p>
+            </div>
         </div>
-</a>
+</div>
         `
         contenedorCarrito.appendChild(div)
 
-        localStorage.setItem(`carrito`, JSON.stringify(carrito))
-    })
+        localStorage.setItem(`carrito`, JSON.stringify(carrito));
 
+        precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0);
+        
+        // Variables a sacar el default
+        
+        // Boton que borra enteramente el producto
+        const botoneliminar = document.querySelector(".boton-eliminar")
+
+        // Le saco el default con eventlistener
+        botoneliminar.addEventListener (`click`,(e)=>{
+            e.preventDefault();
+        })
+        // resta la cantidad del producto
+        Botonresta = () => {
+        carrito.forEach((prod) =>{
+            if(prod.cantidad > 1){
+                prod.cantidad -= 1
+            }else if(prod.cantidad === 0){ // no dejamos comprar al cliente
+                prod.cantidad = 1
+        }
+        console.log(carrito);
+        actualizarCarrito();
+    })
+}
+
+    })
         contadorCarrito.innerText = carrito.length; // actualiza con la longitud del carrito.
         
         console.log(carrito)
 }
+
