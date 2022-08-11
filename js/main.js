@@ -1,3 +1,31 @@
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    
+    effect : `slide`,
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+});
+
+
+
+
+
+
 
 // REGISTER 
 
@@ -205,8 +233,10 @@ const carritoVacio = document.querySelector("#carritoVacio");
 const productoEnCarrito = document.querySelector(".productoEnCarrito");
 // contenedor carrito
 const contenedorCarrito = document.querySelector("#carrito-contenedor");
-//precio total
+// precio total
 const precioTotal = document.querySelector("#precioTotal");
+// boton de la resta carrito
+let Botonresta;
 // ARRAY CARRITO
 let carrito = [];
 
@@ -274,7 +304,6 @@ const agregarAlCarrito = (prodId) => {
             // map encuentre cual es el q igual al que está agregado, le suma la cantidad
             if (prod.id === prodId){
                 prod.cantidad++
-                // cantidadcarrito = prod.cantidad
             }
         })
     } else { //EN CASO DE QUE NO ESTÉ, LO AGREGAMOS AL CARRITO
@@ -284,8 +313,7 @@ const agregarAlCarrito = (prodId) => {
     }
     //Va a buscar el item, agregarlo al carrito y llama a la funcion actualizarCarrito, que recorre
     //el carrito y se ve.
-    actualizarCarrito(); //LLAMAMOS A LA FUNCION QUE CREAMOS EN EL TERCER PASO. CADA VEZ Q SE 
-    //MODIFICA EL CARRITO
+    actualizarCarrito(); //LLAMAMOS A LA FUNCION QUE CREAMOS
 }
 
 
@@ -310,8 +338,6 @@ const Botonsuma = () => {
         actualizarCarrito();
     })
 }
-//
-let Botonresta;
 
 //
 
@@ -337,22 +363,22 @@ const actualizarCarrito = () => {
                     <span class="price__promo__carrito">$8.499</span>
                 </div>
                 <div class="product__sumaresta">
-                    <form action="">
+                    <form>
                         <button class="product__buttons" onclick="Botonresta(${prod.cantidad})"><i class="fa-solid fa-minus"></i></button>
                     </form>
                         <input type="tel" autocomplete="off" disabled class="product__input" value="${prod.cantidad}">
-                    <form action="">
-                        <button class="product__buttons" onclick="Botonsuma(${prod.cantidad})"><i class="fa-solid fa-plus"></i></button>
+                    <form>
+                        <button type="button" class="product__buttons" onclick="Botonsuma(${prod.cantidad})"><i class="fa-solid fa-plus"></i></button>
                     </form>
                 </div>
                 <div class="main__gitemcontainer1">
                     <div class="main__gitem1">
-                        <button  onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+                        <button type="button" onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
                     </div>
                 </div>
             </div>
-            <div >
-                <p class="buyadvertisment" onclick="Botonresta(${prod.cantidad}></p>
+            <div>
+                <p class="buyadvertisment pnot-show">Puedes comprar desde 1 !!!</p>
             </div>
         </div>
 </div>
@@ -367,7 +393,8 @@ const actualizarCarrito = () => {
         
         // Boton que borra enteramente el producto
         const botoneliminar = document.querySelector(".boton-eliminar")
-
+        // cartel que salta al querer comprar menos 1 prodcuto
+        const buyadvertisment = document.querySelector(".buyadvertisment");
         // Le saco el default con eventlistener
         botoneliminar.addEventListener (`click`,(e)=>{
             e.preventDefault();
@@ -377,17 +404,17 @@ const actualizarCarrito = () => {
         carrito.forEach((prod) =>{
             if(prod.cantidad > 1){
                 prod.cantidad -= 1
-            }else if(prod.cantidad === 0){ // no dejamos comprar al cliente
-                prod.cantidad = 1
-        }
+            }else if(prod.cantidad === 1){ // dejamos comprar al cliente minimo 1
+                buyadvertisment.classList.remove("pnot-show");
+        };
         console.log(carrito);
         actualizarCarrito();
-    })
-}
+    });
+};
 
-    })
+    });
         contadorCarrito.innerText = carrito.length; // actualiza con la longitud del carrito.
         
-        console.log(carrito)
-}
+        console.log(carrito);
+};
 

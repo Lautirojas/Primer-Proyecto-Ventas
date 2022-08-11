@@ -133,7 +133,12 @@
 }
 
 .buyadvertisment{
-    width: 69%;
+    padding-left: 140px;
     color:  #f73;
-    text-align: end;
+    text-align: center;
+}
+
+.pnot-show {
+    opacity: 0;
+    visibility: hidden;
 }

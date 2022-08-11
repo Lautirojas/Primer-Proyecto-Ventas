@@ -219,6 +219,19 @@
   padding: 25px;
 }
 
+.swiper-scrollbar {
+  bottom: 0px;
+}
+
+.swiper {
+  padding-top: 7px;
+  padding-bottom: 50px;
+}
+
+.swiper-pagination {
+  bottom: 0px;
+}
+
 .header {
   background-color: #37373f;
 }
@@ -686,9 +699,14 @@
 }
 
 .buyadvertisment {
-  width: 69%;
+  padding-left: 140px;
   color: #f73;
-  text-align: end;
+  text-align: center;
+}
+
+.pnot-show {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .main__h2correction {
@@ -3115,6 +3133,9 @@ img {
 }
 
 @media screen and (max-width: 767px) {
+  .slide__container {
+    display: none;
+  }
   .container-fluid {
     display: none;
   }
@@ -4004,6 +4025,9 @@ img {
 }
 
 @media screen and (max-width: 425px) {
+  .nav__flexend {
+    padding-top: 0px;
+  }
   .main__containslider1 {
     margin-right: 0;
     margin-left: 0;

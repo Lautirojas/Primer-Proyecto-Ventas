@@ -2652,6 +2652,11 @@
 
 
 @media screen and (max-width:767px){
+
+    .slide__container{
+        display: none;
+    }
+
 .container-fluid{
 display: none;
 }
@@ -3910,6 +3915,10 @@ display: none;
 
 
 @media screen and (max-width: 425px){
+
+.nav__flexend {
+    padding-top: 0px;
+}
 
 .main__containslider1{
     margin-right: 0;
