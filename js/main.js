@@ -130,7 +130,13 @@ const parrafo = document.querySelector("#warnings");
             warnings += `La contraseña no es valida <br>`
             entrar = true;
         }
-        (entrar === true) ? parrafo.innerHTML = warnings : saludo();
+        // (entrar === true) ? parrafo.innerHTML = warnings : saludo();
+        if(entrar === true){
+            parrafo.innerHTML = warnings
+        }else{
+            ejecutarFormulario()
+            saludo()
+        }
 
 })
 
@@ -185,6 +191,7 @@ const parrafo = document.querySelector("#warnings");
     let contrasenastorage = localStorage.getItem(`contrasenacompleta`);
 
 // VERIFICA QUE SEA EL USUARIO QUE SE REGISTRO 
+
     const verificarStorage = () =>{
         if (nombrestorage !== null && emailstorage !== null && contrasenastorage !== null){
             nombreapellido = nombrestorage;
@@ -194,15 +201,12 @@ const parrafo = document.querySelector("#warnings");
         } else {
             formulario.addEventListener(`submit`,(e) => {
                 e.preventDefault();
-                ejecutarFormulario();
             nombrecompleto.value = ``;
             email.value = ``;
             Contrasena.value = ``;
             })
         }
     }
-
-    verificarStorage();
 
     // CARRITO
 
@@ -236,15 +240,16 @@ const contenedorCarrito = document.querySelector("#carrito-contenedor");
 // precio total
 const precioTotal = document.querySelector("#precioTotal");
 // boton de la resta carrito
-let Botonresta;
 // ARRAY CARRITO
 let carrito = [];
+let buyadvertisment
 
 document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('carrito')){
         carrito = JSON.parse(localStorage.getItem('carrito'))
         actualizarCarrito()
     }
+    verificarStorage()
 })
 
 
@@ -320,24 +325,34 @@ const agregarAlCarrito = (prodId) => {
 
 // HAGO QUE EL ICONO TACHO LO BORRE
 
-const eliminarDelCarrito = (prodId)  => {
+const eliminarDelCarrito = (prodId) => {  
     const item = carrito.find((prod) => prod.id === prodId)
     const indice = carrito.indexOf(item);
-    carrito.splice(indice, 1);
+    carrito.splice(indice,1)
+    console.log(carrito)
+    localStorage.setItem("carrito",JSON.stringify(carrito));
+    actualizarCarrito();
+}
+
+const Botonsuma = (prodId)  => {
+    const item = carrito.find((prod) => prod.id === prodId)
+    console.log(item)
+    console.log(item.cantidad)
+    item.cantidad++
     actualizarCarrito()
 }
-// Suma la cantidad del producto en 1
-const Botonsuma = () => {
-    carrito.forEach((prod) =>{
-        if(prod.cantidad >= 1){
-            prod.cantidad += 1
-        }else{
-            prod.cantidad += 1
-        }
-        console.log(carrito);
-        actualizarCarrito();
-    })
+const Botonresta = (prodId) =>{
+    const item = carrito.find((prod) => prod.id === prodId)
+    if(item.cantidad > 1){
+        item.cantidad--
+    }else if(item.cantidad === 1){ // dejamos comprar al cliente minimo 1
+        setTimeout(() => {
+            buyadvertisment.classList.remove("pnot-show");
+        }, 1000);
+    };
+    actualizarCarrito()
 }
+
 
 //
 
@@ -349,7 +364,6 @@ const actualizarCarrito = () => {
     carrito.forEach((prod) =>{
         const div = document.createElement(`div`)
         div.classList.add("productoEnCarrito");
-
         div.innerHTML = `
 <div class="product" >
             <div class="image">
@@ -364,11 +378,11 @@ const actualizarCarrito = () => {
                 </div>
                 <div class="product__sumaresta">
                     <form>
-                        <button class="product__buttons" onclick="Botonresta(${prod.cantidad})"><i class="fa-solid fa-minus"></i></button>
+                        <button class="product__buttons" onclick="Botonresta(${prod.id})"><i class="fa-solid fa-minus"></i></button>
                     </form>
                         <input type="tel" autocomplete="off" disabled class="product__input" value="${prod.cantidad}">
                     <form>
-                        <button type="button" class="product__buttons" onclick="Botonsuma(${prod.cantidad})"><i class="fa-solid fa-plus"></i></button>
+                        <button type="button" class="product__buttons" id="btn-suma${prod.id}" onclick="Botonsuma(${prod.id})"><i class="fa-solid fa-plus"></i></button>
                     </form>
                 </div>
                 <div class="main__gitemcontainer1">
@@ -394,23 +408,23 @@ const actualizarCarrito = () => {
         // Boton que borra enteramente el producto
         const botoneliminar = document.querySelector(".boton-eliminar")
         // cartel que salta al querer comprar menos 1 prodcuto
-        const buyadvertisment = document.querySelector(".buyadvertisment");
+        buyadvertisment = document.querySelector(".buyadvertisment");
         // Le saco el default con eventlistener
         botoneliminar.addEventListener (`click`,(e)=>{
             e.preventDefault();
         })
         // resta la cantidad del producto
-        Botonresta = () => {
-        carrito.forEach((prod) =>{
-            if(prod.cantidad > 1){
-                prod.cantidad -= 1
-            }else if(prod.cantidad === 1){ // dejamos comprar al cliente minimo 1
-                buyadvertisment.classList.remove("pnot-show");
-        };
-        console.log(carrito);
-        actualizarCarrito();
-    });
-};
+//         Botonresta = () => {
+//         carrito.forEach((prod) =>{
+//             if(prod.cantidad > 1){
+//                 prod.cantidad -= 1
+//             }else if(prod.cantidad === 1){ // dejamos comprar al cliente minimo 1
+//                 buyadvertisment.classList.remove("pnot-show");
+//         };
+//         console.log(carrito);
+//         actualizarCarrito();
+//     });
+// };
 
     });
         contadorCarrito.innerText = carrito.length; // actualiza con la longitud del carrito.
