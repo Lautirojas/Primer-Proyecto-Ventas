@@ -261,7 +261,7 @@ stockProductos.forEach((producto) => {
     div.classList.add(`list__item`);
     
     div.innerHTML = `
-    <a href="#" class="product">
+    <div href="#" class="product">
             <div class="image">
                 <img src=${producto.img} alt= "">
             </div>
@@ -284,7 +284,7 @@ stockProductos.forEach((producto) => {
             </div>
 
 
-    </a>
+    </div>
     `
 
     contenedorProductos.appendChild(div)
@@ -348,7 +348,7 @@ const Botonresta = (prodId) =>{
     }else if(item.cantidad === 1){ // dejamos comprar al cliente minimo 1
         setTimeout(() => {
             buyadvertisment.classList.remove("pnot-show");
-        }, 1000);
+        }, 300);
     };
     actualizarCarrito()
 }
@@ -361,72 +361,70 @@ const actualizarCarrito = () => {
 
 
     //Por cada producto creamos un div con esta estructura y le hacemos un append al contenedor-Productos (el modal)
-    carrito.forEach((prod) =>{
-        const div = document.createElement(`div`)
-        div.classList.add("productoEnCarrito");
-        div.innerHTML = `
-<div class="product" >
-            <div class="image">
-                <img src=${prod.img} alt= "">
-            </div>
-        <div class="info">
-                <h3 class="product__title_carrito">${prod.nombre}</h3>
-            <div class="main__price__carrito">
-                <div>
-                    $${prod.precio}
-                    <span class="price__promo__carrito">$8.499</span>
-                </div>
-                <div class="product__sumaresta">
-                    <form>
-                        <button class="product__buttons" onclick="Botonresta(${prod.id})"><i class="fa-solid fa-minus"></i></button>
-                    </form>
-                        <input type="tel" autocomplete="off" disabled class="product__input" value="${prod.cantidad}">
-                    <form>
-                        <button type="button" class="product__buttons" id="btn-suma${prod.id}" onclick="Botonsuma(${prod.id})"><i class="fa-solid fa-plus"></i></button>
-                    </form>
-                </div>
-                <div class="main__gitemcontainer1">
-                    <div class="main__gitem1">
-                        <button type="button" onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <p class="buyadvertisment pnot-show">Puedes comprar desde 1 !!!</p>
-            </div>
+    if(carrito.length === 0) {
+        const div = document.createElement("div")
+        div.innerHTML= `
+        <div class="card-body" style="padding: 12rem 1rem;" id="carritoVacio" >
+            <h5 class="card-title" style="color: #666;">Tu Carrito esta vacio</h5>
+            <p class="card-text" style="color: #999;">¿No sabés qué comprar? ¡Miles de productos te esperan!</p>
+            <a href="../index.html" class="btn btn-primary">Seguir Comprando</a>
         </div>
-</div>
         `
         contenedorCarrito.appendChild(div)
-
-        localStorage.setItem(`carrito`, JSON.stringify(carrito));
-
-        precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0);
-        
-        // Variables a sacar el default
-        
-        // Boton que borra enteramente el producto
-        const botoneliminar = document.querySelector(".boton-eliminar")
-        // cartel que salta al querer comprar menos 1 prodcuto
-        buyadvertisment = document.querySelector(".buyadvertisment");
-        // Le saco el default con eventlistener
-        botoneliminar.addEventListener (`click`,(e)=>{
-            e.preventDefault();
-        })
-        // resta la cantidad del producto
-//         Botonresta = () => {
-//         carrito.forEach((prod) =>{
-//             if(prod.cantidad > 1){
-//                 prod.cantidad -= 1
-//             }else if(prod.cantidad === 1){ // dejamos comprar al cliente minimo 1
-//                 buyadvertisment.classList.remove("pnot-show");
-//         };
-//         console.log(carrito);
-//         actualizarCarrito();
-//     });
-// };
-
-    });
+    }else{
+        carrito.forEach((prod) =>{
+            const div = document.createElement(`div`)
+            div.innerHTML = `
+    <div class="product-carrito" >
+                <div class="image">
+                    <img src=${prod.img} alt= "">
+                </div>
+            <div class="info">
+                    <h3 class="product__title_carrito">${prod.nombre}</h3>
+                <div class="main__price__carrito">
+                    <div>
+                        $${prod.precio}
+                        <span class="price__promo__carrito">$8.499</span>
+                    </div>
+                    <div class="product__sumaresta">
+                        <form>
+                            <button class="product__buttons" onclick="Botonresta(${prod.id})"><i class="fa-solid fa-minus"></i></button>
+                        </form>
+                            <input type="tel" autocomplete="off" disabled class="product__input" value="${prod.cantidad}">
+                        <form>
+                            <button type="button" class="product__buttons" id="btn-suma${prod.id}" onclick="Botonsuma(${prod.id})"><i class="fa-solid fa-plus"></i></button>
+                        </form>
+                    </div>
+                    <div class="main__gitemcontainer1">
+                        <div class="main__gitem1">
+                            <button type="button" onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="buyadvertisment pnot-show">Puedes comprar desde 1 !!!</p>
+                </div>
+            </div>
+    </div>
+            `
+            contenedorCarrito.appendChild(div)
+    
+            localStorage.setItem(`carrito`, JSON.stringify(carrito));
+    
+            precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0);
+            
+            // Variables a sacar el default
+            
+            // Boton que borra enteramente el producto
+            const botoneliminar = document.querySelector(".boton-eliminar")
+            // cartel que salta al querer comprar menos 1 prodcuto
+            buyadvertisment = document.querySelector(".buyadvertisment");
+            // Le saco el default con eventlistener
+            botoneliminar.addEventListener (`click`,(e)=>{
+                e.preventDefault();
+            })
+        });
+    }
         contadorCarrito.innerText = carrito.length; // actualiza con la longitud del carrito.
         
         console.log(carrito);

@@ -709,6 +709,15 @@
   visibility: hidden;
 }
 
+.product-carrito {
+  align-items: flex-start;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  text-decoration: none;
+}
+
 .main__h2correction {
   font-size: 1.5em;
 }

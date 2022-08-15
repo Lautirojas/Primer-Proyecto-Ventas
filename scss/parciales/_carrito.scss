@@ -142,3 +142,12 @@
     opacity: 0;
     visibility: hidden;
 }
+
+.product-carrito{
+    align-items: flex-start;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    text-decoration: none;
+}
