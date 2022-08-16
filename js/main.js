@@ -235,14 +235,16 @@ const contadorCarrito = document.querySelector("#contadorCarrito")
 const carritoVacio = document.querySelector("#carritoVacio");
 // DIV CREADO EN EL CARRITO
 const productoEnCarrito = document.querySelector(".productoEnCarrito");
-// contenedor carrito
+// CONTENEDOR DEL CARRITO
 const contenedorCarrito = document.querySelector("#carrito-contenedor");
-// precio total
+// CONTENEDOR DEL PRECIO TOTAL
+const containpricetotal = document.querySelector("#containpricetotal")
+// SPAN QUE DICE EL PRECIO TOTAL
 const precioTotal = document.querySelector("#precioTotal");
-// boton de la resta carrito
+// CARTEL DE MINIMO 1
+let buyadvertisment
 // ARRAY CARRITO
 let carrito = [];
-let buyadvertisment
 
 document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('carrito')){
@@ -359,9 +361,9 @@ const Botonresta = (prodId) =>{
 const actualizarCarrito = () => {
     contenedorCarrito.innerHTML = "";
 
-
     //Por cada producto creamos un div con esta estructura y le hacemos un append al contenedor-Productos (el modal)
     if(carrito.length === 0) {
+        // DIV QUE EN CASO DE QUE NO HAYA PRODUCTOS ME DEJA UN CARTEL DE CARRITO VACIO
         const div = document.createElement("div")
         div.innerHTML= `
         <div class="card-body" style="padding: 12rem 1rem;" id="carritoVacio" >
@@ -370,10 +372,17 @@ const actualizarCarrito = () => {
             <a href="../index.html" class="btn btn-primary">Seguir Comprando</a>
         </div>
         `
+        // METO EL CARTEL ADENTRO DEL CONTENEDOR CARRITO
         contenedorCarrito.appendChild(div)
-    }else{
+        // ACTUALIZO EL PRECIO A 0 POR SI ACASO
+        precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad / 0, 0);
+        // DESSAPAREZCO EL CARTEL DEL PRECIO TOTAL
+        containpricetotal.classList.add(`d-none`);
+
+    }else{ // SI EL CLIENTE CARGA UN PRODUCTO SE INSERTA EL HTML CON EL PRODUCTO Y SUS DETALLES
         carrito.forEach((prod) =>{
-            const div = document.createElement(`div`)
+            // CREO EL DIV DONDE CONTENDRE EL PRODUCTO SELECCIONADO
+            const div = document.createElement(`div`);
             div.innerHTML = `
     <div class="product-carrito" >
                 <div class="image">
@@ -392,7 +401,7 @@ const actualizarCarrito = () => {
                         </form>
                             <input type="tel" autocomplete="off" disabled class="product__input" value="${prod.cantidad}">
                         <form>
-                            <button type="button" class="product__buttons" id="btn-suma${prod.id}" onclick="Botonsuma(${prod.id})"><i class="fa-solid fa-plus"></i></button>
+                            <button type="button" class="product__buttons" onclick="Botonsuma(${prod.id})"><i class="fa-solid fa-plus"></i></button>
                         </form>
                     </div>
                     <div class="main__gitemcontainer1">
@@ -406,14 +415,19 @@ const actualizarCarrito = () => {
                 </div>
             </div>
     </div>
+    
             `
+            // INSERTA LOS PRODUCTOS DENTRO DEL DIV
             contenedorCarrito.appendChild(div)
-    
+            // LE SACA EL DISPLAY NONE AL PRECIO TOTAL + SEGUIR COMPRA
+            containpricetotal.classList.remove(`d-none`);
+            // METE EL PRODUCTO DENTRO DEL STORAGE
             localStorage.setItem(`carrito`, JSON.stringify(carrito));
-    
-            precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0);
+            // CREA EL PRECIO TOTAL
+            precioTotal.innerText = "$" + carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0);
             
-            // Variables a sacar el default
+            
+            // VARIABLES CREADAS PARA SACAR EL DEFAULT
             
             // Boton que borra enteramente el producto
             const botoneliminar = document.querySelector(".boton-eliminar")
@@ -425,6 +439,7 @@ const actualizarCarrito = () => {
             })
         });
     }
+        // ME MUESTRA EN EL CONTADOR DEL CARRITO CUANTOS ELEMENTOS POSEE
         contadorCarrito.innerText = carrito.length; // actualiza con la longitud del carrito.
         
         console.log(carrito);
