@@ -114,7 +114,8 @@
 
                         <div class="nav__paddright"><a class="nav__icono" href="../index.html"><img src="../imagenes/ForGamers2.png" alt="ForGamers"></a></div>
 
-
+                        <!-- BUSCADOR -->
+                        
                         <div class="nav__searchcontainer">
                                 <form>
                                         <label for="busqueda" id="busqueda"></label>
@@ -123,6 +124,7 @@
                                 </form>
                         </div>
 
+                        <!-- MODAL TRIGGER BUTTON + ICONOS -->
                         <div class="nav__flexend">
                                 <ul class="d-flex">
                                         <li class="nav__spacebtwnicons">
@@ -135,19 +137,20 @@
                                         <li class="nav__spacebtwnicons">
                                                 <a class="nav__perfil" href="#">
                                                         <!-- Button trigger modal -->
-                                                        <i class="fa-solid fa-user"  id="triggerbutton" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+                                                        <i class="fa-solid fa-user"  id="triggerbutton" class="btn btn-primary"></i>
                                                 </a>
                                         </li>
                                 </ul>
                         </div>
                         </nav>
-                                        <!-- Modal login e register -->
+                                <!-- Modal login e register -->
 
                                         <!-- Modal -->
 
                                         
-                                        <!-- LOGIN -->
+                                        <!-- LOGIN Y REGISTER-->
 
+                                        <!-- LOGIN -->
                                         <div class="overlaymodal" id="overlay">
                                                 <div class="modalcontainer logindisappear" id="modalloogin">
                                                         <div>
@@ -161,15 +164,15 @@
                                                         <form class="modal__body">
                                                                 <div class="d-flex flex-column">
                                                                         <label for="email" class="text-light"> Email :</label>
-                                                                        <input type="email" class="modal__input modal__email" placeholder="Email@gmail.com">
+                                                                        <input type="email"  class="modal__input modal__email" placeholder="Email@gmail.com" id="emaillogin">
                                                                 </div>
                                                                 <div class="d-flex flex-column"> 
                                                                         <label for="password" class="text-light"> Contraseña :</label>
-                                                                        <input type="password" class="modal__input modal__pass" placeholder="Password">
+                                                                        <input type="password" class="modal__input modal__pass" placeholder="Password" id="passlogin">
                                                                 </div>
                                                                 <div class="modal__buttoncontain">
                                                                         <div class="modal__botonlogin">
-                                                                                <button class="modal__button">
+                                                                                <button class="modal__button" id="btnlogin">
                                                                                         Iniciar Sesion
                                                                                 </button>
                                                                         </div>
@@ -179,10 +182,17 @@
                                                                                 </button>
                                                                         </div>
                                                                 </div>
+                                                                <div class="d-flex justify-content-center flex-column">
+                                                                        <div class="d-flex justify-content-center">
+                                                                                <i class="fa-solid fa-circle-check pnot-show" style="color: #91c612; font-size: 45px; position: absolute;" id="logincorrecticon"></i>
+                                                                                <i class="fa-solid fa-circle-xmark pnot-show" style="color: red; font-size: 45px;" id="loginxicon"></i>
+                                                                        </div>
+                                                                        <p class="d-flex justify-content-center" id="loginp"></p>
+                                                                </div>
                                                         </form>
                                                 </div>
 
-                                                                                <!-- REGISTER -->
+                                                <!-- REGISTER -->
 
                                                 <div class="modalcontainer registerappear" id="modalregister">
                                                         <div>
@@ -222,9 +232,16 @@
                                                                         <p class="warnings" id="warnings"></p>
                                                                 </div>
                                                         </form>
-                                                        <p id="saludo" class="text-light"></p>
+                                                                <p id="saludo" class="text-light psaludoregisster"></p>
+                                                        
+                                                        <div class="modal__botonlogin not-show"> 
+                                                                <button type="submit" class="modal__button" id="volverlogin">
+                                                                        Iniciar Sesion
+                                                                </button>
+                                                        </div>
+                                                        
                                                         <div class="modal__botonlogin not-show" id="logoutcontainer"> 
-                                                                <button type=submit class="modal__button " id="logout">
+                                                                <button type="submit" class="modal__button " id="logout">
                                                                         Cerrar Sesion
                                                                 </button>
                                                         </div>

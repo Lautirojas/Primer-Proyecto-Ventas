@@ -718,6 +718,18 @@
   text-decoration: none;
 }
 
+.color-red {
+  color: red;
+}
+
+.color-greenpage {
+  color: #91C612;
+}
+
+.psaludoregisster {
+  padding-top: 10px;
+}
+
 .main__h2correction {
   font-size: 1.5em;
 }

@@ -65,6 +65,8 @@ const containerlogout = document.querySelector("#logoutcontainer");
 const finishregigister = document.querySelector("#finishregigister")
 // Parrafo que me dice lo faltante para el registro
 const parrafo = document.querySelector("#warnings");
+// VOLVER AL LOG-IN
+const volverlogin = document.querySelector("#volverlogin");
 
 // Events
 
@@ -130,7 +132,7 @@ const parrafo = document.querySelector("#warnings");
             warnings += `La contraseña no es valida <br>`
             entrar = true;
         }
-        // (entrar === true) ? parrafo.innerHTML = warnings : saludo();
+
         if(entrar === true){
             parrafo.innerHTML = warnings
         }else{
@@ -143,7 +145,7 @@ const parrafo = document.querySelector("#warnings");
 
     // FUNCIONES
 
-// STORAGE & REGISTER-LOGIN
+// STORAGE DEL REGISTER
 
 //  CERRAR SESION
     const cerrarSesion = () =>{
@@ -162,7 +164,7 @@ const parrafo = document.querySelector("#warnings");
 
 // CIERRA EL REGISTER E SALUDA AL USUARIO
     const saludo = () =>{
-        saludousername.innerHTML += `Hola ${nombreapellido}`;
+        saludousername.innerHTML += `Hola ${nombreapellido}, Bienvenido a ForGamers`;
         containerlogout.classList.remove("not-show");
         formulario.style.display = `none`;
     }
@@ -185,7 +187,7 @@ const parrafo = document.querySelector("#warnings");
 
     }
 
-// HACE QUE LA VARIABLE SE LE GUARDE EL NOMBRE GUARDADO EN EL STORAGE
+// HACE QUE A LA VARIABLE SE LE GUARDE EL DATO GUARDADO EN EL STORAGE
     let nombrestorage = localStorage.getItem(`nombrecompleto`);
     let emailstorage = localStorage.getItem(`emailcompleto`);
     let contrasenastorage = localStorage.getItem(`contrasenacompleta`);
@@ -207,6 +209,70 @@ const parrafo = document.querySelector("#warnings");
             })
         }
     }
+
+    // LOGIN
+
+    // VARIABLES
+
+// INPUT DEL EMAIL LOGIN
+const emaillogin = document.querySelector("#emaillogin");
+// INPUT DE LA CONTRASENA LOGIN
+const passlogin = document.querySelector("#passlogin");
+// BOTON INICIAR SESION LOGIN
+const btnlogin = document.querySelector("#btnlogin");
+// TEXTO QUE INDICA ACOMPANA EL ICONO SI ES CORRECTO O NO LOS DATOS
+const loginp = document.querySelector("#loginp");
+// ICONO CORRECTO LOGIN
+const logincorrecticon = document.querySelector("#logincorrecticon");
+// ICONO INCORRECTO LOGIN   
+const loginxicon = document.querySelector("#loginxicon");
+
+// FUNCIONES
+
+
+
+// LISTENERS
+
+btnlogin.addEventListener (`click`,(e) => {
+    e.preventDefault();
+    console.log()
+    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+    let warnings = "";
+    loginp.innerHTML = "";
+    
+    entrar = false;
+    if(!regexEmail.test(emaillogin.value)){
+        warnings += `El email no es valido <br>`;
+        entrar = true
+    }
+    if(emailstorage !== emaillogin.value || contrasenastorage !== passlogin.value){
+        loginp.classList.add("color-red");
+        loginp.classList.remove("pnot-show");
+        loginxicon.classList.remove("pnot-show");
+        loginp.classList.remove("color-greenpage");
+        logincorrecticon.classList.add("pnot-show");
+        warnings += `Usuario Incorrecto`;
+        entrar = true
+    }
+    if(entrar === true){
+        loginp.innerHTML = warnings
+    }
+    else{
+        loginp.classList.remove("color-red");
+        loginp.classList.add("color-greenpage");
+        logincorrecticon.classList.add("color-greenpage");
+        logincorrecticon.classList.remove("pnot-show");
+        loginxicon.classList.add("pnot-show");
+        loginp.innerHTML = `Has iniciado sesion correctamente`;
+        setTimeout(() => {
+            overlay.style.opacity = 0;
+            overlay.style.visibility = "hidden";
+            modalloogin.classList.add("logindisappear");
+        },3000);
+    }
+})
+
+
 
     // CARRITO
 
