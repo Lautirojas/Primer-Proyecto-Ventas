@@ -126,7 +126,7 @@
 
                         <!-- MODAL TRIGGER BUTTON + ICONOS -->
                         <div class="nav__flexend">
-                                <ul class="d-flex">
+                                <ul class="d-flex align-items-center">
                                         <li class="nav__spacebtwnicons">
                                                 <i class="fa-solid fa-magnifying-glass nav__searchcelu"></i>
                                         </li>
@@ -134,11 +134,16 @@
                                                 <a class="nav__compras " href="../paginas/carrito.html"><i class="fa-solid fa-cart-shopping cart"></i></a>
                                                 <span id="contadorCarrito" class="contador__carrito">0</span>
                                         </li>
-                                        <li class="nav__spacebtwnicons">
+                                        <li class="nav__spacebtwnicons position-relative ">
+
                                                 <a class="nav__perfil" href="#">
                                                         <!-- Button trigger modal -->
                                                         <i class="fa-solid fa-user"  id="triggerbutton" class="btn btn-primary"></i>
                                                 </a>
+
+                                                <div  id="loginconfig" class="d-none">
+                                                        
+                                                </div>
                                         </li>
                                 </ul>
                         </div>
@@ -218,7 +223,7 @@
                                                                 </div>
                                                                 <div class="modal__buttoncontain">
                                                                         <div class="modal__botonlogin">
-                                                                                <button  type="submit" class="modal__button" id="finishregigister">
+                                                                                <button  type="submit" class="modal__button" id="finishregister">
                                                                                         Registrarse
                                                                                 </button>
                                                                         </div>
@@ -234,21 +239,18 @@
                                                         </form>
                                                                 <p id="saludo" class="text-light psaludoregisster"></p>
                                                         
-                                                        <div class="modal__botonlogin not-show"> 
-                                                                <button type="submit" class="modal__button" id="volverlogin">
-                                                                        Iniciar Sesion
-                                                                </button>
-                                                        </div>
                                                         
-                                                        <div class="modal__botonlogin not-show" id="logoutcontainer"> 
-                                                                <button type="submit" class="modal__button " id="logout">
-                                                                        Cerrar Sesion
+                                                        <div class="modal__botonlogin not-show" id="volverlogincontainer"> 
+                                                                <button type="submit" class="modal__button " id="volverlogin">
+                                                                        Iniciar Sesión
                                                                 </button>
                                                         </div>
                                                 </div>
                                         </div>
 
+                                        <!-- PRUEBA PERFIL-CONFIG -->
 
+                                        
                         <!-- A PAGINAS -->
 
                         <div class="nav__container">

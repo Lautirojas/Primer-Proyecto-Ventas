@@ -57,26 +57,91 @@ const email = document.querySelector("#email");
 const Contrasena = document.querySelector("#password");
 // Luego del registro
 const saludousername = document.querySelector("#saludo");
-// Cerrar sesion
-const logout = document.querySelector("#logout");
-// Contenedor de cerrar sesion
-const containerlogout = document.querySelector("#logoutcontainer");
-// Btn para terminar de registrarse 
-const finishregigister = document.querySelector("#finishregigister")
-// Parrafo que me dice lo faltante para el registro
-const parrafo = document.querySelector("#warnings");
 // VOLVER AL LOG-IN
 const volverlogin = document.querySelector("#volverlogin");
-
+// CONTENEDOR DE VOLVER AL LOG-IN
+const containervolverlogin = document.querySelector("#volverlogincontainer");
+// Btn para terminar de registrarse 
+const finishregister = document.querySelector("#finishregister")
+// Parrafo que me dice lo faltante para el registro
+const parrafo = document.querySelector("#warnings");
+// Contenedor del login config
+const loginconfig = document.querySelector("#loginconfig");
+//
+let buscar1
 // Events
+let usuariosLogeados2 = []
 
 // ACTIVA EL LOGIN-REGISTER
+
+    const cerrarsesionlogin = () => {
+
+        localStorage.removeItem(`nombrecompleto`);
+        localStorage.removeItem(`emailcompleto`);
+        localStorage.removeItem(`contrasenacompleta`);
+
+        loginconfig.classList.remove("configprofile");
+        revertirsaludo();
+    }
+
     triggerbutton.addEventListener(`click`,(e) => {
         e.preventDefault();
-        overlay.style.opacity = 1;
-        overlay.style.visibility = "visible";
         modalloogin.classList.remove("logindisappear");
+
+        if(localStorage.getItem("usersregistered")){
+            usuariosLogeados2 = JSON.parse(localStorage.getItem('usersregistered'));
+            buscar1 = usuariosLogeados2.find(el => el.correo === emaillogin.value && el.contrasena === passlogin.value);
+        }
+        
+        if(!buscar1){
+                overlay.style.opacity = 1;
+                overlay.style.visibility = "visible";
+            }
+        
+        if(localStorage.getItem("emailcompleto")){
+            loginconfig.innerHTML = "";
+            let emailLog = localStorage.getItem("emailcompleto")
+            let nombreLog = localStorage.getItem("nombrecompleto")
+
+            modalloogin.classList.add("logindisappear");
+            overlay.style.opacity = 0;
+            overlay.style.visibility ="hidden";
+            const div = document.createElement("div");
+            div.innerHTML = `
+            <div class="text-light configwelcomeuser configsection"> Bienvenido ${nombreLog}
+            </div>
+                <div class="configloginsection configsection">
+                    <i class="fa-solid fa-user configicon1"></i><span class="text-light">Mi Cuenta</span>
+                </div>
+                <div class="configsection">
+                    <i class="fa-solid fa-right-from-bracket configicon2"></i> 
+                    <span onclick="cerrarsesionlogin()" class="text-light" id="log-out">Cerrar Sesión</span>
+                </div>
+            `
+            loginconfig.appendChild(div)
+            loginconfig.classList.toggle("configprofile")
+        }
+        if(buscar1){
+            loginconfig.innerHTML = "";
+            const div = document.createElement("div");
+            // INNERHTML DE LA CONFIGURACION DEL PERFIL UNA VEZ INICIADO SESION
+            div.innerHTML = `
+            
+            <div class="text-light configwelcomeuser configsection"> Bienvenido ${buscar1.nombre}
+            </div>
+                <div class="configloginsection configsection">
+                    <i class="fa-solid fa-user configicon1"></i><span class="text-light">Mi Cuenta</span>
+                </div>
+                <div class="configsection">
+                    <i class="fa-solid fa-right-from-bracket configicon2"></i> 
+                    <span onclick="cerrarsesionlogin()" class="text-light" id="log-out">Cerrar Sesión</span>
+                </div>
+            ` 
+            loginconfig.appendChild(div)
+            loginconfig.classList.toggle("configprofile")
+        }
     })
+
 // CIERRA EL LOGIN 
     modalclose.addEventListener(`click`,(e) => {
         e.preventDefault();
@@ -105,12 +170,14 @@ const volverlogin = document.querySelector("#volverlogin");
         modalloogin.classList.remove("logindisappear");
     });
 // BORRA EL STORAGE DE QUIEN SE CREO LA CUENTA
-    logout.addEventListener (`click`,(e) => {
+    volverlogin.addEventListener (`click`,(e) => {
         e.preventDefault();
-        cerrarSesion();
+        modalregister.style = "transform: translateY(600px)";
+        modalloogin.classList.remove("logindisappear");
     })
 
 // VALIDACION PREVIA PARA REGISTRARTE
+
 
     let entrar = false;
 
@@ -137,6 +204,7 @@ const volverlogin = document.querySelector("#volverlogin");
             parrafo.innerHTML = warnings
         }else{
             ejecutarFormulario()
+            agregarUserLogeados();
             saludo()
         }
 
@@ -145,27 +213,17 @@ const volverlogin = document.querySelector("#volverlogin");
 
     // FUNCIONES
 
-// STORAGE DEL REGISTER
-
-//  CERRAR SESION
-    const cerrarSesion = () =>{
-        localStorage.removeItem(`nombrecompleto`);
-        localStorage.removeItem(`emailcompleto`);
-        localStorage.removeItem(`contrasenacompleta`);
-        revertirsaludo();
-    }
-
 // DEVUELVE EL REGISTER
     const revertirsaludo = () =>{
         saludousername.innerHTML = ``;
-        containerlogout.classList.add("not-show");
+        containervolverlogin.classList.add("not-show");
         formulario.style.display = `block`;
     }
 
 // CIERRA EL REGISTER E SALUDA AL USUARIO
     const saludo = () =>{
         saludousername.innerHTML += `Hola ${nombreapellido}, Bienvenido a ForGamers`;
-        containerlogout.classList.remove("not-show");
+        containervolverlogin.classList.remove("not-show");
         formulario.style.display = `none`;
     }
 
@@ -210,7 +268,11 @@ const volverlogin = document.querySelector("#volverlogin");
         }
     }
 
+
+
     // LOGIN
+
+    
 
     // VARIABLES
 
@@ -220,7 +282,7 @@ const emaillogin = document.querySelector("#emaillogin");
 const passlogin = document.querySelector("#passlogin");
 // BOTON INICIAR SESION LOGIN
 const btnlogin = document.querySelector("#btnlogin");
-// TEXTO QUE INDICA ACOMPANA EL ICONO SI ES CORRECTO O NO LOS DATOS
+// TEXTO QUE INDICA SI EL ICONO ES CORRECTO O NO 
 const loginp = document.querySelector("#loginp");
 // ICONO CORRECTO LOGIN
 const logincorrecticon = document.querySelector("#logincorrecticon");
@@ -229,46 +291,90 @@ const loginxicon = document.querySelector("#loginxicon");
 
 // FUNCIONES
 
+    // ARRAY PARA GENTE YA REGISTRADA
+    let usuariosLogeados = [];
+    // CONSTRUCTORA USUARIOS
+    class UsuarioCreate{
+        constructor (nombre,contrasena,correo) {
+            this.nombre = nombre ,
+            this.contrasena = contrasena ,
+            this.correo = correo
+        }
+    }
+    // FUNCION QUE AGREGA AL STORAGE Y AL ARRAY LOS USUARIOS REGISTRADOS
+    const agregarUserLogeados = ()=>{
+        let newuserlogeado = new UsuarioCreate(nombrecompleto.value, Contrasena.value, email.value);
+        usuariosLogeados.push(newuserlogeado);
+        console.log(usuariosLogeados); 
+        console.log(newuserlogeado);
+        localStorage.setItem('usersregistered', JSON.stringify(usuariosLogeados));
+    }
 
+    // ENCONTRAR AL USER
+
+    let buscar
+
+    const encontraruserlogin = () =>{
+
+        console.log(usuariosLogeados);
+        console.log(buscar);
+    }
 
 // LISTENERS
 
 btnlogin.addEventListener (`click`,(e) => {
     e.preventDefault();
-    console.log()
+    // VARIABLE REGEX EMAIL
     let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+    // TEXTO A PONER EN CASO DE QUE SEA INCORRECTO
     let warnings = "";
+    // TEXTO QUE VA CON DEBAJO DE LOS ICONOS
     loginp.innerHTML = "";
     
     entrar = false;
+    //
+    usuariosLogeados = JSON.parse(localStorage.getItem('usersregistered'));
+    buscar = usuariosLogeados.find(el => el.correo === emaillogin.value && el.contrasena === passlogin.value);
+    console.log(buscar)
+    // usuariosLogeados.forEach(el =>{
+    //     if(emaillogin.value === el)
+    // })
+    // VALIDACION DE QUE EL EMAIL FUE BIEN PUESTO
     if(!regexEmail.test(emaillogin.value)){
         warnings += `El email no es valido <br>`;
         entrar = true
     }
-    if(emailstorage !== emaillogin.value || contrasenastorage !== passlogin.value){
-        loginp.classList.add("color-red");
-        loginp.classList.remove("pnot-show");
-        loginxicon.classList.remove("pnot-show");
-        loginp.classList.remove("color-greenpage");
-        logincorrecticon.classList.add("pnot-show");
+    // CHECKEA QUE EL EMAIL Y LA CONTRASENA SEAN LAS MISMAS QUE LAS QUE SE REGISTRARON
+    if(!buscar){
+        loginp.classList.add("color-red");// LE DA COLOR ROJO
+        loginp.classList.remove("pnot-show");// HACE QUE APAREZCA EL TEXXTO
+        loginxicon.classList.remove("pnot-show");// HACE QUE APAREZCA EL ICONO
+        loginp.classList.remove("color-greenpage");// LE REMUEVE LA CLASE DE VERDE POR SI ACASO
+        logincorrecticon.classList.add("pnot-show");// AL ICONO DE CORRECTO LO VUELVE INVISIBLE EN CASO DE QUE APAREZA
         warnings += `Usuario Incorrecto`;
         entrar = true
     }
     if(entrar === true){
         loginp.innerHTML = warnings
     }
+    //(emailstorage !== emaillogin.value || contrasenastorage !== passlogin.value) ||
     else{
-        loginp.classList.remove("color-red");
-        loginp.classList.add("color-greenpage");
-        logincorrecticon.classList.add("color-greenpage");
-        logincorrecticon.classList.remove("pnot-show");
-        loginxicon.classList.add("pnot-show");
-        loginp.innerHTML = `Has iniciado sesion correctamente`;
+        encontraruserlogin(); // EJECUTA EL BUSCADO DE SU SESION CREADA
+        loginp.classList.remove("color-red");// REMUEVE EL COLOR ROJO
+        loginp.classList.add("color-greenpage");// LE DA COLOR VERDE
+        logincorrecticon.classList.add("color-greenpage");// LE DA COLOR VERDE AL ICONO
+        logincorrecticon.classList.remove("pnot-show");// LE SACA EL INVISIBLE
+        loginxicon.classList.add("pnot-show");// BORRA EL ICONO DE BORRAR
+        loginp.innerHTML = `Has iniciado sesion correctamente`;// TEXTO DETALLE DE INICIO DE SESION
+        // TIMEOUT QUE DESAPARECE EL MODAL LOG-IN
         setTimeout(() => {
-            overlay.style.opacity = 0;
-            overlay.style.visibility = "hidden";
-            modalloogin.classList.add("logindisappear");
-        },3000);
+            if(buscar){
+                modalloogin.classList.add("logindisappear");
+                overlay.style.opacity = 0;
+                overlay.style.visibility ="hidden";
+                console.log("hola")
+            }
+        },1000);
     }
 })
 
@@ -276,20 +382,6 @@ btnlogin.addEventListener (`click`,(e) => {
 
     // CARRITO
 
-    // STOCK
-
-    let stockProductos = [
-        {id: 1, nombre: "Mouse logitech g403", tipo: "mouse", cantidad: 1,  precio: 1200,  img: '../imagenes/mouse.png'},
-        {id: 2, nombre: "Monitor Msi 144Hz", tipo: "monitor", cantidad: 1,  precio: 1100,  img: '../imagenes/monitor.png'},
-        {id: 3, nombre: "PLACA DE VIDEO MSI NVIDIA GEFORCE RTX 3090 VENTUS", tipo: "placa", cantidad: 1,  precio: 1200,  img: '../imagenes/placadevideo.png'},
-        {id: 4, nombre: "Notebook Intel Cloudbook", tipo: "notebook", cantidad: 1,  precio: 1400,  img: '../imagenes/notebook4.png'},
-        {id: 5, nombre: "Silla Gamer Game House Naranja", tipo: "silla", cantidad: 1,  precio: 1200,  img: '../imagenes/sillagamer3_adobe_express.png'},
-        {id: 6, nombre: "Teclado Redragon", tipo: "teclado", cantidad: 1,  precio: 1500,  img: '../imagenes/teclado1.png'},
-        {id: 7, nombre: "Silla Gamer Primus Thronos", tipo: "silla", cantidad: 1,  precio: 500,  img: '../imagenes/sillagamer4_adobe_express.png'},
-        {id: 8, nombre: "Procesador Ryzen 5600g", tipo: "procesador", cantidad: 1,  precio: 500, img: '../imagenes/procesador-ryzen.png'},
-        {id: 9, nombre: "Disco Solido Ssd 240Gb Kingston", tipo: "disco", cantidad: 1,  precio: 500, img: '../imagenes/ssd_240gb_kingston_adobe_express.png'},
-        {id: 10, nombre: "Notebook Samsung Plus V2", tipo: "notebook", cantidad: 1,  precio: 700,  img: '../imagenes/notebook1.png'},
-    ]
 
     // VARIABLES
 
@@ -317,12 +409,20 @@ document.addEventListener('DOMContentLoaded', () => {
         carrito = JSON.parse(localStorage.getItem('carrito'))
         actualizarCarrito()
     }
+    // if (localStorage.getItem('usersregistered')){
+    //     usuariosLogeados = JSON.parse(localStorage.getItem('usersregistered'));
+    // }
     verificarStorage()
 })
 
+// FETCH PRODUCTOS  
 
-// SE CREAN LOS PRODUCTOS AL HTML
-stockProductos.forEach((producto) => {
+fetch('/stock.json')
+    .then((res) => res.json())
+    .then ((data) => {
+        
+        // SE CREAN LOS PRODUCTOS AL HTML
+data.forEach((producto) => {
 
     const div = document.createElement("div");
 
@@ -364,9 +464,8 @@ stockProductos.forEach((producto) => {
         e.preventDefault();
         agregarAlCarrito(producto.id);
     })
-})  
 
-// funcion agregar al carrito
+    // funcion agregar al carrito
 
 const agregarAlCarrito = (prodId) => {
     //PARA AUMENTAR LA CANTIDAD Y QUE NO SE REPITA
@@ -380,14 +479,18 @@ const agregarAlCarrito = (prodId) => {
             }
         })
     } else { //EN CASO DE QUE NO ESTÉ, LO AGREGAMOS AL CARRITO
-        const item = stockProductos.find((prod) => prod.id === prodId)
+        const item = data.find((prod) => prod.id === prodId)
         //Una vez obtenida la ID, le hago un push para agregarlo al carrito
         carrito.push(item)
     }
     //Va a buscar el item, agregarlo al carrito y llama a la funcion actualizarCarrito, que recorre
     //el carrito y se ve.
-    actualizarCarrito(); //LLAMAMOS A LA FUNCION QUE CREAMOS
+    actualizarCarrito();
 }
+
+})  
+
+    })
 
 
 
@@ -402,6 +505,8 @@ const eliminarDelCarrito = (prodId) => {
     actualizarCarrito();
 }
 
+// BOTON QUE SUMA 1 PRODUCTO EN EL CARRITO
+
 const Botonsuma = (prodId)  => {
     const item = carrito.find((prod) => prod.id === prodId)
     console.log(item)
@@ -409,6 +514,9 @@ const Botonsuma = (prodId)  => {
     item.cantidad++
     actualizarCarrito()
 }
+
+// BOTON QUE RESTA 1 PRODUCTO EN EL CARRITO
+
 const Botonresta = (prodId) =>{
     const item = carrito.find((prod) => prod.id === prodId)
     if(item.cantidad > 1){

@@ -163,3 +163,45 @@
 .psaludoregisster{
     padding-top: 10px;
 }
+// MENSAJE UNA VEZ INICIADO SESION
+.configprofile{
+    bottom: auto;
+    display: block !important;
+    position: absolute;
+    left: -255px;
+    background-color: #0077f9;
+    height: auto;
+    width: 300px;
+}
+// SECCIONES DENTRO DE LA CONFIGURACION DE PERFIL INICIADO SESION
+
+// CLASE EN COMUN SECTIONS
+.configsection:hover{
+    background-color: #fff;
+    opacity: 40%;
+}
+
+// CARTEL BIENVENIDA USUARIO
+.configwelcomeuser{
+    margin: 10px 10px;
+}
+// CONTENEDOR DE LOS DIVS SECTION
+.configloginsection{
+    border-top: 1px solid #b7b7b7;
+    border-bottom: 1px solid #b7b7b7;
+}
+// EL ICONO USER
+.configicon1{
+    color: #c6c6c6;
+    margin: 10px;
+    font-size: 20px;
+}
+// ICONO CERRAR SESION
+.configicon2{
+    color: #c6c6c6;
+    margin: 10px;
+    font-size: 20px;
+}
+.configicon2:hover{
+    color: red;
+}
