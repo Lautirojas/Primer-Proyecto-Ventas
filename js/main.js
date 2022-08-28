@@ -68,79 +68,14 @@ const parrafo = document.querySelector("#warnings");
 // Contenedor del login config
 const loginconfig = document.querySelector("#loginconfig");
 //
-let buscar1
-// Events
 let usuariosLogeados2 = []
+//
+let buscar1 //= usuariosLogeados2.find(el => el.correo === emaillogin.value && el.contrasena === passlogin.value);
+//
+let nombre
 
-// ACTIVA EL LOGIN-REGISTER
+// Events
 
-    const cerrarsesionlogin = () => {
-
-        localStorage.removeItem(`nombrecompleto`);
-        localStorage.removeItem(`emailcompleto`);
-        localStorage.removeItem(`contrasenacompleta`);
-
-        loginconfig.classList.remove("configprofile");
-        revertirsaludo();
-    }
-
-    triggerbutton.addEventListener(`click`,(e) => {
-        e.preventDefault();
-        modalloogin.classList.remove("logindisappear");
-
-        if(localStorage.getItem("usersregistered")){
-            usuariosLogeados2 = JSON.parse(localStorage.getItem('usersregistered'));
-            buscar1 = usuariosLogeados2.find(el => el.correo === emaillogin.value && el.contrasena === passlogin.value);
-        }
-        
-        if(!buscar1){
-                overlay.style.opacity = 1;
-                overlay.style.visibility = "visible";
-            }
-        
-        if(localStorage.getItem("emailcompleto")){
-            loginconfig.innerHTML = "";
-            let emailLog = localStorage.getItem("emailcompleto")
-            let nombreLog = localStorage.getItem("nombrecompleto")
-
-            modalloogin.classList.add("logindisappear");
-            overlay.style.opacity = 0;
-            overlay.style.visibility ="hidden";
-            const div = document.createElement("div");
-            div.innerHTML = `
-            <div class="text-light configwelcomeuser configsection"> Bienvenido ${nombreLog}
-            </div>
-                <div class="configloginsection configsection">
-                    <i class="fa-solid fa-user configicon1"></i><span class="text-light">Mi Cuenta</span>
-                </div>
-                <div class="configsection">
-                    <i class="fa-solid fa-right-from-bracket configicon2"></i> 
-                    <span onclick="cerrarsesionlogin()" class="text-light" id="log-out">Cerrar Sesión</span>
-                </div>
-            `
-            loginconfig.appendChild(div)
-            loginconfig.classList.toggle("configprofile")
-        }
-        if(buscar1){
-            loginconfig.innerHTML = "";
-            const div = document.createElement("div");
-            // INNERHTML DE LA CONFIGURACION DEL PERFIL UNA VEZ INICIADO SESION
-            div.innerHTML = `
-            
-            <div class="text-light configwelcomeuser configsection"> Bienvenido ${buscar1.nombre}
-            </div>
-                <div class="configloginsection configsection">
-                    <i class="fa-solid fa-user configicon1"></i><span class="text-light">Mi Cuenta</span>
-                </div>
-                <div class="configsection">
-                    <i class="fa-solid fa-right-from-bracket configicon2"></i> 
-                    <span onclick="cerrarsesionlogin()" class="text-light" id="log-out">Cerrar Sesión</span>
-                </div>
-            ` 
-            loginconfig.appendChild(div)
-            loginconfig.classList.toggle("configprofile")
-        }
-    })
 
 // CIERRA EL LOGIN 
     modalclose.addEventListener(`click`,(e) => {
@@ -242,7 +177,7 @@ let usuariosLogeados2 = []
         localStorage.setItem(`nombrecompleto`, nombreapellido);
         localStorage.setItem(`emailcompleto`, emailgmail);
         localStorage.setItem(`contrasenacompleta`, contrasena123);
-
+        localStorage.setItem('nombresaludoconfiguser', nombreapellido);
     }
 
 // HACE QUE A LA VARIABLE SE LE GUARDE EL DATO GUARDADO EN EL STORAGE
@@ -288,6 +223,8 @@ const loginp = document.querySelector("#loginp");
 const logincorrecticon = document.querySelector("#logincorrecticon");
 // ICONO INCORRECTO LOGIN   
 const loginxicon = document.querySelector("#loginxicon");
+//
+let buscar
 
 // FUNCIONES
 
@@ -310,15 +247,7 @@ const loginxicon = document.querySelector("#loginxicon");
         localStorage.setItem('usersregistered', JSON.stringify(usuariosLogeados));
     }
 
-    // ENCONTRAR AL USER
 
-    let buscar
-
-    const encontraruserlogin = () =>{
-
-        console.log(usuariosLogeados);
-        console.log(buscar);
-    }
 
 // LISTENERS
 
@@ -332,13 +261,12 @@ btnlogin.addEventListener (`click`,(e) => {
     loginp.innerHTML = "";
     
     entrar = false;
-    //
+
+    // ENCONTRAR AL USER
+
     usuariosLogeados = JSON.parse(localStorage.getItem('usersregistered'));
     buscar = usuariosLogeados.find(el => el.correo === emaillogin.value && el.contrasena === passlogin.value);
     console.log(buscar)
-    // usuariosLogeados.forEach(el =>{
-    //     if(emaillogin.value === el)
-    // })
     // VALIDACION DE QUE EL EMAIL FUE BIEN PUESTO
     if(!regexEmail.test(emaillogin.value)){
         warnings += `El email no es valido <br>`;
@@ -359,24 +287,76 @@ btnlogin.addEventListener (`click`,(e) => {
     }
     //(emailstorage !== emaillogin.value || contrasenastorage !== passlogin.value) ||
     else{
-        encontraruserlogin(); // EJECUTA EL BUSCADO DE SU SESION CREADA
         loginp.classList.remove("color-red");// REMUEVE EL COLOR ROJO
         loginp.classList.add("color-greenpage");// LE DA COLOR VERDE
         logincorrecticon.classList.add("color-greenpage");// LE DA COLOR VERDE AL ICONO
         logincorrecticon.classList.remove("pnot-show");// LE SACA EL INVISIBLE
         loginxicon.classList.add("pnot-show");// BORRA EL ICONO DE BORRAR
         loginp.innerHTML = `Has iniciado sesion correctamente`;// TEXTO DETALLE DE INICIO DE SESION
+        localStorage.setItem("emailcompleto",emaillogin.value )
         // TIMEOUT QUE DESAPARECE EL MODAL LOG-IN
         setTimeout(() => {
             if(buscar){
                 modalloogin.classList.add("logindisappear");
                 overlay.style.opacity = 0;
                 overlay.style.visibility ="hidden";
-                console.log("hola")
             }
         },1000);
     }
 })
+
+// ACTIVA EL LOGIN-REGISTER
+
+const cerrarsesionlogin = () => {
+
+    localStorage.removeItem(`nombrecompleto`);
+    localStorage.removeItem(`emailcompleto`);
+    localStorage.removeItem(`contrasenacompleta`);
+
+    overlay.style.opacity = 1;
+    overlay.style.visibility ="";
+    loginconfig.classList.remove("configprofile");
+    revertirsaludo();
+}
+
+triggerbutton.addEventListener(`click`,(e) => {
+    e.preventDefault();
+    modalloogin.classList.remove("logindisappear");
+    if(localStorage.getItem('emailcompleto')){
+        // ENCUENTRA EL NOMBRE DEL LOGEADO
+        nombre = JSON.parse(localStorage.getItem('usersregistered'));
+        let  nombre2 = nombre.find(el => el.nombre );
+        console.log(nombre2)
+        loginconfig.innerHTML = "";
+        // DESAPARECE EL LOGIN
+        modalloogin.classList.add("logindisappear");
+        overlay.style.opacity = 0;
+        overlay.style.visibility ="hidden";
+        // CREA LA CONFIGURACION PARA EL USUARIO LOGEADO
+        const div = document.createElement("div");
+        div.innerHTML = `
+        <div class="text-light configwelcomeuser configsection"> Bienvenido ${nombre2.nombre}
+        </div>
+            <div class="configloginsection configsection">
+                <i class="fa-solid fa-user configicon1"></i><span class="text-light">Mi Cuenta</span>
+            </div>
+            <div class="configsection">
+                <i class="fa-solid fa-right-from-bracket configicon2"></i> 
+                <span onclick="cerrarsesionlogin()" class="text-light" id="log-out">Cerrar Sesión</span>
+            </div>
+        `
+        loginconfig.appendChild(div)
+        loginconfig.classList.toggle("configprofile")
+
+    }else{ // SI NO SE ENCUENTRA EL 
+            modalloogin.classList.remove("logindisappear");
+            loginconfig.classList.remove("configprofile");
+            revertirsaludo();
+            overlay.style.opacity = 1;
+            overlay.style.visibility = "visible";
+        }
+})
+
 
 
 
@@ -409,9 +389,6 @@ document.addEventListener('DOMContentLoaded', () => {
         carrito = JSON.parse(localStorage.getItem('carrito'))
         actualizarCarrito()
     }
-    // if (localStorage.getItem('usersregistered')){
-    //     usuariosLogeados = JSON.parse(localStorage.getItem('usersregistered'));
-    // }
     verificarStorage()
 })
 
