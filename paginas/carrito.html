@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+        <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +13,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@383&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/estilos.css">
         <title>ForGamers •Shop</title>
-</head>
-<body>
-        
+        </head>
+<body>        
         <!-- HEADER -->
-
-        <!-- HEADER UP -->
         <header class="header">
 
                 <nav class="navup">
@@ -267,17 +264,12 @@
                 </nav>
 </header>
         
-
         <!-- MAIN -->
         <main class="main">
 
-        <div id="contenedor-productos" class="products_list">
-
+        <div id="contenedor-productos" class="products_list d-none">
         </div>
 
-        <!-- CARRITO -->
-
-        <!-- HEADER -->
         <div class="card text-center container mb-5" style="position:unset; padding-left: 0; padding-right: 0;" >
                 <div class="card-header">
                         <ul class="nav nav-pills card-header-pills">
@@ -308,6 +300,31 @@
                 </div>
         </div>
 
+        <!-- SECTION QUE HACE HACE QUE NO TIRE ERROR EL CODIGO POR LOS APPENCHILD-->
+        <section class="d-none">
+                                                        <div id="contenedor-productos-placadevideo" class="products_list">
+                                                        </div>
+                                                        <div id="contenedor-productos-notebooks" class="products_list">
+                                                        </div>
+                                                        <div id="contenedor-productos-mouse" class="products_list">
+                                                        </div>
+                                                        <div id="contenedor-productos-teclados" class="products_list">
+                                                        </div>
+                                                        <div id="contenedor-productos-monitores" class="products_list">
+                                                        </div>
+                                                        <div id="carrito-contenedor" >
+                                                        </div>
+                                                        <div id="containpricetotal">
+                                                                <hr style="opacity:15%; margin: 0; color: gray;">
+                                                                <div class="text-end pt-4 pb-3">
+                                                                        <span class="p-5">Total con envio <span class="ps-5 " id="precioTotal">$</span></span>
+                                                                </div>
+                                                                <hr style="opacity:15%;color: gray;">
+                                                                <div class="p-1 pe-5 pb-3 text-end">
+                                                                        <a href="../index.html" class="btn btn-primary ">Seguir compra</a>
+                                                                </div>
+                                                        </div>
+        </section>
 </main>
         <!-- FOOTER -->
         <footer class="footer">

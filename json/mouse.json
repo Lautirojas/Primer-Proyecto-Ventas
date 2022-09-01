@@ -1,0 +1,7 @@
+[
+    {"id": 1, "nombre": "MOUSE HYPERX PULSEFIRE SURGE RGB", "tipo": "mouse", "cantidad": 1,  "precio": 37499,  "img": "../imagenes/mouse2.png"},
+    {"id": 2, "nombre": "MOUSE GAMERR RAZER VIPER MINI", "tipo": "mouse", "cantidad": 1,  "precio": 9999,  "img": "../imagenes/mouse3.png"},
+    {"id": 3, "nombre": "MOUSE LOGITECH G403", "tipo": "mouse", "cantidad": 1,  "precio": 8999,  "img": "../imagenes/mouse.png"},
+    {"id": 4, "nombre": "MOUSE GENIUS ESCRITORIO", "tipo": "mouse", "cantidad": 1,  "precio": 7560,  "img": "../imagenes/mouse4.png"},
+    {"id": 5, "nombre": "MOUSE GAMER LOGITECH G203", "tipo": "mouse", "cantidad": 1,  "precio": 8679,  "img": "../imagenes/mouse1.png"}
+]

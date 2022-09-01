@@ -1,7 +1,6 @@
 [
-    
-    {"id": 1, "nombre": "Mouse logitech g403", "tipo": "mouse", "cantidad": 1,  "precio": 1200,  "img": "../imagenes/mouse.png"},
-    {"id": 2, "nombre": "Monitor Msi 144Hz", "tipo": "monitor", "cantidad": 1,  "precio": 1100,  "img": "../imagenes/monitor.png"},
+    {"id": 1, "nombre": "GABINETE GAMER MID TOWER DEEPCOOL V3", "tipo": "mouse", "cantidad": 1,  "precio": 1200,  "img": "../imagenes/gabinete.png"},
+    {"id": 2, "nombre": "MONITOR MSI 144HZ", "tipo": "monitor", "cantidad": 1,  "precio": 1100,  "img": "../imagenes/monitor.png"},
     {"id": 3, "nombre": "PLACA DE VIDEO MSI NVIDIA GEFORCE RTX 3090 VENTUS", "tipo": "placa", "cantidad": 1,  "precio": 1200,  "img": "../imagenes/placadevideo.png"},
     {"id": 4, "nombre": "Notebook Intel Cloudbook", "tipo": "notebook", "cantidad": 1,  "precio": 1400,  "img": "../imagenes/notebook4.png"},
     {"id": 5, "nombre": "Silla Gamer Game House Naranja", "tipo": "silla", "cantidad": 1,  "precio": 1200,  "img": "../imagenes/sillagamer3_adobe_express.png"},

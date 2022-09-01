@@ -1,3 +1,4 @@
+// API SLIDES 
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
@@ -21,21 +22,15 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
+    // REGISTER 
 
+// VARIABLES
 
-
-
-
-
-// REGISTER 
-
-// Variables
-
-// Boton que activa el login
+// BOTON QUE DA INICIO AL LOG-IN E REGISTER
 const triggerbutton = document.querySelector("#triggerbutton");
-// Boton que sube el registro
+// BOTON QUE HACE QUE APAREZCA EL REGISTER
 const buttonregister = document.querySelector("#buttonregister")
-// Boton que cierra el login
+// BOTON O X QUE CIERRA EL LOG-IN
 const modalclose = document.querySelector("#modalclose");
 // ID LOGIN CONTAINER
 const modalloogin = document.querySelector("#modalloogin");
@@ -43,19 +38,19 @@ const modalloogin = document.querySelector("#modalloogin");
 const overlay = document.querySelector("#overlay");
 // ID MODAL REGISTER CONTAINER
 const modalregister = document.querySelector("#modalregister")
-// Boton que cierra el register
+// BOTON O X QUE CIERRA EL REGISTER
 const modalcloseregister = document.querySelector("#modalcloseregister");
-// Boton Volver al Log-In
+// BOTON PARA VOLVER AL LOG-IN
 const registervolver = document.querySelector("#registervolver");
-// Form
+// FORM DEL REGISTER
 const formulario = document.querySelector("#formulario");
-// Nombre completo
+// INPUT REGISTER NOMBRE COMPLETO
 const nombrecompleto = document.querySelector("#nombre");
-// Email
+// INPUT EMAIL REGITER 
 const email = document.querySelector("#email");
-// Contrasena
+// INPUT PASSWORD REGISTER
 const Contrasena = document.querySelector("#password");
-// Luego del registro
+// UNA VEZ REGISTRADO SE ESCRIBE DENTRO DE ESTE P
 const saludousername = document.querySelector("#saludo");
 // VOLVER AL LOG-IN
 const volverlogin = document.querySelector("#volverlogin");
@@ -67,14 +62,10 @@ const finishregister = document.querySelector("#finishregister")
 const parrafo = document.querySelector("#warnings");
 // Contenedor del login config
 const loginconfig = document.querySelector("#loginconfig");
-//
-let usuariosLogeados2 = []
-//
-let buscar1 //= usuariosLogeados2.find(el => el.correo === emaillogin.value && el.contrasena === passlogin.value);
-//
-let nombre
+// VARIABLE PARA SALUDAR AL USUARIO
+let nombre;
 
-// Events
+// EVENT LISTENERS
 
 
 // CIERRA EL LOGIN 
@@ -113,9 +104,9 @@ let nombre
 
 // VALIDACION PREVIA PARA REGISTRARTE
 
-
+    // VARIABLE QUE ME AYUDA EN LA VALIDACION
     let entrar = false;
-
+    // FOMULARIO DEL REGISTER
     formulario.addEventListener("submit", e=>{
         e.preventDefault()
         let warnings = "";
@@ -205,9 +196,8 @@ let nombre
 
 
 
-    // LOGIN
 
-    
+    // LOGIN
 
     // VARIABLES
 
@@ -251,6 +241,7 @@ let buscar
 
 // LISTENERS
 
+// BOTON DENTRO DEL LOGIN QUE DA INICIO AL INICIO DE SESION
 btnlogin.addEventListener (`click`,(e) => {
     e.preventDefault();
     // VARIABLE REGEX EMAIL
@@ -305,7 +296,7 @@ btnlogin.addEventListener (`click`,(e) => {
     }
 })
 
-// ACTIVA EL LOGIN-REGISTER
+// CIERRA LA SESION E HACE QUE EL OVERLAY DEL LOGIN VUELVA
 
 const cerrarsesionlogin = () => {
 
@@ -318,14 +309,14 @@ const cerrarsesionlogin = () => {
     loginconfig.classList.remove("configprofile");
     revertirsaludo();
 }
-
+// TRIGGER BUTTON ICONO PERSONA (ACTIVA EL LOGIN O LA CONFIG USER DEPENDIENDO LO QUE HAYA HECHO EL USUARIO)
 triggerbutton.addEventListener(`click`,(e) => {
     e.preventDefault();
     modalloogin.classList.remove("logindisappear");
     if(localStorage.getItem('emailcompleto')){
         // ENCUENTRA EL NOMBRE DEL LOGEADO
         nombre = JSON.parse(localStorage.getItem('usersregistered'));
-        let  nombre2 = nombre.find(el => el.nombre );
+        let nombre2 = nombre.find(el => el.nombre );
         console.log(nombre2)
         loginconfig.innerHTML = "";
         // DESAPARECE EL LOGIN
@@ -365,8 +356,18 @@ triggerbutton.addEventListener(`click`,(e) => {
 
     // VARIABLES
 
-// DIV CONTENEDOR DEL STOCK
+// DIV CONTENEDOR DE PRODUCTOS
 const contenedorProductos = document.querySelector("#contenedor-productos");
+// DIV CONTENEDOR DE LOS MONITORES
+const contenedorMonitores = document.querySelector("#contenedor-productos-monitores");
+// DIV CONTENEDOR DE LOS TECLADOS
+const contenedorTeclados = document.querySelector("#contenedor-productos-teclados");
+// DIV CONTENEDOR DE LOS MOUSE
+const contenedorMouse = document.querySelector("#contenedor-productos-mouse");
+// DIV CONTENEDOR DE LAS NOTEBOOKS
+const contenedorNotebooks = document.querySelector("#contenedor-productos-notebooks");
+// DIV CONTENEDRO DE LAS PLACAS DE VIDEO
+const contenedorPlacasdevideo = document.querySelector("#contenedor-productos-placadevideo")
 // CONTADOR DEL CARRITO
 const contadorCarrito = document.querySelector("#contadorCarrito")
 // CONTENEDOR DE TU CARRITO ESTA VACIO
@@ -384,6 +385,7 @@ let buyadvertisment
 // ARRAY CARRITO
 let carrito = [];
 
+// DOM CONTENT LOADED
 document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('carrito')){
         carrito = JSON.parse(localStorage.getItem('carrito'))
@@ -392,9 +394,9 @@ document.addEventListener('DOMContentLoaded', () => {
     verificarStorage()
 })
 
-// FETCH PRODUCTOS  
+// FETCH PAGINA PRODUCTOS  
 
-fetch('/stock.json')
+fetch('../json/stock.json')
     .then((res) => res.json())
     .then ((data) => {
         
@@ -406,7 +408,7 @@ data.forEach((producto) => {
     div.classList.add(`list__item`);
     
     div.innerHTML = `
-    <div href="#" class="product">
+    <a href="../paginas/gabineteproduct.html" class="product">
             <div class="image">
                 <img src=${producto.img} alt= "">
             </div>
@@ -429,7 +431,7 @@ data.forEach((producto) => {
             </div>
 
 
-    </div>
+    </a>
     `
 
     contenedorProductos.appendChild(div)
@@ -442,7 +444,7 @@ data.forEach((producto) => {
         agregarAlCarrito(producto.id);
     })
 
-    // funcion agregar al carrito
+    // FUNCION QUE AGREGA UN PRODUCTO AL CARRITO
 
 const agregarAlCarrito = (prodId) => {
     //PARA AUMENTAR LA CANTIDAD Y QUE NO SE REPITA
@@ -507,7 +509,7 @@ const Botonresta = (prodId) =>{
 }
 
 
-//
+// ACTUALIZA EL CARRITO
 
 const actualizarCarrito = () => {
     contenedorCarrito.innerHTML = "";
@@ -596,3 +598,399 @@ const actualizarCarrito = () => {
         console.log(carrito);
 };
 
+
+
+    // FETCH PAGINA MONITORES
+
+
+fetch('../json/monitores.json')
+    .then((res) => res.json())
+    .then ((data) => {
+        
+        // SE CREAN LOS PRODUCTOS AL HTML
+data.forEach((producto) => {
+
+    const div = document.createElement("div");
+
+    div.classList.add(`list__item`);
+    
+    div.innerHTML = `
+    <a href="../paginas/gabineteproduct.html" class="product">
+            <div class="image">
+                <img src=${producto.img} alt= "">
+            </div>
+            <div class="info">
+                <h3 class="product__title">${producto.nombre}</h3>
+                <div class="main__price1">
+                    $${producto.precio}
+                    <span class="price__promo">$8.499</span>
+                </div>
+                <div>
+                    <div class="main__gitemcontainer1">
+                                <div class="main__gitem1">
+                                        <span class="main__goutline1"><button class= "boton-comprar">Comprar</button></span>
+                                </div>
+                                <div class="main__gitem1">
+                                    <span class="main__goutline2"><i class="fas fa-shopping-cart" aria-hidden="true"></i><button id="agregar${producto.id}" class="boton-agregar">Agregar</button></span>
+                                </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </a>
+    `
+
+    contenedorMonitores.appendChild(div)
+
+    const boton = document.querySelector(`#agregar${producto.id}`);
+
+
+    boton.addEventListener(`click`, (e) => {
+        e.preventDefault();
+        agregarAlCarrito(producto.id);
+    })
+
+    // funcion agregar al carrito
+
+const agregarAlCarrito = (prodId) => {
+    //PARA AUMENTAR LA CANTIDAD Y QUE NO SE REPITA
+    const existe = carrito.some (prod => prod.id === prodId) //comprobar si el elemento ya existe en el carro
+
+    if (existe){ //SI YA ESTÁ EN EL CARRITO, ACTUALIZAMOS LA CANTIDAD
+        const prod = carrito.map (prod => { 
+            // map encuentre cual es el q igual al que está agregado, le suma la cantidad
+            if (prod.id === prodId){
+                prod.cantidad++
+            }
+        })
+    } else { //EN CASO DE QUE NO ESTÉ, LO AGREGAMOS AL CARRITO
+        const item = data.find((prod) => prod.id === prodId)
+        //Una vez obtenida la ID, le hago un push para agregarlo al carrito
+        carrito.push(item)
+    }
+    //Va a buscar el item, agregarlo al carrito y llama a la funcion actualizarCarrito, que recorre
+    //el carrito y se ve.
+    actualizarCarrito();
+}
+
+})  
+
+    })
+
+
+
+
+    // FETCH PAGINA TECLADOS
+
+
+fetch('../json/teclados.json')
+.then((res) => res.json())
+.then ((data) => {
+    
+    // SE CREAN LOS PRODUCTOS AL HTML
+data.forEach((producto) => {
+
+const div = document.createElement("div");
+
+div.classList.add(`list__item`);
+
+div.innerHTML = `
+<a href="../paginas/gabineteproduct.html" class="product">
+        <div class="image">
+            <img src=${producto.img} alt= "">
+        </div>
+        <div class="info">
+            <h3 class="product__title">${producto.nombre}</h3>
+            <div class="main__price1">
+                $${producto.precio}
+                <span class="price__promo">$8.499</span>
+            </div>
+            <div>
+                <div class="main__gitemcontainer1">
+                            <div class="main__gitem1">
+                                    <span class="main__goutline1"><button class= "boton-comprar">Comprar</button></span>
+                            </div>
+                            <div class="main__gitem1">
+                                <span class="main__goutline2"><i class="fas fa-shopping-cart" aria-hidden="true"></i><button id="agregar${producto.id}" class="boton-agregar">Agregar</button></span>
+                            </div>
+                </div>
+            </div>
+        </div>
+
+
+</a>
+`
+
+contenedorTeclados.appendChild(div)
+
+const boton = document.querySelector(`#agregar${producto.id}`);
+
+
+boton.addEventListener(`click`, (e) => {
+    e.preventDefault();
+    agregarAlCarrito(producto.id);
+})
+
+// funcion agregar al carrito
+
+const agregarAlCarrito = (prodId) => {
+//PARA AUMENTAR LA CANTIDAD Y QUE NO SE REPITA
+const existe = carrito.some (prod => prod.id === prodId) //comprobar si el elemento ya existe en el carro
+
+if (existe){ //SI YA ESTÁ EN EL CARRITO, ACTUALIZAMOS LA CANTIDAD
+    const prod = carrito.map (prod => { 
+        // map encuentre cual es el q igual al que está agregado, le suma la cantidad
+        if (prod.id === prodId){
+            prod.cantidad++
+        }
+    })
+} else { //EN CASO DE QUE NO ESTÉ, LO AGREGAMOS AL CARRITO
+    const item = data.find((prod) => prod.id === prodId)
+    //Una vez obtenida la ID, le hago un push para agregarlo al carrito
+    carrito.push(item)
+}
+//Va a buscar el item, agregarlo al carrito y llama a la funcion actualizarCarrito, que recorre
+//el carrito y se ve.
+actualizarCarrito();
+}
+
+})  
+
+})
+
+    // FETCH PAGINA MOUSE
+
+
+    fetch('../json/mouse.json')
+    .then((res) => res.json())
+    .then ((data) => {
+        
+        // SE CREAN LOS PRODUCTOS AL HTML
+    data.forEach((producto) => {
+    
+    const div = document.createElement("div");
+    
+    div.classList.add(`list__item`);
+    
+    div.innerHTML = `
+    <a href="../paginas/gabineteproduct.html" class="product">
+            <div class="image">
+                <img src=${producto.img} alt= "">
+            </div>
+            <div class="info">
+                <h3 class="product__title">${producto.nombre}</h3>
+                <div class="main__price1">
+                    $${producto.precio}
+                    <span class="price__promo">$8.499</span>
+                </div>
+                <div>
+                    <div class="main__gitemcontainer1">
+                                <div class="main__gitem1">
+                                        <span class="main__goutline1"><button class= "boton-comprar">Comprar</button></span>
+                                </div>
+                                <div class="main__gitem1">
+                                    <span class="main__goutline2"><i class="fas fa-shopping-cart" aria-hidden="true"></i><button id="agregar${producto.id}" class="boton-agregar">Agregar</button></span>
+                                </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+    </a>
+    `
+    
+    contenedorMouse.appendChild(div)
+    
+    const boton = document.querySelector(`#agregar${producto.id}`);
+    
+    
+    boton.addEventListener(`click`, (e) => {
+        e.preventDefault();
+        agregarAlCarrito(producto.id);
+    })
+    
+    // funcion agregar al carrito
+    
+    const agregarAlCarrito = (prodId) => {
+    //PARA AUMENTAR LA CANTIDAD Y QUE NO SE REPITA
+    const existe = carrito.some (prod => prod.id === prodId) //comprobar si el elemento ya existe en el carro
+    
+    if (existe){ //SI YA ESTÁ EN EL CARRITO, ACTUALIZAMOS LA CANTIDAD
+        const prod = carrito.map (prod => { 
+            // map encuentre cual es el q igual al que está agregado, le suma la cantidad
+            if (prod.id === prodId){
+                prod.cantidad++
+            }
+        })
+    } else { //EN CASO DE QUE NO ESTÉ, LO AGREGAMOS AL CARRITO
+        const item = data.find((prod) => prod.id === prodId)
+        //Una vez obtenida la ID, le hago un push para agregarlo al carrito
+        carrito.push(item)
+    }
+    //Va a buscar el item, agregarlo al carrito y llama a la funcion actualizarCarrito, que recorre
+    //el carrito y se ve.
+    actualizarCarrito();
+    }
+    
+    })  
+    
+    })
+
+
+    // FETCH PAGINA NOTEBOOKS
+
+
+    fetch('../json/notebooks.json')
+    .then((res) => res.json())
+    .then ((data) => {
+        
+        // SE CREAN LOS PRODUCTOS AL HTML
+    data.forEach((producto) => {
+    
+    const div = document.createElement("div");
+    
+    div.classList.add(`list__item`);
+    
+    div.innerHTML = `
+    <a href="../paginas/gabineteproduct.html" class="product">
+            <div class="image">
+                <img src=${producto.img} alt= "">
+            </div>
+            <div class="info">
+                <h3 class="product__title">${producto.nombre}</h3>
+                <div class="main__price1">
+                    $${producto.precio}
+                    <span class="price__promo">$8.499</span>
+                </div>
+                <div>
+                    <div class="main__gitemcontainer1">
+                                <div class="main__gitem1">
+                                        <span class="main__goutline1"><button class= "boton-comprar">Comprar</button></span>
+                                </div>
+                                <div class="main__gitem1">
+                                    <span class="main__goutline2"><i class="fas fa-shopping-cart" aria-hidden="true"></i><button id="agregar${producto.id}" class="boton-agregar">Agregar</button></span>
+                                </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+    </a>
+    `
+    
+    contenedorNotebooks.appendChild(div)
+    
+    const boton = document.querySelector(`#agregar${producto.id}`);
+    
+    
+    boton.addEventListener(`click`, (e) => {
+        e.preventDefault();
+        agregarAlCarrito(producto.id);
+    })
+    
+    // funcion agregar al carrito
+    
+    const agregarAlCarrito = (prodId) => {
+    //PARA AUMENTAR LA CANTIDAD Y QUE NO SE REPITA
+    const existe = carrito.some (prod => prod.id === prodId) //comprobar si el elemento ya existe en el carro
+    
+    if (existe){ //SI YA ESTÁ EN EL CARRITO, ACTUALIZAMOS LA CANTIDAD
+        const prod = carrito.map (prod => { 
+            // map encuentre cual es el q igual al que está agregado, le suma la cantidad
+            if (prod.id === prodId){
+                prod.cantidad++
+            }
+        })
+    } else { //EN CASO DE QUE NO ESTÉ, LO AGREGAMOS AL CARRITO
+        const item = data.find((prod) => prod.id === prodId)
+        //Una vez obtenida la ID, le hago un push para agregarlo al carrito
+        carrito.push(item)
+    }
+    //Va a buscar el item, agregarlo al carrito y llama a la funcion actualizarCarrito, que recorre
+    //el carrito y se ve.
+    actualizarCarrito();
+    }
+    
+    })  
+    
+    })
+
+
+    // FETCH PAGINA PLACAS DE VIDEO
+
+
+        fetch('../json/placadevideo.json')
+        .then((res) => res.json())
+        .then ((data) => {
+            
+            // SE CREAN LOS PRODUCTOS AL HTML
+        data.forEach((producto) => {
+        
+        const div = document.createElement("div");
+        
+        div.classList.add(`list__item`);
+        
+        div.innerHTML = `
+        <a href="../paginas/gabineteproduct.html" class="product">
+                <div class="image">
+                    <img src=${producto.img} alt= "">
+                </div>
+                <div class="info">
+                    <h3 class="product__title">${producto.nombre}</h3>
+                    <div class="main__price1">
+                        $${producto.precio}
+                        <span class="price__promo">$8.499</span>
+                    </div>
+                    <div>
+                        <div class="main__gitemcontainer1">
+                                    <div class="main__gitem1">
+                                            <span class="main__goutline1"><button class= "boton-comprar">Comprar</button></span>
+                                    </div>
+                                    <div class="main__gitem1">
+                                        <span class="main__goutline2"><i class="fas fa-shopping-cart" aria-hidden="true"></i><button id="agregar${producto.id}" class="boton-agregar">Agregar</button></span>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+        
+        
+        </a>
+        `
+        
+        contenedorPlacasdevideo.appendChild(div)
+        
+        const boton = document.querySelector(`#agregar${producto.id}`);
+        
+        
+        boton.addEventListener(`click`, (e) => {
+            e.preventDefault();
+            agregarAlCarrito(producto.id);
+        })
+        
+        // funcion agregar al carrito
+        
+        const agregarAlCarrito = (prodId) => {
+        //PARA AUMENTAR LA CANTIDAD Y QUE NO SE REPITA
+        const existe = carrito.some (prod => prod.id === prodId) //comprobar si el elemento ya existe en el carro
+        
+        if (existe){ //SI YA ESTÁ EN EL CARRITO, ACTUALIZAMOS LA CANTIDAD
+            const prod = carrito.map (prod => { 
+                // map encuentre cual es el q igual al que está agregado, le suma la cantidad
+                if (prod.id === prodId){
+                    prod.cantidad++
+                }
+            })
+        } else { //EN CASO DE QUE NO ESTÉ, LO AGREGAMOS AL CARRITO
+            const item = data.find((prod) => prod.id === prodId)
+            //Una vez obtenida la ID, le hago un push para agregarlo al carrito
+            carrito.push(item)
+        }
+        //Va a buscar el item, agregarlo al carrito y llama a la funcion actualizarCarrito, que recorre
+        //el carrito y se ve.
+        actualizarCarrito();
+        }
+        
+        })  
+        
+        })

@@ -1,0 +1,7 @@
+[
+    {"id": 1, "nombre": "PLACA DE VIDEO MSI NVIDIA GEFORCE RTX 3090 VENTUS", "tipo": "placadevideo", "cantidad": 1,  "precio": 277499,  "img": "../imagenes/placadevideo.png"},
+    {"id": 2, "nombre": "PLACA DE VIDEO GYGABYTE GEFORCE RTX 1050TI", "tipo": "placadevideo", "cantidad": 1,  "precio": 219999,  "img": "../imagenes/placadevideo1.png"},
+    {"id": 3, "nombre": "PLACA DE VIDEO ASUS DUAL AMD RADEON RX 6700 XT 12GB", "tipo": "placadevideo", "cantidad": 1,  "precio": 118999,  "img": "../imagenes/placadevideo2.png"},
+    {"id": 4, "nombre": "PLACA DE VIDEO GYGABYTE GEFORCE 1030", "tipo": "placadevideo", "cantidad": 1,  "precio": 137560,  "img": "../imagenes/placadevideo3.png"},
+    {"id": 5, "nombre": "PLACA DE VIDEO ZOTAC GAMING GEFORCE GTX 1660 TWIN 6GB", "tipo": "placadevideo", "cantidad": 1,  "precio": 128679,  "img": "../imagenes/placadevideo4.png"}
+]

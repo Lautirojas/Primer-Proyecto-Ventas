@@ -1,0 +1,7 @@
+[
+    {"id": 1, "nombre": "NOTEBOOK HP 14-dq2024LA", "tipo": "notebook", "cantidad": 1,  "precio": 37499,  "img": "../imagenes/notebook.png"},
+    {"id": 2, "nombre": "NOTEBOOK SAMSUNG PLUS V2", "tipo": "notebook", "cantidad": 1,  "precio": 9999,  "img": "../imagenes/notebook1.png"},
+    {"id": 3, "nombre": "NOTEBOOK LENOVO IP1", "tipo": "notebook", "cantidad": 1,  "precio": 8999,  "img": "../imagenes/notebook2.png"},
+    {"id": 4, "nombre": "NOTEBOOK ASUS X515EA", "tipo": "notebook", "cantidad": 1,  "precio": 7560,  "img": "../imagenes/notebook3.png"},
+    {"id": 5, "nombre": "NOTEBOOK INTEL CLOUDBOOK", "tipo": "notebook", "cantidad": 1,  "precio": 8679,  "img": "../imagenes/notebook4.png"}
+]

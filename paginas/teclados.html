@@ -17,8 +17,6 @@
 <body>
         
         <!-- HEADER -->
-
-        <!-- HEADER UP -->
         <header class="header">
 
                 <nav class="navup">
@@ -40,15 +38,20 @@
                         </div>
                 </nav>
 
-                <!-- MID HEADER -->
+                        <!-- MID HEADER -->
 
-                <nav class="nav1">
+                        <nav class="nav1">
 
                         <!-- ALL MID HEADER -->
-                <div class="nav__buscador">
+
+                        <div class="nav__buscador">
 
                         <!-- MENU HAMBURGUESA + CONTENIDO-->
-                <div class="nav__menuhamburguesa"> 
+
+                        <div class="nav__menuhamburguesa"> 
+
+                                <!-- MENU HAMBURGUESA -->
+
                         <nav class="navbar navbar-dark sticky-top navbar-light" style="flex-wrap:nowrap;">
                                         <div>
                                                 <div class="container-fluid">
@@ -106,9 +109,11 @@
                                         </div>
                                 
                         </div>
+
                         <div class="nav__paddright"><a class="nav__icono" href="../index.html"><img src="../imagenes/ForGamers2.png" alt="ForGamers"></a></div>
 
-
+                        <!-- BUSCADOR -->
+                        
                         <div class="nav__searchcontainer">
                                 <form>
                                         <label for="busqueda" id="busqueda"></label>
@@ -117,61 +122,133 @@
                                 </form>
                         </div>
 
+                        <!-- MODAL TRIGGER BUTTON + ICONOS -->
                         <div class="nav__flexend">
-                                <div>
-                                        <i class="fa-solid fa-magnifying-glass nav__searchcelu"></i>
-                                </div>
-                                <div class="nav__spacebtwnicons">
-                                        <a class="nav__compras" href="../paginas/carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                                </div >
-                                <div class="nav__spacebtwnicons"> 
-                                        <a class="nav__perfil" href="#">
-                                                <!-- Button trigger modal -->
-                                                <i class="fa-solid fa-user" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
-                                        </a>
-                                </div>
+                                <ul class="d-flex align-items-center">
+                                        <li class="nav__spacebtwnicons">
+                                                <i class="fa-solid fa-magnifying-glass nav__searchcelu"></i>
+                                        </li>
+                                        <li class="nav__spacebtwnicons">
+                                                <a class="nav__compras " href="../paginas/carrito.html"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                                                <span id="contadorCarrito" class="contador__carrito">0</span>
+                                        </li>
+                                        <li class="nav__spacebtwnicons position-relative ">
+
+                                                <a class="nav__perfil" href="#">
+                                                        <!-- Button trigger modal -->
+                                                        <i class="fa-solid fa-user"  id="triggerbutton" class="btn btn-primary"></i>
+                                                </a>
+
+                                                <div  id="loginconfig" class="d-none">
+                                                        
+                                                </div>
+                                        </li>
+                                </ul>
                         </div>
-                                </nav>
-
-
-
+                        </nav>
+                                <!-- Modal login e register -->
 
                                         <!-- Modal -->
-                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content" style="background-color: #37373f;">
-                <div class="modal-header" style="border-bottom:1px solid #91c612;  ;">
-                        <h5 class="modal-title" id="exampleModalLabel">Iniciar sesión</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                <form>
-                <div class="row mb-3">
-                        <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                        <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
-                        </div>
-                </div>
-                <div class="row mb-3">
-                        <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                        <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputPassword3">
-                        </div>
-                </div>
-                <div class="nav__iniciosesion">
-                        <button type="submit" class="btn btn-primary" style="background-color: #eeeeee; border-color: #91c612; color: #91c612;">Sign in</button>
-                </div>
-                <div class="nav__iniciosesion">
-                        <button type="submit" class="btn btn-primary" style="background-color: #eeeeee; border-color: #91c612; color: #91c612;">Create new Account</button>
-                </div>
-                </form>
-                </div>
-        </div>
-        </div>
-                                        </div>
-                                </div>
-                        </nav>
 
+                                        
+                                        <!-- LOGIN Y REGISTER-->
+
+                                        <!-- LOGIN -->
+                                        <div class="overlaymodal" id="overlay">
+                                                <div class="modalcontainer logindisappear" id="modalloogin">
+                                                        <div>
+                                                                <div class="modal__header">
+                                                                        <h5 class="text-light">Iniciar Sesion</h5>
+                                                                        <div id="modalclose">
+                                                                                <a href="#" ><i class="fa-solid fa-xmark text-light" ></i></a>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                        <form class="modal__body">
+                                                                <div class="d-flex flex-column">
+                                                                        <label for="email" class="text-light"> Email :</label>
+                                                                        <input type="email"  class="modal__input modal__email" placeholder="Email@gmail.com" id="emaillogin">
+                                                                </div>
+                                                                <div class="d-flex flex-column"> 
+                                                                        <label for="password" class="text-light"> Contraseña :</label>
+                                                                        <input type="password" class="modal__input modal__pass" placeholder="Password" id="passlogin">
+                                                                </div>
+                                                                <div class="modal__buttoncontain">
+                                                                        <div class="modal__botonlogin">
+                                                                                <button class="modal__button" id="btnlogin">
+                                                                                        Iniciar Sesion
+                                                                                </button>
+                                                                        </div>
+                                                                        <div class="modal__botonlogin">
+                                                                                <button id="buttonregister" class="modal__button">
+                                                                                        Registrarse
+                                                                                </button>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="d-flex justify-content-center flex-column">
+                                                                        <div class="d-flex justify-content-center">
+                                                                                <i class="fa-solid fa-circle-check pnot-show" style="color: #91c612; font-size: 45px; position: absolute;" id="logincorrecticon"></i>
+                                                                                <i class="fa-solid fa-circle-xmark pnot-show" style="color: red; font-size: 45px;" id="loginxicon"></i>
+                                                                        </div>
+                                                                        <p class="d-flex justify-content-center" id="loginp"></p>
+                                                                </div>
+                                                        </form>
+                                                </div>
+
+                                                <!-- REGISTER -->
+
+                                                <div class="modalcontainer registerappear" id="modalregister">
+                                                        <div>
+                                                                <div class="modal__header">
+                                                                        <h5 class="text-light">Registrarse</h5>
+                                                                        <div id="modalcloseregister">
+                                                                                <a href="#" ><i class="fa-solid fa-xmark text-light" ></i></a>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                        <form class="modal__body" id="formulario">
+                                                                <div class="d-flex flex-column">
+                                                                        <label for="email" class="text-light"> Nombre Completo :</label>
+                                                                        <input type="text" class="modal__input modal__username" placeholder="Juan Carlos" id="nombre">
+                                                                </div>
+                                                                <div class="d-flex flex-column">
+                                                                        <label for="email" class="text-light"> Email :</label>
+                                                                        <input type="email" class="modal__input modal__email" placeholder="Email@gmail.com" id="email">
+                                                                </div>
+                                                                <div class="d-flex flex-column">
+                                                                        <label for="password" class="text-light"> Contraseña :</label>
+                                                                        <input type="password" class="modal__input modal__pass" placeholder="Password" id="password">
+                                                                </div>
+                                                                <div class="modal__buttoncontain">
+                                                                        <div class="modal__botonlogin">
+                                                                                <button  type="submit" class="modal__button" id="finishregister">
+                                                                                        Registrarse
+                                                                                </button>
+                                                                        </div>
+                                                                        <div class="modal__botonlogin"> 
+                                                                                <button  id="registervolver" class="modal__button">
+                                                                                        Volver
+                                                                                </button>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="modal__buttoncontain"> 
+                                                                        <p class="warnings" id="warnings"></p>
+                                                                </div>
+                                                        </form>
+                                                                <p id="saludo" class="text-light psaludoregisster"></p>
+                                                        
+                                                        
+                                                        <div class="modal__botonlogin not-show" id="volverlogincontainer"> 
+                                                                <button type="submit" class="modal__button " id="volverlogin">
+                                                                        Iniciar Sesión
+                                                                </button>
+                                                        </div>
+                                                </div>
+                                        </div>
+
+                                        <!-- PRUEBA PERFIL-CONFIG -->
+
+                                        
                         <!-- A PAGINAS -->
 
                         <div class="nav__container">
@@ -189,246 +266,139 @@
 </header>
         
         <main class="main">
-        <div class="main__newcontainer">
-                <div class="main__products">
-                        <div class="products__slidebar">
-                                <div class="main__slidebar">
-                                        <h2 class="main__h2correction1 space">Ordenar por:</h2>
-                                        <ul>
-                                                <li><a href="#" class="main__a main__phover1">Menor Precio <br></a> </li> 
-                                                <li><a href="#" class="main__a main__phover1">Mayor Precio</a> </li> 
-                                        </ul>
-                                        <ul>    
-                                                <li><br><h2 class="main__h2correction1"> Categorias:</h2></li> 
-                                                <li> <a href="#" class="main__a main__phover1 ">Apple</a> <br> </li>
-                                                <li> <a href="#" class="main__a main__phover1 ">Combos</a> <br> </li>
-                                                <li> <a href="#" class="main__a main__phover1 ">Consolas</a> <br> </li>
-                                                <li> <a href="#" class="main__a main__phover1 ">Fuentes</a> <br> </li>
-                                                <li> <a href="#" class="main__a main__phover1 ">Gabinetes</a> <br> </li>
-                                                <li> <a href="#" class="main__a main__phover1 ">Software</a> <br> </li>
-                                                <li> <a href="#" class="main__a main__phover1 ">Refrigeración</a> <br>
-                                                <li> <a href="#" class="main__a main__phover1 ">Parlantes</a> <br> </li>
-                                                <li> <a href="#" class="main__a main__phover1 ">Impresoras</a> <br> </li>
-                                        </ul>
-                                </div>
-                        </div>
-                        <div class="products">
-                                <div class="dropdown d-flex justify-content-end">
-                                        <div class="products-dropdown">
-                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        Ordenar Por:
-                                                </button>
-                                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                                                        <li><a class="dropdown-item active" href="#">Mayor Precio</a></li>
-                                                        <li><a class="dropdown-item" href="#">Menor Precio</a></li>
+                <div class="main__newcontainer">
+                        <div class="main__products">
+                                <div class="products__slidebar">
+                                        <div class="main__slidebar">
+                                                <h2 class="main__h2correction1 space">Ordenar por:</h2>
+                                                <ul>
+                                                        <li><a href="#" class="main__a main__phover1">Menor Precio <br></a> </li> 
+                                                        <li><a href="#" class="main__a main__phover1">Mayor Precio</a> </li> 
+                                                </ul>
+                                                <ul>    
+                                                        <li><br><h2 class="main__h2correction1"> Categorias:</h2></li> 
+                                                        <li> <a href="#" class="main__a main__phover1 ">Apple</a> <br> </li>
+                                                        <li> <a href="#" class="main__a main__phover1 ">Combos</a> <br> </li>
+                                                        <li> <a href="#" class="main__a main__phover1 ">Consolas</a> <br> </li>
+                                                        <li> <a href="#" class="main__a main__phover1 ">Fuentes</a> <br> </li>
+                                                        <li> <a href="#" class="main__a main__phover1 ">Gabinetes</a> <br> </li>
+                                                        <li> <a href="#" class="main__a main__phover1 ">Software</a> <br> </li>
+                                                        <li> <a href="#" class="main__a main__phover1 ">Refrigeración</a> <br>
+                                                        <li> <a href="#" class="main__a main__phover1 ">Parlantes</a> <br> </li>
+                                                        <li> <a href="#" class="main__a main__phover1 ">Impresoras</a> <br> </li>
                                                 </ul>
                                         </div>
+                                </div>
+                                <div class="products">
+                                        <div class="dropdown d-flex justify-content-end">
+                                                <div class="products-dropdown">
+                                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                Ordenar Por:
+                                                        </button>
+                                                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                                                                <li><a class="dropdown-item active" href="#">Mayor Precio</a></li>
+                                                                <li><a class="dropdown-item" href="#">Menor Precio</a></li>
+                                                        </ul>
+                                                </div>
 
-                                        <div class="products-dropdown">
-                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        Categorias:
-                                                </button>
-                                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                                                        <li><a class="dropdown-item" href="../index.html">Inicio</a></li>
-                                                        <li><hr class="dropdown-divider"></li>
-                                                        <li><a class="dropdown-item active" href="#">Apple</a></li>
-                                                        <li><a class="dropdown-item" href="#">Combos</a></li>
-                                                        <li><a class="dropdown-item" href="#">Fuentes</a></li>
-                                                        <li><a class="dropdown-item" href="#">Gabinetes</a></li>
-                                                        <li><a class="dropdown-item" href="#">Software</a></li>
-                                                        <li><a class="dropdown-item" href="#">Refrigeración</a></li>
-                                                        <li><a class="dropdown-item" href="#">Parlantes</a></li>
-                                                        <li><a class="dropdown-item" href="#">Impresoras</a></li>
-                                                </ul>
+                                                <div class="products-dropdown">
+                                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                Categorias:
+                                                        </button>
+                                                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                                                                <li><a class="dropdown-item" href="../index.html">Inicio</a></li>
+                                                                <li><hr class="dropdown-divider"></li>
+                                                                <li><a class="dropdown-item active" href="#">Apple</a></li>
+                                                                <li><a class="dropdown-item" href="#">Combos</a></li>
+                                                                <li><a class="dropdown-item" href="#">Fuentes</a></li>
+                                                                <li><a class="dropdown-item" href="#">Gabinetes</a></li>
+                                                                <li><a class="dropdown-item" href="#">Software</a></li>
+                                                                <li><a class="dropdown-item" href="#">Refrigeración</a></li>
+                                                                <li><a class="dropdown-item" href="#">Parlantes</a></li>
+                                                                <li><a class="dropdown-item" href="#">Impresoras</a></li>
+                                                        </ul>
+                                                </div>
                                         </div>
+                                        <div class="main__gcontainer1">
+                                                <div class="main__gvolver">
+                                                        <a href="../index.html">
+                                                                <span>
+                                                                        <h2 class="main__gsubtitle">Home</h2>
+                                                                </span>
+                                                                        <span class="main__item">/</span>
+                                                        </a>
+                                                        <a href="../paginas/productos.html">
+                                                                <span>
+                                                                        <h1 class="main__gsubtitle">Productos</h1>
+                                                                </span>
+                                                        </a>
+                                                </div>
+                                        </div>
+                                        <!-- DIV QUE MUESTRA LOS PRODUCTOS -->
+                                        <div id="contenedor-productos-teclados" class="products_list">
+                                        </div>
+                                        
+                                        <!-- SECTION QUE HACE HACE QUE NO TIRE ERROR EL CODIGO -->
+                                        <section class="d-none">
+                                                <div id="contenedor-productos-placadevideo" class="products_list">
+                                                </div>
+                                                <div id="contenedor-productos-notebooks" class="products_list">
+                                                </div>
+                                                <div id="contenedor-productos-mouse" class="products_list">
+                                                </div>
+                                                <div id="contenedor-productos" class="products_list">
+                                                </div>
+                                                <div id="contenedor-productos-monitores" class="products_list">
+                                                </div>
+                                                <div id="carrito-contenedor" >
+                                                </div>
+                                                <div id="containpricetotal">
+                                                        <hr style="opacity:15%; margin: 0; color: gray;">
+                                                        <div class="text-end pt-4 pb-3">
+                                                                <span class="p-5">Total con envio <span class="ps-5 " id="precioTotal">$</span></span>
+                                                        </div>
+                                                        <hr style="opacity:15%;color: gray;">
+                                                        <div class="p-1 pe-5 pb-3 text-end">
+                                                                <a href="../index.html" class="btn btn-primary ">Seguir compra</a>
+                                                        </div>
+                                                </div>
+                                        </section> 
                                 </div>
-                                <div class="main__gcontainer1">
-                                        <div class="main__gvolver">
-                                                <a href="../index.html">
-                                                        <span>
-                                                                <h2 class="main__gsubtitle">Home</h2>
-                                                        </span>
-                                                                <span class="main__item">/</span>
-                                                </a>
-                                                <a href="../paginas/productos.html">
-                                                        <span>
-                                                                <h1 class="main__gsubtitle">Teclados</h1>
-                                                        </span>
-                                                </a>
-                                        </div>
-                                </div>
-                                <div class="products_list">
-                                        <div class="list__item">
-                                                <a href="../paginas/gabineteproduct.html" class="product">
-                                                        <div class="image">
-                                                                <img src="../imagenes/teclado.png" alt="Teclado Hyperx Alloy Origins">
-                                                        </div>
-                                                        <div class="info">
-                                                                <h3 class="product__title">TECLADO MECANICO ALLOY ORIGINS CORE HYPERX</h3>
-                                                                <div class="main__price1">
-                                                                        $7.499
-                                                                        <span class="price__promo">$8.499</span>
-                                                                </div>
-                                                                <div>
-                                                                        <div class="main__gitemcontainer1">
-                                                                                <div class="main__gitem1">
-                                                                                        <span class="main__goutline1">Comprar</span>
-                                                                                </div>
-                                                                                <div class="main__gitem1">
-                                                                                        <span class="main__goutline2"><i class="fas fa-shopping-cart"></i> Agregar</span>
-                                                                                </div>
-                                                                        </div>
-                                                                </div>
-                                                        </div>
-                                                </a>
-                                        </div>
-                                        <div class="list__item">
-                                                <a href="../paginas/gabineteproduct.html" class="product">
-                                                        <div class="image">
-                                                                <img src="../imagenes/teclado1.png" alt="Teclado Redragon">
-                                                        </div>
-                                                        <div class="info">
-                                                                <h3 class="product__title">TECLADO REDRAGON</h3>
-                                                                <div class="main__price1">
-                                                                        $9.999
-                                                                        <span class="price__promo">$10.999</span>
-                                                                </div>
-                                                                <div>
-                                                                        <div class="main__gitemcontainer1">
-                                                                                <div class="main__gitem1">
-                                                                                        <span class="main__goutline1">Comprar</span>
-                                                                                </div>
-                                                                                <div class="main__gitem1">
-                                                                                        <span class="main__goutline2"><i class="fas fa-shopping-cart"></i> Agregar</span>
-                                                                                </div>
-                                                                        </div>
-                                                                </div>
-                                                        </div>
-                                                </a>
-                                        </div>
-                                        <div class="list__item">
-                                                <a href="../paginas/gabineteproduct.html" class="product">
-                                                        <div class="image">
-                                                                <img src="../imagenes/teclado2.png" alt="Teclado Hyperx alloy Fps Pro">
-                                                        </div>
-                                                        <div class="info">
-                                                                <h3 class="product__title">TECLADO HYPERX ALLOY FPS PRO</h3>
-                                                                <div class="main__price1">
-                                                                        $8.999
-                                                                        <span class="price__promo">$9.999</span>
-                                                                </div>
-                                                                <div>
-                                                                        <div class="main__gitemcontainer1">
-                                                                                <div class="main__gitem1">
-                                                                                        <span class="main__goutline1">Comprar</span>
-                                                                                </div>
-                                                                                <div class="main__gitem1">
-                                                                                        <span class="main__goutline2"><i class="fas fa-shopping-cart"></i> Agregar</span>
-                                                                                </div>
-                                                                        </div>
-                                                                </div>
-                                                        </div>
-                                                </a>
-                                        </div>
-                                        <div class="list__item">
-                                                <a href="../paginas/gabineteproduct.html" class="product">
-                                                        <div class="image">
-                                                                <img src="../imagenes/teclado3.png" alt="Teclado Hyperx Mecanico RGB">
-                                                        </div>
-                                                        <div class="info">
-                                                                <h3 class="product__title">TECLADO HYPERX MECANICO RGB</h3>
-                                                                <div class="main__price1">
-                                                                        $7.560
-                                                                        <span class="price__promo">$8.880</span>
-                                                                </div>
-                                                                <div>
-                                                                        <div class="main__gitemcontainer1">
-                                                                                <div class="main__gitem1">
-                                                                                        <span class="main__goutline1">Comprar</span>
-                                                                                </div>
-                                                                                <div class="main__gitem1">
-                                                                                        <span class="main__goutline2"><i class="fas fa-shopping-cart"></i> Agregar</span>
-                                                                                </div>
-                                                                        </div>
-                                                                </div>
-                                                        </div>
-                                                </a>
-                                        </div>
-                                        <div class="list__item">
-                                                <a href="../paginas/gabineteproduct.html" class="product">
-                                                        <div class="image">
-                                                                <img src="../imagenes/teclado4.png" alt="Teclado Hyperx Mecanico ">
-                                                        </div>
-                                                        <div class="info">
-                                                                <h3 class="product__title">TECLADO HYPERX MECANICO</h3>
-                                                                <div class="main__price1">
-                                                                        $8.679
-                                                                        <span class="price__promo">$9.899</span>
-                                                                </div>
-                                                                <div>
-                                                                        <div class="main__gitemcontainer1">
-                                                                                <div class="main__gitem1">
-                                                                                        <span class="main__goutline1">Comprar</span>
-                                                                                </div>
-                                                                                <div class="main__gitem1">
-                                                                                        <span class="main__goutline2"><i class="fas fa-shopping-cart"></i> Agregar</span>
-                                                                                </div>
-                                                                        </div>
-                                                                </div>
-                                                        </div>
-                                                </a>
-                                        </div>
-                                </div>
-                                <nav aria-label="Search results pages" class="bg-white pb-5">
-                                        <ul class="pagination justify-content-center space">
-                                                <li class="page-item disabled">
-                                                        <a class="page-link">Previous</a>
-                                                </li>
-                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                                <li class="page-item " aria-current="page">
-                                                        <a class="page-link" href="#">2</a>
-                                                </li>
-                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                <li class="page-item">
-                                                        <a class="page-link" href="#">Next</a>
-                                                </li>
-                                        </ul>
-                                </nav>
                         </div>
                 </div>
-        </div>
 </main>
         
-        <footer class="footer">
+        <footer class="footer"> 
         <div class="footer__izquierda">
-            <span class="footer__atencion">ATENCIÓN AL CLIENTE:</span>
-            <p class="footer__color">
-            0810-555-8892 <br>
-            </p>
-            <a class="footer__color" href="#">ForGamers@gmail.com</a>
-            <span class="footer__color">Whatsapp:</span> <a class="footer__color" href="https://wa.me/+541159542242">+54 11 59542242</a>
+                <span class="footer__atencion">ATENCIÓN AL CLIENTE:</span>
+                <p class="footer__color">
+                        0810-555-8892 <br>
+                </p>
+                <a class="footer__color" href="#">ForGamers@gmail.com</a>
+                <span class="footer__color">Whatsapp:</span> <a class="footer__color" href="https://wa.me/+541159542242">+54 11 59542242</a>
         </div>
         <div>
-            <h2 class="footer__atencion">SE EL PRIMERO EN ENTERARTE!</h2>
-            <h3 class="footer__color">Recibi las mejores promos y noticias!</h3>
-            <form class="footer__formf">
-                <label for="email" id="email"></label>
-                <input class="footer__input" type="email" form="email" id="email" placeholder="Direccion de Email">
-                <button class="footer__botongmail"><img src="../imagenes/enviar.png"alt="enviar" class="footer__botonimg"></button>
-            </form>
+                <h2 class="footer__atencion">SE EL PRIMERO EN ENTERARTE!</h2>
+                <h3 class="footer__color">Recibi las mejores promos y noticias!</h3>
+                <form class="footer__formf">
+                        <label for="email"></label>
+                        <input class="footer__input" type="email" form="email" placeholder="Direccion de Email">
+                        <button class="footer__botongmail"><img src="../imagenes/enviar.png"alt="enviar" class="footer__botonimg"></button>
+                </form>
         </div>
         <div class="footer__redes">
-            <h2 class="footer__color">Copyright© 2021- ForGamers</h2>
-            <a class="footer__sociales" href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
-            <a class="footer__sociales" href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
-            <a class="footer__sociales" href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                <h2 class="footer__color">Copyright© 2021- ForGamers</h2>
+                <a class="footer__sociales" href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <a class="footer__sociales" href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a class="footer__sociales" href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
         </div>
         <div>
-            <h2 class="footer__atencion">Encontranos aca!</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52421.685332004214!2d-58.42019202466192!3d-34.797001165400935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd3194a44b3ed%3A0xb3c4c71736efabce!2sParque%20Finky!5e0!3m2!1ses!2sar!4v1649360176041!5m2!1ses!2sar" width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <h2 class="footer__atencion">Encontranos aca!</h2>
+                <iframe title="Dirección de google maps local" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52421.685332004214!2d-58.42019202466192!3d-34.797001165400935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd3194a44b3ed%3A0xb3c4c71736efabce!2sParque%20Finky!5e0!3m2!1ses!2sar!4v1649360176041!5m2!1ses!2sar"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="footer__maps"></iframe>
         </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="../js/main.js"></script>
         <script src="../js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> 
 </body>
 </html>    
