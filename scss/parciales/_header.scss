@@ -102,15 +102,18 @@ $mapaheader: (
 }
 
 .nav__searchcontainer form input{
+    outline: none;
     border: 0;
     padding: 15px;
+}
+
+.nav__searchcontainer form:hover{
+    border: 2px solid #000;
 }
 
 .nav__paddright{
     padding-right: 20px;
 }
-
-
 
 .nav__buscar{
     color: #0071c9;
@@ -316,50 +319,3 @@ $mapaheader: (
         margin: auto;
         color: #91c612;
     }
-
-    // .register__label{
-    //     padding-top: 0px;
-    // }
-
-    // .register__incontain{
-    //     padding-top: 3.5px;
-    // }
-
-    // .register__input{
-    //     width: 100%;
-    //     font-size: 1rem;
-    //     font-weight: 400;
-    //     color: #212529;
-    //     background-color: #fff;
-    //     border: 1px solid #ced4da;
-    //     border-radius: 0.25rem;
-    //     padding: 7px ;
-    // }
-
-    // .allregister__container{
-    // }
-
-    // .pantalladisappear{
-    //     display: none;
-    // }
-
-    // .modal-content{
-    //     transition: all 1s;
-    // }
-
-    // .disappearregister{
-    //     transform: translateY(-500px) ;
-    //     opacity: 0;
-    // }
-
-    // .modalpalu{
-    //     position: fixed;
-    // top: 0;
-    // left: 0;
-    // z-index: 1055;
-    // width: 100%;
-    // height: 100%;
-    // overflow-x: hidden;
-    // overflow-y: auto;
-    // outline: 0;
-    // }

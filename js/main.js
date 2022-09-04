@@ -356,18 +356,12 @@ triggerbutton.addEventListener(`click`,(e) => {
 
     // VARIABLES
 
+// CARRITO ICONO
+const carritoicon = document.querySelector("#carritoicon");
+// DIV CONTENEDOR DEL CONTENIDO DEL CARRITO
+const divcarritocontainer = document.querySelector("#divcarritocontainer");
 // DIV CONTENEDOR DE PRODUCTOS
 const contenedorProductos = document.querySelector("#contenedor-productos");
-// DIV CONTENEDOR DE LOS MONITORES
-const contenedorMonitores = document.querySelector("#contenedor-productos-monitores");
-// DIV CONTENEDOR DE LOS TECLADOS
-const contenedorTeclados = document.querySelector("#contenedor-productos-teclados");
-// DIV CONTENEDOR DE LOS MOUSE
-const contenedorMouse = document.querySelector("#contenedor-productos-mouse");
-// DIV CONTENEDOR DE LAS NOTEBOOKS
-const contenedorNotebooks = document.querySelector("#contenedor-productos-notebooks");
-// DIV CONTENEDRO DE LAS PLACAS DE VIDEO
-const contenedorPlacasdevideo = document.querySelector("#contenedor-productos-placadevideo")
 // CONTADOR DEL CARRITO
 const contadorCarrito = document.querySelector("#contadorCarrito")
 // CONTENEDOR DE TU CARRITO ESTA VACIO
@@ -394,82 +388,7 @@ document.addEventListener('DOMContentLoaded', () => {
     verificarStorage()
 })
 
-// FETCH PAGINA PRODUCTOS  
 
-fetch('../json/stock.json')
-    .then((res) => res.json())
-    .then ((data) => {
-        
-        // SE CREAN LOS PRODUCTOS AL HTML
-data.forEach((producto) => {
-
-    const div = document.createElement("div");
-
-    div.classList.add(`list__item`);
-    
-    div.innerHTML = `
-    <a href="../paginas/gabineteproduct.html" class="product">
-            <div class="image">
-                <img src=${producto.img} alt= "">
-            </div>
-            <div class="info">
-                <h3 class="product__title">${producto.nombre}</h3>
-                <div class="main__price1">
-                    $${producto.precio}
-                    <span class="price__promo">$8.499</span>
-                </div>
-                <div>
-                    <div class="main__gitemcontainer1">
-                                <div class="main__gitem1">
-                                        <span class="main__goutline1"><button class= "boton-comprar">Comprar</button></span>
-                                </div>
-                                <div class="main__gitem1">
-                                    <span class="main__goutline2"><i class="fas fa-shopping-cart" aria-hidden="true"></i><button id="agregar${producto.id}" class="boton-agregar">Agregar</button></span>
-                                </div>
-                    </div>
-                </div>
-            </div>
-
-
-    </a>
-    `
-
-    contenedorProductos.appendChild(div)
-
-    const boton = document.querySelector(`#agregar${producto.id}`);
-
-
-    boton.addEventListener(`click`, (e) => {
-        e.preventDefault();
-        agregarAlCarrito(producto.id);
-    })
-
-    // FUNCION QUE AGREGA UN PRODUCTO AL CARRITO
-
-const agregarAlCarrito = (prodId) => {
-    //PARA AUMENTAR LA CANTIDAD Y QUE NO SE REPITA
-    const existe = carrito.some (prod => prod.id === prodId) //comprobar si el elemento ya existe en el carro
-
-    if (existe){ //SI YA ESTÁ EN EL CARRITO, ACTUALIZAMOS LA CANTIDAD
-        const prod = carrito.map (prod => { 
-            // map encuentre cual es el q igual al que está agregado, le suma la cantidad
-            if (prod.id === prodId){
-                prod.cantidad++
-            }
-        })
-    } else { //EN CASO DE QUE NO ESTÉ, LO AGREGAMOS AL CARRITO
-        const item = data.find((prod) => prod.id === prodId)
-        //Una vez obtenida la ID, le hago un push para agregarlo al carrito
-        carrito.push(item)
-    }
-    //Va a buscar el item, agregarlo al carrito y llama a la funcion actualizarCarrito, que recorre
-    //el carrito y se ve.
-    actualizarCarrito();
-}
-
-})  
-
-    })
 
 
 
@@ -598,22 +517,72 @@ const actualizarCarrito = () => {
         console.log(carrito);
 };
 
+// LISTENER PARA CARRITO ICON
+
+carritoicon.addEventListener("click",(e)=>{
+    e.preventDefault();
+    indexcontainer.classList.add(`d-none`);
+    productoscontainer.classList.add(`d-none`);
+    divcarritocontainer.classList.remove(`d-none`);
+})
+
+// 1 SOLA PAGINA
 
 
-    // FETCH PAGINA MONITORES
+// VARIABLES
 
 
-fetch('../json/monitores.json')
+// MAIN INDEX
+
+const indexcontainer = document.querySelector("#indexcontainer");
+
+// CONTENEDOR DE DONDE SE INYECTAN LOS PRODUCTOS
+const headerproducts = document.querySelector("#headerproducts");
+
+// A DEL LOS LI DEL HEADER
+
+// A INICIO
+const paginainicio = document.querySelector(".pageinicio");
+// A PRODUCTOS
+const pageproductos = document.querySelector("#pageproductos");
+// CONTAINER PRODUCTOS
+const productoscontainer = document.querySelector("#productoscontainer");
+// A MONITORES
+const pagemonitores = document.querySelector("#page-monitores");
+// A MOUSE
+const pagemouse = document.querySelector("#page-mouse");
+// A TECLADOS
+const pageteclados = document.querySelector("#page-teclados");
+// A NOTEBOOKS
+const pagenotebooks = document.querySelector("#page-notebooks");
+// A PLACAS DE VIDEO
+const pageplacasdevideo = document.querySelector("#page-placasdevideo");
+
+// LISTENERS PARA CADA A
+
+// INICIO
+paginainicio.addEventListener(`click`,(e) => {
+    e.preventDefault();
+    indexcontainer.classList.remove("d-none");
+    productoscontainer.classList.add(`d-none`);
+    divcarritocontainer.classList.add(`d-none`);
+})
+
+    // FETCH PAGINA PRODUCTOS  
+    const fetchprductos = ()=>{
+
+    fetch('../json/stock.json')
     .then((res) => res.json())
     .then ((data) => {
         
         // SE CREAN LOS PRODUCTOS AL HTML
-data.forEach((producto) => {
+    data.forEach((producto) => {
 
     const div = document.createElement("div");
 
     div.classList.add(`list__item`);
-    
+
+
     div.innerHTML = `
     <a href="../paginas/gabineteproduct.html" class="product">
             <div class="image">
@@ -641,7 +610,7 @@ data.forEach((producto) => {
     </a>
     `
 
-    contenedorMonitores.appendChild(div)
+    contenedorProductos.appendChild(div)
 
     const boton = document.querySelector(`#agregar${producto.id}`);
 
@@ -651,9 +620,9 @@ data.forEach((producto) => {
         agregarAlCarrito(producto.id);
     })
 
-    // funcion agregar al carrito
+    // FUNCION QUE AGREGA UN PRODUCTO AL CARRITO
 
-const agregarAlCarrito = (prodId) => {
+    const agregarAlCarrito = (prodId) => {
     //PARA AUMENTAR LA CANTIDAD Y QUE NO SE REPITA
     const existe = carrito.some (prod => prod.id === prodId) //comprobar si el elemento ya existe en el carro
 
@@ -672,96 +641,206 @@ const agregarAlCarrito = (prodId) => {
     //Va a buscar el item, agregarlo al carrito y llama a la funcion actualizarCarrito, que recorre
     //el carrito y se ve.
     actualizarCarrito();
-}
+    }
 
-})  
+    })  
 
     })
+    }
+
+// PRODUCTOS
+pageproductos.addEventListener('click',(e)=>{
+    contenedorProductos.innerHTML=``;
+    e.preventDefault();
+    indexcontainer.classList.add('d-none');
+    productoscontainer.classList.remove(`d-none`)
+    divcarritocontainer.classList.add(`d-none`);
+    fetchprductos();
+})
 
 
+    // FETCH PAGINA MONITORES
+    const fetchmonitores = ()=>{
+    fetch('../json/monitores.json')
+    .then((res) => res.json())
+    .then ((data) => {
+        
+        // SE CREAN LOS PRODUCTOS AL HTML
+    data.forEach((producto) => {
 
+    const div = document.createElement("div");
+
+    div.classList.add(`list__item`);
+
+    div.innerHTML = `
+    <a href="../paginas/gabineteproduct.html" class="product">
+            <div class="image">
+                <img src=${producto.img} alt= "">
+            </div>
+            <div class="info">
+                <h3 class="product__title">${producto.nombre}</h3>
+                <div class="main__price1">
+                    $${producto.precio}
+                    <span class="price__promo">$8.499</span>
+                </div>
+                <div>
+                    <div class="main__gitemcontainer1">
+                                <div class="main__gitem1">
+                                        <span class="main__goutline1"><button class= "boton-comprar">Comprar</button></span>
+                                </div>
+                                <div class="main__gitem1">
+                                    <span class="main__goutline2"><i class="fas fa-shopping-cart" aria-hidden="true"></i><button id="agregar${producto.id}" class="boton-agregar">Agregar</button></span>
+                                </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </a>
+    `
+
+    contenedorProductos.appendChild(div)
+
+    const boton = document.querySelector(`#agregar${producto.id}`);
+
+
+    boton.addEventListener(`click`, (e) => {
+        e.preventDefault();
+        agregarAlCarrito(producto.id);
+    })
+
+    // funcion agregar al carrito
+
+    const agregarAlCarrito = (prodId) => {
+    //PARA AUMENTAR LA CANTIDAD Y QUE NO SE REPITA
+    const existe = carrito.some (prod => prod.id === prodId) //comprobar si el elemento ya existe en el carro
+
+    if (existe){ //SI YA ESTÁ EN EL CARRITO, ACTUALIZAMOS LA CANTIDAD
+        const prod = carrito.map (prod => { 
+            // map encuentre cual es el q igual al que está agregado, le suma la cantidad
+            if (prod.id === prodId){
+                prod.cantidad++
+            }
+        })
+    } else { //EN CASO DE QUE NO ESTÉ, LO AGREGAMOS AL CARRITO
+        const item = data.find((prod) => prod.id === prodId)
+        //Una vez obtenida la ID, le hago un push para agregarlo al carrito
+        carrito.push(item)
+    }
+    //Va a buscar el item, agregarlo al carrito y llama a la funcion actualizarCarrito, que recorre
+    //el carrito y se ve.
+    actualizarCarrito();
+    }
+
+    })  
+
+    })
+    }
+
+// MONITORES
+
+pagemonitores.addEventListener(`click`,(e)=>{
+    contenedorProductos.innerHTML=``;
+    e.preventDefault();
+    indexcontainer.classList.add(`d-none`);
+    productoscontainer.classList.remove(`d-none`);
+    divcarritocontainer.classList.add(`d-none`);
+    fetchmonitores();
+})
 
     // FETCH PAGINA TECLADOS
 
+    const fetchteclados = ()=>{
+    fetch('../json/teclados.json')
+    .then((res) => res.json())
+    .then ((data) => {
+        
+        // SE CREAN LOS PRODUCTOS AL HTML
+    data.forEach((producto) => {
 
-fetch('../json/teclados.json')
-.then((res) => res.json())
-.then ((data) => {
-    
-    // SE CREAN LOS PRODUCTOS AL HTML
-data.forEach((producto) => {
+    const div = document.createElement("div");
 
-const div = document.createElement("div");
+    div.classList.add(`list__item`);
 
-div.classList.add(`list__item`);
-
-div.innerHTML = `
-<a href="../paginas/gabineteproduct.html" class="product">
-        <div class="image">
-            <img src=${producto.img} alt= "">
-        </div>
-        <div class="info">
-            <h3 class="product__title">${producto.nombre}</h3>
-            <div class="main__price1">
-                $${producto.precio}
-                <span class="price__promo">$8.499</span>
+    div.innerHTML = `
+    <a href="../paginas/gabineteproduct.html" class="product">
+            <div class="image">
+                <img src=${producto.img} alt= "">
             </div>
-            <div>
-                <div class="main__gitemcontainer1">
-                            <div class="main__gitem1">
-                                    <span class="main__goutline1"><button class= "boton-comprar">Comprar</button></span>
-                            </div>
-                            <div class="main__gitem1">
-                                <span class="main__goutline2"><i class="fas fa-shopping-cart" aria-hidden="true"></i><button id="agregar${producto.id}" class="boton-agregar">Agregar</button></span>
-                            </div>
+            <div class="info">
+                <h3 class="product__title">${producto.nombre}</h3>
+                <div class="main__price1">
+                    $${producto.precio}
+                    <span class="price__promo">$8.499</span>
+                </div>
+                <div>
+                    <div class="main__gitemcontainer1">
+                                <div class="main__gitem1">
+                                        <span class="main__goutline1"><button class= "boton-comprar">Comprar</button></span>
+                                </div>
+                                <div class="main__gitem1">
+                                    <span class="main__goutline2"><i class="fas fa-shopping-cart" aria-hidden="true"></i><button id="agregar${producto.id}" class="boton-agregar">Agregar</button></span>
+                                </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
 
-</a>
-`
+    </a>
+    `
 
-contenedorTeclados.appendChild(div)
+    contenedorProductos.appendChild(div)
 
-const boton = document.querySelector(`#agregar${producto.id}`);
+    const boton = document.querySelector(`#agregar${producto.id}`);
 
 
-boton.addEventListener(`click`, (e) => {
-    e.preventDefault();
-    agregarAlCarrito(producto.id);
-})
-
-// funcion agregar al carrito
-
-const agregarAlCarrito = (prodId) => {
-//PARA AUMENTAR LA CANTIDAD Y QUE NO SE REPITA
-const existe = carrito.some (prod => prod.id === prodId) //comprobar si el elemento ya existe en el carro
-
-if (existe){ //SI YA ESTÁ EN EL CARRITO, ACTUALIZAMOS LA CANTIDAD
-    const prod = carrito.map (prod => { 
-        // map encuentre cual es el q igual al que está agregado, le suma la cantidad
-        if (prod.id === prodId){
-            prod.cantidad++
-        }
+    boton.addEventListener(`click`, (e) => {
+        e.preventDefault();
+        agregarAlCarrito(producto.id);
     })
-} else { //EN CASO DE QUE NO ESTÉ, LO AGREGAMOS AL CARRITO
-    const item = data.find((prod) => prod.id === prodId)
-    //Una vez obtenida la ID, le hago un push para agregarlo al carrito
-    carrito.push(item)
-}
-//Va a buscar el item, agregarlo al carrito y llama a la funcion actualizarCarrito, que recorre
-//el carrito y se ve.
-actualizarCarrito();
-}
 
-})  
+    // funcion agregar al carrito
 
+    const agregarAlCarrito = (prodId) => {
+    //PARA AUMENTAR LA CANTIDAD Y QUE NO SE REPITA
+    const existe = carrito.some (prod => prod.id === prodId) //comprobar si el elemento ya existe en el carro
+
+    if (existe){ //SI YA ESTÁ EN EL CARRITO, ACTUALIZAMOS LA CANTIDAD
+        const prod = carrito.map (prod => { 
+            // map encuentre cual es el q igual al que está agregado, le suma la cantidad
+            if (prod.id === prodId){
+                prod.cantidad++
+            }
+        })
+    } else { //EN CASO DE QUE NO ESTÉ, LO AGREGAMOS AL CARRITO
+        const item = data.find((prod) => prod.id === prodId)
+        //Una vez obtenida la ID, le hago un push para agregarlo al carrito
+        carrito.push(item)
+    }
+    //Va a buscar el item, agregarlo al carrito y llama a la funcion actualizarCarrito, que recorre
+    //el carrito y se ve.
+    actualizarCarrito();
+    }
+
+    })  
+
+    })
+    }
+
+// TECLADOS
+
+pageteclados.addEventListener(`click`,(e)=>{
+    contenedorProductos.innerHTML=``;
+    e.preventDefault()
+    indexcontainer.classList.add(`d-none`);
+    productoscontainer.classList.remove(`d-none`);
+    divcarritocontainer.classList.add(`d-none`);
+    fetchteclados();
 })
 
     // FETCH PAGINA MOUSE
 
-
+    const fetchmouse =()=>{
     fetch('../json/mouse.json')
     .then((res) => res.json())
     .then ((data) => {
@@ -800,7 +879,7 @@ actualizarCarrito();
     </a>
     `
     
-    contenedorMouse.appendChild(div)
+    contenedorProductos.appendChild(div)
     
     const boton = document.querySelector(`#agregar${producto.id}`);
     
@@ -836,91 +915,22 @@ actualizarCarrito();
     })  
     
     })
+    }
 
+//  MOUSE
+
+pagemouse.addEventListener(`click`,(e)=>{
+    contenedorProductos.innerHTML=``;
+    e.preventDefault()
+    indexcontainer.classList.add(`d-none`);
+    productoscontainer.classList.remove(`d-none`);
+    divcarritocontainer.classList.add(`d-none`);
+    fetchmouse();
+})
 
     // FETCH PAGINA NOTEBOOKS
-
-
-    fetch('../json/notebooks.json')
-    .then((res) => res.json())
-    .then ((data) => {
-        
-        // SE CREAN LOS PRODUCTOS AL HTML
-    data.forEach((producto) => {
-    
-    const div = document.createElement("div");
-    
-    div.classList.add(`list__item`);
-    
-    div.innerHTML = `
-    <a href="../paginas/gabineteproduct.html" class="product">
-            <div class="image">
-                <img src=${producto.img} alt= "">
-            </div>
-            <div class="info">
-                <h3 class="product__title">${producto.nombre}</h3>
-                <div class="main__price1">
-                    $${producto.precio}
-                    <span class="price__promo">$8.499</span>
-                </div>
-                <div>
-                    <div class="main__gitemcontainer1">
-                                <div class="main__gitem1">
-                                        <span class="main__goutline1"><button class= "boton-comprar">Comprar</button></span>
-                                </div>
-                                <div class="main__gitem1">
-                                    <span class="main__goutline2"><i class="fas fa-shopping-cart" aria-hidden="true"></i><button id="agregar${producto.id}" class="boton-agregar">Agregar</button></span>
-                                </div>
-                    </div>
-                </div>
-            </div>
-    
-    
-    </a>
-    `
-    
-    contenedorNotebooks.appendChild(div)
-    
-    const boton = document.querySelector(`#agregar${producto.id}`);
-    
-    
-    boton.addEventListener(`click`, (e) => {
-        e.preventDefault();
-        agregarAlCarrito(producto.id);
-    })
-    
-    // funcion agregar al carrito
-    
-    const agregarAlCarrito = (prodId) => {
-    //PARA AUMENTAR LA CANTIDAD Y QUE NO SE REPITA
-    const existe = carrito.some (prod => prod.id === prodId) //comprobar si el elemento ya existe en el carro
-    
-    if (existe){ //SI YA ESTÁ EN EL CARRITO, ACTUALIZAMOS LA CANTIDAD
-        const prod = carrito.map (prod => { 
-            // map encuentre cual es el q igual al que está agregado, le suma la cantidad
-            if (prod.id === prodId){
-                prod.cantidad++
-            }
-        })
-    } else { //EN CASO DE QUE NO ESTÉ, LO AGREGAMOS AL CARRITO
-        const item = data.find((prod) => prod.id === prodId)
-        //Una vez obtenida la ID, le hago un push para agregarlo al carrito
-        carrito.push(item)
-    }
-    //Va a buscar el item, agregarlo al carrito y llama a la funcion actualizarCarrito, que recorre
-    //el carrito y se ve.
-    actualizarCarrito();
-    }
-    
-    })  
-    
-    })
-
-
-    // FETCH PAGINA PLACAS DE VIDEO
-
-
-        fetch('../json/placadevideo.json')
+    const fetchnotebooks=()=>{
+        fetch('../json/notebooks.json')
         .then((res) => res.json())
         .then ((data) => {
             
@@ -958,7 +968,7 @@ actualizarCarrito();
         </a>
         `
         
-        contenedorPlacasdevideo.appendChild(div)
+        contenedorProductos.appendChild(div)
         
         const boton = document.querySelector(`#agregar${producto.id}`);
         
@@ -994,3 +1004,105 @@ actualizarCarrito();
         })  
         
         })
+}
+
+
+// NOTEBOOKS
+
+pagenotebooks.addEventListener(`click`,(e)=>{
+    contenedorProductos.innerHTML=``;
+    e.preventDefault()
+    indexcontainer.classList.add(`d-none`);
+    productoscontainer.classList.remove(`d-none`);
+    divcarritocontainer.classList.add(`d-none`);
+    fetchnotebooks();
+})
+
+    // FETCH PAGINA PLACAS DE VIDEO
+    const fetchplacasdevideo=()=>{
+            fetch('../json/placadevideo.json')
+            .then((res) => res.json())
+            .then ((data) => {
+                
+                // SE CREAN LOS PRODUCTOS AL HTML
+            data.forEach((producto) => {
+            
+            const div = document.createElement("div");
+            
+            div.classList.add(`list__item`);
+            
+            div.innerHTML = `
+            <a href="../paginas/gabineteproduct.html" class="product">
+                    <div class="image">
+                        <img src=${producto.img} alt= "">
+                    </div>
+                    <div class="info">
+                        <h3 class="product__title">${producto.nombre}</h3>
+                        <div class="main__price1">
+                            $${producto.precio}
+                            <span class="price__promo">$8.499</span>
+                        </div>
+                        <div>
+                            <div class="main__gitemcontainer1">
+                                        <div class="main__gitem1">
+                                                <span class="main__goutline1"><button class= "boton-comprar">Comprar</button></span>
+                                        </div>
+                                        <div class="main__gitem1">
+                                            <span class="main__goutline2"><i class="fas fa-shopping-cart" aria-hidden="true"></i><button id="agregar${producto.id}" class="boton-agregar">Agregar</button></span>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+            
+            
+            </a>
+            `
+            
+            contenedorProductos.appendChild(div)
+            
+            const boton = document.querySelector(`#agregar${producto.id}`);
+            
+            
+            boton.addEventListener(`click`, (e) => {
+                e.preventDefault();
+                agregarAlCarrito(producto.id);
+            })
+            
+            // funcion agregar al carrito
+            
+            const agregarAlCarrito = (prodId) => {
+            //PARA AUMENTAR LA CANTIDAD Y QUE NO SE REPITA
+            const existe = carrito.some (prod => prod.id === prodId) //comprobar si el elemento ya existe en el carro
+            
+            if (existe){ //SI YA ESTÁ EN EL CARRITO, ACTUALIZAMOS LA CANTIDAD
+                const prod = carrito.map (prod => { 
+                    // map encuentre cual es el q igual al que está agregado, le suma la cantidad
+                    if (prod.id === prodId){
+                        prod.cantidad++
+                    }
+                })
+            } else { //EN CASO DE QUE NO ESTÉ, LO AGREGAMOS AL CARRITO
+                const item = data.find((prod) => prod.id === prodId)
+                //Una vez obtenida la ID, le hago un push para agregarlo al carrito
+                carrito.push(item)
+            }
+            //Va a buscar el item, agregarlo al carrito y llama a la funcion actualizarCarrito, que recorre
+            //el carrito y se ve.
+            actualizarCarrito();
+            }
+            
+            })  
+            
+            })
+    }
+
+// PLACAS DE VIDEO
+
+pageplacasdevideo.addEventListener(`click`,(e)=>{
+    contenedorProductos.innerHTML=``;
+    e.preventDefault()
+    indexcontainer.classList.add(`d-none`);
+    productoscontainer.classList.remove(`d-none`);
+    divcarritocontainer.classList.add(`d-none`);
+    fetchplacasdevideo();
+})

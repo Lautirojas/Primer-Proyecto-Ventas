@@ -20,6 +20,7 @@
         <!-- HEADER -->
         <header class="header">
 
+                <!-- NAV UP HEADER -->
                 <nav class="navup">
                         <div class="navupcontainer">
                                 <div class="navupcontact">
@@ -111,7 +112,7 @@
                                 
                         </div>
 
-                        <div class="nav__paddright"><a class="nav__icono" href="../index.html"><img src="imagenes/ForGamers2.png" alt="ForGamers"></a></div>
+                        <div class="nav__paddright"><div class="nav__icono pageinicio"><img src="imagenes/ForGamers2.png" alt="ForGamers"></div></div>
 
                         <!-- BUSCADOR -->
                         
@@ -130,7 +131,7 @@
                                                 <i class="fa-solid fa-magnifying-glass nav__searchcelu"></i>
                                         </li>
                                         <li class="nav__spacebtwnicons">
-                                                <a class="nav__compras " href="paginas/carrito.html"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                                                <a class="nav__compras " href="#"><i id="carritoicon" class="fa-solid fa-cart-shopping cart"></i></a>
                                                 <span id="contadorCarrito" class="contador__carrito">0</span>
                                         </li>
                                         <li class="nav__spacebtwnicons position-relative ">
@@ -246,28 +247,138 @@
                                                         </div>
                                                 </div>
                                         </div>
-
-                                        <!-- PRUEBA PERFIL-CONFIG -->
-
                                         
                         <!-- A PAGINAS -->
 
                         <div class="nav__container">
                 <ul class="nav__links">
-                <li class="nav__paginas"><a href="../index.html">Inicio</a></li> 
-                <li class="nav__paginas"><a href="../paginas/productos.html">Productos</a></li> 
-                <li class="nav__paginas"><a href="../paginas/monitores.html">Monitores</a></li>
-                <li class="nav__paginas"><a href="../paginas/teclados.html">Teclados</a></li>
-                <li class="nav__paginas"><a href="../paginas/mouse.html">Mouse</a></li>
-                <li class="nav__paginas"><a href="../paginas/notebooks.html">Notebooks</a></li>
-                <li class="nav__paginas"><a href="../paginas/placasdevideo.html">Placas de video</a></li>    
+                <li class="nav__paginas"><span class="pageinicio" >Inicio</span></li> 
+                <li class="nav__paginas"><span href="/paginas/productos.html" id="pageproductos">Productos</span></li> 
+                <li class="nav__paginas"><a href="../paginas/monitores.html" id="page-monitores">Monitores</a></li>
+                <li class="nav__paginas"><a href="../paginas/teclados.html" id="page-teclados">Teclados</a></li>
+                <li class="nav__paginas"><a href="../paginas/mouse.html" id="page-mouse">Mouse</a></li>
+                <li class="nav__paginas"><a href="../paginas/notebooks.html" id="page-notebooks">Notebooks</a></li>
+                <li class="nav__paginas"><a href="../paginas/placasdevideo.html" id="page-placasdevideo">Placas de video</a></li>    
                 </ul>
                         </div> 
                 </nav>
 </header>
         <!-- MAIN -->
         <main class="main">
+                <!--CARRITO CONTAINER-->
+                <div id="divcarritocontainer" class="d-none">
+                        <div class="card text-center container mb-5" style="position:unset; padding-left: 0; padding-right: 0;" >
+                                <div class="card-header">
+                                        <ul class="nav nav-pills card-header-pills">
+                                        <li class="nav-item">
+                                                <a class="nav-link active" href="#" style="padding: 0.8rem 1rem;"><h1 style="font-size:16px; line-height:1; margin-bottom: auto; ">Carrito</h1></a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link1" href="#" style="padding: 0.57rem 1rem;" >Guardados</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link disabled"></a>
+                                        </li>
+                                        </ul>
+                                </div>
+                        
+                        <!-- CONTENIDO -->
+                                <div id="carrito-contenedor">
+                                </div>
+                                <div id="containpricetotal">
+                                        <hr style="opacity:15%; margin: 0; color: gray;">
+                                        <div class="text-end pt-4 pb-3">
+                                                <span class="p-5">Total con envio <span class="ps-5 " id="precioTotal">$</span></span>
+                                        </div>
+                                        <hr style="opacity:15%;color: gray;">
+                                        <div class="p-1 pe-5 pb-3 text-end">
+                                                <a href="../index.html" class="btn btn-primary ">Seguir compra</a>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <!--PAGE PRODUCTOS-->
+                <div id="productoscontainer" class="d-none">
+                        <div class="main__newcontainer">
+                                <div class="main__products">
+                                        <div class="products__slidebar">
+                                                <div class="main__slidebar">
+                                                        <h2 class="main__h2correction1 space">Ordenar por:</h2>
+                                                        <ul>
+                                                                <li><a href="#" class="main__a main__phover1">Menor Precio <br></a> </li> 
+                                                                <li><a href="#" class="main__a main__phover1">Mayor Precio</a> </li> 
+                                                        </ul>
+                                                        <ul>    
+                                                                <li><br><h2 class="main__h2correction1"> Categorias:</h2></li> 
+                                                                <li> <a href="#" class="main__a main__phover1 ">Apple</a> <br> </li>
+                                                                <li> <a href="#" class="main__a main__phover1 ">Combos</a> <br> </li>
+                                                                <li> <a href="#" class="main__a main__phover1 ">Consolas</a> <br> </li>
+                                                                <li> <a href="#" class="main__a main__phover1 ">Fuentes</a> <br> </li>
+                                                                <li> <a href="#" class="main__a main__phover1 ">Gabinetes</a> <br> </li>
+                                                                <li> <a href="#" class="main__a main__phover1 ">Software</a> <br> </li>
+                                                                <li> <a href="#" class="main__a main__phover1 ">Refrigeración</a> <br>
+                                                                <li> <a href="#" class="main__a main__phover1 ">Parlantes</a> <br> </li>
+                                                                <li> <a href="#" class="main__a main__phover1 ">Impresoras</a> <br> </li>
+                                                        </ul>
+                                                </div>
+                                        </div>
+                                        <div class="products">
+                                                <div class="dropdown d-flex justify-content-end">
+                                                        <div class="products-dropdown">
+                                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        Ordenar Por:
+                                                                </button>
+                                                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                                                                        <li><a class="dropdown-item active" href="#">Mayor Precio</a></li>
+                                                                        <li><a class="dropdown-item" href="#">Menor Precio</a></li>
+                                                                </ul>
+                                                        </div>
+                                                        
+                                                        <div class="products-dropdown">
+                                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        Categorias:
+                                                                </button>
+                                                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                                                                        <li><a class="dropdown-item" href="../index.html">Inicio</a></li>
+                                                                        <li><hr class="dropdown-divider"></li>
+                                                                        <li><a class="dropdown-item active" href="#">Apple</a></li>
+                                                                        <li><a class="dropdown-item" href="#">Combos</a></li>
+                                                                        <li><a class="dropdown-item" href="#">Fuentes</a></li>
+                                                                        <li><a class="dropdown-item" href="#">Gabinetes</a></li>
+                                                                        <li><a class="dropdown-item" href="#">Software</a></li>
+                                                                        <li><a class="dropdown-item" href="#">Refrigeración</a></li>
+                                                                        <li><a class="dropdown-item" href="#">Parlantes</a></li>
+                                                                        <li><a class="dropdown-item" href="#">Impresoras</a></li>
+                                                                </ul>
+                                                        </div>
+                                                </div>
+                                                <div class="main__gcontainer1">
+                                                        <div class="main__gvolver">
+                                                                <a href="../index.html">
+                                                                        <span>
+                                                                                <h2 class="main__gsubtitle">Home</h2>
+                                                                        </span>
+                                                                                <span class="main__item">/</span>
+                                                                </a>
+                                                                <a href="../paginas/productos.html">
+                                                                        <span>
+                                                                                <h1 class="main__gsubtitle">Productos</h1>
+                                                                        </span>
+                                                                </a>
+                                                        </div>
+                                                </div>
+                                                <!-- DIV QUE MUESTRA LOS PRODUCTOS -->
+                                                <div id="contenedor-productos" class="products_list">
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <!--INDEX CONTAINER-->
+                <div id="indexcontainer">
 
+                <!-- INDEX -->
+                <div>
                 <section class="slide__container">
                 <div class="swiper">
                         <!-- Additional required wrapper -->
@@ -288,10 +399,10 @@
                                 <div class="swiper-scrollbar" style="position:unset;"></div>
                         </div>
                 </section>
-
+        
                 <div class="main__publicidadindex">
                 </div>
-
+        
                 <section class="main__containerpublicidad p-5">
                 <div>
                         <div>
@@ -308,13 +419,12 @@
                         </div>
                 </div>
                 </section>
-
-
+        
                 <div class="main__subtitle2">
                         <h3 style="font-weight: 600; font-size: 21px; margin-bottom: 0rem;">Elegí tu notebook ideal para trabajar o jugar</h3>                
                 </div>
         
-        <section class="main__containslider">
+                <section class="main__containslider">
                 <div class="main__productcontainer">
                         <div class="main__productsslider">
                                 <div class="main__imgslider"></div>
@@ -366,13 +476,13 @@
                                 </div>
                         </div>
                 </div>
-        </section>
-        
-        <div class="main__subtitle2">
+                </section>
+                
+                <div class="main__subtitle2">
                 <h3 style="font-weight: 600; font-size: 21px; margin-bottom: 0rem;">Tus productos favoritos estan aqui !</h3>                
-        </div>
-
-        <section class="main__containslider">
+                </div>
+        
+                <section class="main__containslider">
                 <div class="main__productcontainer">
                         <div class="main__productsslider">
                                 <div class="main__imgslider1"></div>
@@ -424,13 +534,13 @@
                                 </div>
                         </div>
                 </div>
-        </section>
-
-        <div class="main__subtitle2">
-                <h3 style="font-weight: 600; font-size: 21px; margin-bottom: 0rem;">Potencía tu PC con el mejor almacenamiento !</h3>                
-        </div>
+                </section>
         
-        <section class="main__containslider">
+                <div class="main__subtitle2">
+                <h3 style="font-weight: 600; font-size: 21px; margin-bottom: 0rem;">Potencía tu PC con el mejor almacenamiento !</h3>                
+                </div>
+        
+                <section class="main__containslider">
                 <div class="main__productcontainer">
                         <div class="main__productsslider">
                                 <div class="main__imgslider2"></div>
@@ -482,13 +592,13 @@
                                 </div>
                         </div>
                 </div>
-        </section>
-        
-        <div class="main__subtitle1">
+                </section>
+                
+                <div class="main__subtitle1">
                 <h3 style="font-weight: 600; font-size: 21px;">ESO QUE QUERÉS, <b>ENCONTRALO EN FORGAMERS</b></h3>                
-        </div>
-
-        <section class="main__containslider main__color">
+                </div>
+        
+                <section class="main__containslider main__color">
                 <div class="main__productcontainer">
                         <div class="main__productsslider">
                                 <div class="main__imgslider3"></div>
@@ -540,14 +650,14 @@
                                 </div>
                         </div>
                 </div>
-        </section>
-
+                </section>
         
-        <div class="main__subtitle1">
+                
+                <div class="main__subtitle1">
                 <h3 style="font-weight: 600; font-size: 21px;">Comodidad en todo momento, <b>Cuidá tu cuerpo</b></h3>                
-        </div>
-        
-        <section class="main__containslider main__color">
+                </div>
+                
+                <section class="main__containslider main__color">
                 <div class="main__productcontainer">
                         <div class="main__productsslider">
                                 <div class="main__imgslider4"></div>
@@ -599,9 +709,9 @@
                                 </div>
                         </div>
                 </div>
-        </section>
+                </section>
         
-        <section class="main__containslider main__color">
+                <section class="main__containslider main__color">
                 <div class="main__productcontainer">
                         <div class="main__productsslider">
                                 <div class="main__imgslider5"></div>
@@ -653,10 +763,11 @@
                                 </div>
                         </div>
                 </div>
-        </section>
-        
-        <!-- SECTION QUE HACE HACE QUE NO TIRE ERROR EL CODIGO -->
-        <section class="d-none">
+                </section>
+                </div>
+
+                <!-- SECTION QUE HACE HACE QUE NO TIRE ERROR EL CODIGO -->
+                <section class="d-none">
                                                         <div id="contenedor-productos-placadevideo" class="products_list">
                                                         </div>
                                                         <div id="contenedor-productos-notebooks" class="products_list">
@@ -681,7 +792,8 @@
                                                                         <a href="../index.html" class="btn btn-primary ">Seguir compra</a>
                                                                 </div>
                                                         </div>
-        </section> 
+                </section> 
+                </div>
 </main>
         <!-- FOOTER -->
         <footer class="footer"> 
@@ -716,7 +828,7 @@
 
         <!-- SCRIPTS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script src="js/main.js"></script>
+        <script src="js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
