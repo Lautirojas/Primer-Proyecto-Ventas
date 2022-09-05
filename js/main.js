@@ -573,7 +573,7 @@ paginainicio.addEventListener(`click`,(e) => {
     // FETCH PAGINA PRODUCTOS  
     const fetchprductos = ()=>{
 
-    fetch('../json/stock.json')
+    fetch('./json/stock.json')
     .then((res) => res.json())
     .then ((data) => {
         
@@ -661,10 +661,9 @@ pageproductos.addEventListener('click',(e)=>{
     fetchprductos();
 })
 
-
     // FETCH PAGINA MONITORES
     const fetchmonitores = ()=>{
-    fetch('../json/monitores.json')
+    fetch('./json/monitores.json')
     .then((res) => res.json())
     .then ((data) => {
         
@@ -755,7 +754,7 @@ pagemonitores.addEventListener(`click`,(e)=>{
     // FETCH PAGINA TECLADOS
 
     const fetchteclados = ()=>{
-    fetch('../json/teclados.json')
+    fetch('./json/teclados.json')
     .then((res) => res.json())
     .then ((data) => {
         
@@ -846,7 +845,7 @@ pageteclados.addEventListener(`click`,(e)=>{
     // FETCH PAGINA MOUSE
 
     const fetchmouse =()=>{
-    fetch('../json/mouse.json')
+    fetch('./json/mouse.json')
     .then((res) => res.json())
     .then ((data) => {
         
@@ -936,7 +935,7 @@ pagemouse.addEventListener(`click`,(e)=>{
 
     // FETCH PAGINA NOTEBOOKS
     const fetchnotebooks=()=>{
-        fetch('../json/notebooks.json')
+        fetch('./json/notebooks.json')
         .then((res) => res.json())
         .then ((data) => {
             
@@ -1027,7 +1026,7 @@ pagenotebooks.addEventListener(`click`,(e)=>{
 
     // FETCH PAGINA PLACAS DE VIDEO
     const fetchplacasdevideo=()=>{
-            fetch('../json/placadevideo.json')
+            fetch('./json/placadevideo.json')
             .then((res) => res.json())
             .then ((data) => {
                 
