@@ -441,7 +441,7 @@ const actualizarCarrito = () => {
         <div class="card-body" style="padding: 12rem 1rem;" id="carritoVacio" >
             <h5 class="card-title" style="color: #666;">Tu Carrito esta vacio</h5>
             <p class="card-text" style="color: #999;">¿No sabés qué comprar? ¡Miles de productos te esperan!</p>
-            <a href="../index.html" class="btn btn-primary">Seguir Comprando</a>
+            <a href="./index.html" class="btn btn-primary">Seguir Comprando</a>
         </div>
         `
         // METO EL CARTEL ADENTRO DEL CONTENEDOR CARRITO
