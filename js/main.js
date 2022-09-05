@@ -533,30 +533,32 @@ carritoicon.addEventListener("click",(e)=>{
 
 
 // MAIN INDEX
-
 const indexcontainer = document.querySelector("#indexcontainer");
 
 // CONTENEDOR DE DONDE SE INYECTAN LOS PRODUCTOS
 const headerproducts = document.querySelector("#headerproducts");
-
+// TEXTO QUE CAMBIA SEGUN LA PAGINA QUE SEA
+const textvolverproductos = document.querySelector("#textvolverproductos");
+// VOLVER A PRODUCTOS DESDE EL PRODUCTO SELECCIONADO
+const volverproductos = document.querySelector("#volverproductos")
 // A DEL LOS LI DEL HEADER
 
-// A INICIO
-const paginainicio = document.querySelector(".pageinicio");
-// A PRODUCTOS
-const pageproductos = document.querySelector("#pageproductos");
+// SPAN INICIO
+const paginainicio = document.querySelector(`.pageinicio`);
+// SPAN PRODUCTOS
+const pageproductos = document.querySelector(".pageproductos");
 // CONTAINER PRODUCTOS
 const productoscontainer = document.querySelector("#productoscontainer");
-// A MONITORES
-const pagemonitores = document.querySelector("#page-monitores");
-// A MOUSE
-const pagemouse = document.querySelector("#page-mouse");
-// A TECLADOS
-const pageteclados = document.querySelector("#page-teclados");
-// A NOTEBOOKS
-const pagenotebooks = document.querySelector("#page-notebooks");
-// A PLACAS DE VIDEO
-const pageplacasdevideo = document.querySelector("#page-placasdevideo");
+// SPAN MONITORES
+const pagemonitores = document.querySelector(".page-monitores");
+// SPAN MOUSE
+const pagemouse = document.querySelector(".page-mouse");
+// SPAN TECLADOS
+const pageteclados = document.querySelector(".page-teclados");
+// SPAN NOTEBOOKS
+const pagenotebooks = document.querySelector(".page-notebooks");
+// SPAN PLACAS DE VIDEO
+const pageplacasdevideo = document.querySelector(".page-placasdevideo");
 
 // LISTENERS PARA CADA A
 
@@ -650,6 +652,7 @@ paginainicio.addEventListener(`click`,(e) => {
 
 // PRODUCTOS
 pageproductos.addEventListener('click',(e)=>{
+    textvolverproductos.innerText="Productos";
     contenedorProductos.innerHTML=``;
     e.preventDefault();
     indexcontainer.classList.add('d-none');
@@ -740,6 +743,7 @@ pageproductos.addEventListener('click',(e)=>{
 // MONITORES
 
 pagemonitores.addEventListener(`click`,(e)=>{
+    textvolverproductos.innerText="Monitores";
     contenedorProductos.innerHTML=``;
     e.preventDefault();
     indexcontainer.classList.add(`d-none`);
@@ -830,6 +834,7 @@ pagemonitores.addEventListener(`click`,(e)=>{
 // TECLADOS
 
 pageteclados.addEventListener(`click`,(e)=>{
+    textvolverproductos.innerText="Teclados";
     contenedorProductos.innerHTML=``;
     e.preventDefault()
     indexcontainer.classList.add(`d-none`);
@@ -920,6 +925,7 @@ pageteclados.addEventListener(`click`,(e)=>{
 //  MOUSE
 
 pagemouse.addEventListener(`click`,(e)=>{
+    textvolverproductos.innerText="Mouse";
     contenedorProductos.innerHTML=``;
     e.preventDefault()
     indexcontainer.classList.add(`d-none`);
@@ -1010,6 +1016,7 @@ pagemouse.addEventListener(`click`,(e)=>{
 // NOTEBOOKS
 
 pagenotebooks.addEventListener(`click`,(e)=>{
+    textvolverproductos.innerText="Notebooks";
     contenedorProductos.innerHTML=``;
     e.preventDefault()
     indexcontainer.classList.add(`d-none`);
@@ -1099,10 +1106,30 @@ pagenotebooks.addEventListener(`click`,(e)=>{
 // PLACAS DE VIDEO
 
 pageplacasdevideo.addEventListener(`click`,(e)=>{
+    textvolverproductos.innerText="Placas de video";
     contenedorProductos.innerHTML=``;
     e.preventDefault()
     indexcontainer.classList.add(`d-none`);
     productoscontainer.classList.remove(`d-none`);
     divcarritocontainer.classList.add(`d-none`);
     fetchplacasdevideo();
+})
+
+
+// BUSQUEDA DE UN PRODUCTO(NO TERMINADO)
+
+// BUSQUEDA CONTAINER
+const busquedacontainer = document.querySelector("#busquedacontainer");
+
+document.addEventListener("keyup",e=>{
+
+    if(e.target.matches("#busqueda")){
+        const busqueda = document.querySelector(`#buqueda`).value
+        const buscar = ("#busqueda".toString())
+        const resultados = carrito.filter(p => p.nombre == buscar[0].toUpperCase() + buscar.substring(1))
+        resultados.forEach(buscado=>{
+
+        })
+    }
+    console.log(busqueda.value)
 })

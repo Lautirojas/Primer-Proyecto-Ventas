@@ -118,8 +118,8 @@
                         
                         <div class="nav__searchcontainer">
                                 <form>
-                                        <label for="busqueda" id="busqueda"></label>
-                                        <input type="search" name="busqueda" id="busqueda" placeholder="Buscar producto" class="nav__buttoncelu">
+                                        <label for="busqueda"></label>
+                                        <input type="search" id="busqueda" placeholder="Buscar producto" class="nav__buttoncelu">
                                         <button class="nav__buscar nav__buttoncelu"><i class="fa-solid fa-magnifying-glass"></i></button>
                                 </form>
                         </div>
@@ -252,19 +252,24 @@
 
                         <div class="nav__container">
                 <ul class="nav__links">
-                <li class="nav__paginas"><span class="pageinicio" >Inicio</span></li> 
-                <li class="nav__paginas"><span href="/paginas/productos.html" id="pageproductos">Productos</span></li> 
-                <li class="nav__paginas"><a href="../paginas/monitores.html" id="page-monitores">Monitores</a></li>
-                <li class="nav__paginas"><a href="../paginas/teclados.html" id="page-teclados">Teclados</a></li>
-                <li class="nav__paginas"><a href="../paginas/mouse.html" id="page-mouse">Mouse</a></li>
-                <li class="nav__paginas"><a href="../paginas/notebooks.html" id="page-notebooks">Notebooks</a></li>
-                <li class="nav__paginas"><a href="../paginas/placasdevideo.html" id="page-placasdevideo">Placas de video</a></li>    
+                <li class="nav__paginas"><a href="./index.html">Inicio</a></li> 
+                <li class="nav__paginas"><span class="pageproductos">Productos</span></li> 
+                <li class="nav__paginas"><span class="page-monitores">Monitores</span></li>
+                <li class="nav__paginas"><span class="page-teclados">Teclados</span></li>
+                <li class="nav__paginas"><span class="page-mouse">Mouse</span></li>
+                <li class="nav__paginas"><span class="page-notebooks">Notebooks</span></li>
+                <li class="nav__paginas"><span class="page-placasdevideo">Placas de video</span></li>    
                 </ul>
                         </div> 
                 </nav>
 </header>
         <!-- MAIN -->
         <main class="main">
+                <!--BUQUEDA PRODUCTOS-->
+                <div id="busquedacontainer">
+                        <div></div>
+                        <div></div>
+                </div>
                 <!--CARRITO CONTAINER-->
                 <div id="divcarritocontainer" class="d-none">
                         <div class="card text-center container mb-5" style="position:unset; padding-left: 0; padding-right: 0;" >
@@ -288,7 +293,7 @@
                                 <div id="containpricetotal">
                                         <hr style="opacity:15%; margin: 0; color: gray;">
                                         <div class="text-end pt-4 pb-3">
-                                                <span class="p-5">Total con envio <span class="ps-5 " id="precioTotal">$</span></span>
+                                                <span class="p-5">Total con envio <span class="ps-5 " id="precioTotal"></span></span>
                                         </div>
                                         <hr style="opacity:15%;color: gray;">
                                         <div class="p-1 pe-5 pb-3 text-end">
@@ -356,13 +361,13 @@
                                                         <div class="main__gvolver">
                                                                 <a href="../index.html">
                                                                         <span>
-                                                                                <h2 class="main__gsubtitle">Home</h2>
+                                                                                <h2 class="main__gsubtitle" style="cursor: pointer;">Home</h2>
                                                                         </span>
                                                                                 <span class="main__item">/</span>
                                                                 </a>
-                                                                <a href="../paginas/productos.html">
+                                                                <a>
                                                                         <span>
-                                                                                <h1 class="main__gsubtitle">Productos</h1>
+                                                                                <h1 class="main__gsubtitle" style="cursor: pointer;" id="textvolverproductos">Productos</h1>
                                                                         </span>
                                                                 </a>
                                                         </div>
@@ -765,34 +770,6 @@
                 </div>
                 </section>
                 </div>
-
-                <!-- SECTION QUE HACE HACE QUE NO TIRE ERROR EL CODIGO -->
-                <section class="d-none">
-                                                        <div id="contenedor-productos-placadevideo" class="products_list">
-                                                        </div>
-                                                        <div id="contenedor-productos-notebooks" class="products_list">
-                                                        </div>
-                                                        <div id="contenedor-productos-mouse" class="products_list">
-                                                        </div>
-                                                        <div id="contenedor-productos-teclados" class="products_list">
-                                                        </div>
-                                                        <div id="contenedor-productos-monitores" class="products_list">
-                                                        </div>
-                                                        <div id="contenedor-productos" class="products_list">
-                                                        </div>
-                                                        <div id="carrito-contenedor" >
-                                                        </div>
-                                                        <div id="containpricetotal">
-                                                                <hr style="opacity:15%; margin: 0; color: gray;">
-                                                                <div class="text-end pt-4 pb-3">
-                                                                        <span class="p-5">Total con envio <span class="ps-5 " id="precioTotal">$</span></span>
-                                                                </div>
-                                                                <hr style="opacity:15%;color: gray;">
-                                                                <div class="p-1 pe-5 pb-3 text-end">
-                                                                        <a href="../index.html" class="btn btn-primary ">Seguir compra</a>
-                                                                </div>
-                                                        </div>
-                </section> 
                 </div>
 </main>
         <!-- FOOTER -->

@@ -357,6 +357,7 @@
 }
 
 .nav__icono {
+  cursor: pointer;
   padding-top: 10px;
   padding-left: 200px;
 }
@@ -433,6 +434,7 @@
 }
 
 .nav__paginas {
+  cursor: pointer;
   display: flex;
   text-align: unset;
 }
@@ -1107,7 +1109,7 @@
 
 .main__gimgspace {
   color: #eeeeee;
-  padding-right: 300px;
+  padding-right: 200px;
   display: block;
 }
 
@@ -1120,7 +1122,7 @@
 .main__gmeta {
   padding: 30px;
   position: relative;
-  width: 31.3%;
+  width: 32.3%;
   background-color: #fefefe;
 }
 
@@ -1386,6 +1388,10 @@
   color: #666;
   font-size: 18px;
   line-height: 30px;
+}
+
+.text-description-product {
+  padding-left: 50px;
 }
 
 * {

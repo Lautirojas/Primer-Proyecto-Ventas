@@ -137,6 +137,7 @@ $mapaheader: (
 }
 
 .nav__icono{
+    cursor: pointer;
     padding-top: 10px;
     padding-left:200px;
 }
@@ -216,6 +217,7 @@ $mapaheader: (
 }
 
 .nav__paginas{
+    cursor: pointer;
     display: flex;
     text-align: unset;
 }
