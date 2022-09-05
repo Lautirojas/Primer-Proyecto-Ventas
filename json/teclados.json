@@ -1,7 +1,7 @@
 [
-    {"id": 1, "nombre": "TECLADO MECANICO ALLOY ORIGINS CORE HYPERX", "tipo": "teclado", "cantidad": 1,  "precio": 7499,  "img": "../imagenes/teclado.png"},
-    {"id": 2, "nombre": "TECLADO REDRAGON", "tipo": "teclado", "cantidad": 1,  "precio": 9999,  "img": "../imagenes/teclado1.png"},
-    {"id": 3, "nombre": "TECLADO HYPERX ALLOY FPS PRO", "tipo": "teclado", "cantidad": 1,  "precio": 8999,  "img": "../imagenes/teclado2.png"},
-    {"id": 4, "nombre": "TECLADO HYPERX MECANICO RGB", "tipo": "teclado", "cantidad": 1,  "precio": 7560,  "img": "../imagenes/teclado3.png"},
-    {"id": 5, "nombre": "TECLADO HYPERX MECANICO", "tipo": "teclado", "cantidad": 1,  "precio": 8679,  "img": "../imagenes/teclado4.png"}
+    {"id": 1, "nombre": "TECLADO MECANICO ALLOY ORIGINS CORE HYPERX", "tipo": "teclado", "cantidad": 1,  "precio": 7499,  "img": "./imagenes/teclado.png"},
+    {"id": 2, "nombre": "TECLADO REDRAGON", "tipo": "teclado", "cantidad": 1,  "precio": 9999,  "img": "./imagenes/teclado1.png"},
+    {"id": 3, "nombre": "TECLADO HYPERX ALLOY FPS PRO", "tipo": "teclado", "cantidad": 1,  "precio": 8999,  "img": "./imagenes/teclado2.png"},
+    {"id": 4, "nombre": "TECLADO HYPERX MECANICO RGB", "tipo": "teclado", "cantidad": 1,  "precio": 7560,  "img": "./imagenes/teclado3.png"},
+    {"id": 5, "nombre": "TECLADO HYPERX MECANICO", "tipo": "teclado", "cantidad": 1,  "precio": 8679,  "img": "./imagenes/teclado4.png"}
 ]

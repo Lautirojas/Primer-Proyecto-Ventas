@@ -1,7 +1,7 @@
 [
-    {"id": 1, "nombre": "MONITOR XAOMI", "tipo": "monitor", "cantidad": 1,  "precio": 37499,  "img": "../imagenes/monitor1.png"},
-    {"id": 2, "nombre": "MONITOR MSI 144HZ", "tipo": "monitor", "cantidad": 1,  "precio": 39999,  "img": "../imagenes/monitor.png"},
-    {"id": 3, "nombre": "MONITOR LG CX", "tipo": "monitor", "cantidad": 1,  "precio": 34999,  "img": "../imagenes/monitor2.png"},
-    {"id": 4, "nombre": "MONITOR ACER", "tipo": "monitor", "cantidad": 1,  "precio": 32999,  "img": "../imagenes/monitor3.png"},
-    {"id": 5, "nombre": "MONITOR SAMSUNG ODYSSEY G5", "tipo": "monitor", "cantidad": 1,  "precio": 30999,  "img": "../imagenes/monitor4.png"}
+    {"id": 1, "nombre": "MONITOR XAOMI", "tipo": "monitor", "cantidad": 1,  "precio": 37499,  "img": "./imagenes/monitor1.png"},
+    {"id": 2, "nombre": "MONITOR MSI 144HZ", "tipo": "monitor", "cantidad": 1,  "precio": 39999,  "img": "./imagenes/monitor.png"},
+    {"id": 3, "nombre": "MONITOR LG CX", "tipo": "monitor", "cantidad": 1,  "precio": 34999,  "img": "./imagenes/monitor2.png"},
+    {"id": 4, "nombre": "MONITOR ACER", "tipo": "monitor", "cantidad": 1,  "precio": 32999,  "img": "./imagenes/monitor3.png"},
+    {"id": 5, "nombre": "MONITOR SAMSUNG ODYSSEY G5", "tipo": "monitor", "cantidad": 1,  "precio": 30999,  "img": "./imagenes/monitor4.png"}
 ]
