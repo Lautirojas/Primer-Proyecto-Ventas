@@ -1117,18 +1117,38 @@ pageplacasdevideo.addEventListener(`click`,(e)=>{
 
 // BUSQUEDA DE UN PRODUCTO(NO TERMINADO)
 
-// BUSQUEDA CONTAINER
-const busquedacontainer = document.querySelector("#busquedacontainer");
+const busqueda = document.querySelector("#busqueda")
 
-document.addEventListener("keyup",e=>{
+const d = document
 
-    if(e.target.matches("#busqueda")){
-        const busqueda = document.querySelector(`#buqueda`).value
-        const buscar = ("#busqueda".toString())
-        const resultados = carrito.filter(p => p.nombre == buscar[0].toUpperCase() + buscar.substring(1))
-        resultados.forEach(buscado=>{
-
-        })
-    }
-    console.log(busqueda.value)
+d.addEventListener("DOMContentLoaded",(e)=>{
+    searchFilters(".card-filter",".card")
 })
+
+function searchFilters(input,selector){
+    
+    d.addEventListener("keyup",e=>{
+
+        if(e.key === "Enter"){
+            d.querySelectorAll(selector).forEach(el =>{
+                el.textContent.toLowerCase().includes(e.target.value)
+                ? el.classList.remove("filter")
+                : el.classList.add("filter")
+            })
+        }
+
+        
+        if(e.key === "Escape"){
+            e.target.value = ""
+        }
+
+        if(e.target.matches(input)){
+            d.querySelectorAll(selector).forEach(el =>{
+                el.textContent.toLowerCase().includes(e.target.value)
+                ? el.classList.remove("filter")
+                : el.classList.add("filter")
+            })
+        }
+    })
+
+}

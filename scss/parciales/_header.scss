@@ -321,3 +321,31 @@ $mapaheader: (
         margin: auto;
         color: #91c612;
     }
+
+// BUSQUEDA DE PRODUCTOS
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+
+.card{
+    background-color: #ffffff;
+    color: #2d2d33;
+    transition: all 0.3s ease-out;
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+}
+
+.card-figcaption{
+    padding: 1rem;
+}
+
+.filter{
+    visibility: hidden;
+    opacity: 0;
+    order: 1;
+}
