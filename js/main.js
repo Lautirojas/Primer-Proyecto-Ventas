@@ -559,6 +559,8 @@ const pageteclados = document.querySelector(".page-teclados");
 const pagenotebooks = document.querySelector(".page-notebooks");
 // SPAN PLACAS DE VIDEO
 const pageplacasdevideo = document.querySelector(".page-placasdevideo");
+// CONTENEDOR DE SEARCH PRODUCT
+const contendedorsearch = document.querySelector("#busquedacontainer")
 
 // LISTENERS PARA CADA A
 
@@ -568,6 +570,7 @@ paginainicio.addEventListener(`click`,(e) => {
     indexcontainer.classList.remove("d-none");
     productoscontainer.classList.add(`d-none`);
     divcarritocontainer.classList.add(`d-none`);
+    busquedacontainer.classList.remove("d-none");
 })
 
     // FETCH PAGINA PRODUCTOS  
@@ -588,10 +591,14 @@ paginainicio.addEventListener(`click`,(e) => {
     div.innerHTML = `
     <div class="product">
             <div class="image">
-                <img src=${producto.img} alt= "">
+                <a href="./paginas/gabineteproduct.html">
+                    <img src=${producto.img} alt= "">
+                </a>
             </div>
             <div class="info">
-                <h3 class="product__title">${producto.nombre}</h3>
+                <a href="./paginas/gabineteproduct.html">
+                    <h3 class="product__title">${producto.nombre}</h3>
+                </a>
                 <div class="main__price1">
                     $${producto.precio}
                     <span class="price__promo">$8.499</span>
@@ -656,6 +663,7 @@ pageproductos.addEventListener('click',(e)=>{
     contenedorProductos.innerHTML=``;
     e.preventDefault();
     indexcontainer.classList.add('d-none');
+    busquedacontainer.classList.add('d-none');
     productoscontainer.classList.remove(`d-none`)
     divcarritocontainer.classList.add(`d-none`);
     fetchprductos();
@@ -677,10 +685,14 @@ pageproductos.addEventListener('click',(e)=>{
     div.innerHTML = `
     <div class="product">
             <div class="image">
-                <img src=${producto.img} alt= "">
+                <a href="./paginas/gabineteproduct.html">
+                    <img src=${producto.img} alt= "">
+                </a>
             </div>
             <div class="info">
-                <h3 class="product__title">${producto.nombre}</h3>
+                <a href="./paginas/gabineteproduct.html">
+                    <h3 class="product__title">${producto.nombre}</h3>
+                </a>
                 <div class="main__price1">
                     $${producto.precio}
                     <span class="price__promo">$8.499</span>
@@ -746,6 +758,7 @@ pagemonitores.addEventListener(`click`,(e)=>{
     contenedorProductos.innerHTML=``;
     e.preventDefault();
     indexcontainer.classList.add(`d-none`);
+    busquedacontainer.classList.add('d-none');
     productoscontainer.classList.remove(`d-none`);
     divcarritocontainer.classList.add(`d-none`);
     fetchmonitores();
@@ -768,10 +781,14 @@ pagemonitores.addEventListener(`click`,(e)=>{
     div.innerHTML = `
     <div class="product">
             <div class="image">
-                <img src=${producto.img} alt= "">
+                <a href="./paginas/gabineteproduct.html">
+                    <img src=${producto.img} alt= "">
+                </a>
             </div>
             <div class="info">
-                <h3 class="product__title">${producto.nombre}</h3>
+                <a href="./paginas/gabineteproduct.html">
+                    <h3 class="product__title">${producto.nombre}</h3>
+                </a>
                 <div class="main__price1">
                     $${producto.precio}
                     <span class="price__promo">$8.499</span>
@@ -837,6 +854,7 @@ pageteclados.addEventListener(`click`,(e)=>{
     contenedorProductos.innerHTML=``;
     e.preventDefault()
     indexcontainer.classList.add(`d-none`);
+    busquedacontainer.classList.add('d-none');
     productoscontainer.classList.remove(`d-none`);
     divcarritocontainer.classList.add(`d-none`);
     fetchteclados();
@@ -859,10 +877,14 @@ pageteclados.addEventListener(`click`,(e)=>{
     div.innerHTML = `
     <div class="product">
             <div class="image">
-                <img src=${producto.img} alt= "">
+                <a href="./paginas/gabineteproduct.html">
+                    <img src=${producto.img} alt= "">
+                </a>
             </div>
             <div class="info">
-                <h3 class="product__title">${producto.nombre}</h3>
+                <a href="./paginas/gabineteproduct.html">
+                    <h3 class="product__title">${producto.nombre}</h3>
+                </a>
                 <div class="main__price1">
                     $${producto.precio}
                     <span class="price__promo">$8.499</span>
@@ -878,8 +900,8 @@ pageteclados.addEventListener(`click`,(e)=>{
                     </div>
                 </div>
             </div>
-    
-    
+
+
     </div>
     `
     
@@ -928,6 +950,7 @@ pagemouse.addEventListener(`click`,(e)=>{
     contenedorProductos.innerHTML=``;
     e.preventDefault()
     indexcontainer.classList.add(`d-none`);
+    busquedacontainer.classList.add('d-none');
     productoscontainer.classList.remove(`d-none`);
     divcarritocontainer.classList.add(`d-none`);
     fetchmouse();
@@ -948,29 +971,33 @@ pagemouse.addEventListener(`click`,(e)=>{
         
         div.innerHTML = `
         <div class="product">
-                <div class="image">
-                    <img src=${producto.img} alt= "">
-                </div>
-                <div class="info">
-                    <h3 class="product__title">${producto.nombre}</h3>
-                    <div class="main__price1">
-                        $${producto.precio}
-                        <span class="price__promo">$8.499</span>
-                    </div>
-                    <div>
-                        <div class="main__gitemcontainer1">
-                                    <div class="main__gitem1">
-                                            <span class="main__goutline1"><button class= "boton-comprar">Comprar</button></span>
-                                    </div>
-                                    <div class="main__gitem1">
-                                        <span class="main__goutline2"><i class="fas fa-shopping-cart" aria-hidden="true"></i><button id="agregar${producto.id}" class="boton-agregar">Agregar</button></span>
-                                    </div>
-                        </div>
-                    </div>
-                </div>
-        
-        
+        <div class="image">
+            <a href="./paginas/gabineteproduct.html">
+                <img src=${producto.img} alt= "">
+            </a>
         </div>
+        <div class="info">
+            <a href="./paginas/gabineteproduct.html">
+                <h3 class="product__title">${producto.nombre}</h3>
+            </a>
+            <div class="main__price1">
+                $${producto.precio}
+                <span class="price__promo">$8.499</span>
+            </div>
+            <div>
+                <div class="main__gitemcontainer1">
+                            <div class="main__gitem1">
+                                    <span class="main__goutline1"><button class= "boton-comprar">Comprar</button></span>
+                            </div>
+                            <div class="main__gitem1">
+                                <span class="main__goutline2"><i class="fas fa-shopping-cart" aria-hidden="true"></i><button id="agregar${producto.id}" class="boton-agregar">Agregar</button></span>
+                            </div>
+                </div>
+            </div>
+        </div>
+
+
+</div>
         `
         
         contenedorProductos.appendChild(div)
@@ -1019,6 +1046,7 @@ pagenotebooks.addEventListener(`click`,(e)=>{
     contenedorProductos.innerHTML=``;
     e.preventDefault()
     indexcontainer.classList.add(`d-none`);
+    busquedacontainer.classList.add('d-none');
     productoscontainer.classList.remove(`d-none`);
     divcarritocontainer.classList.add(`d-none`);
     fetchnotebooks();
@@ -1039,29 +1067,33 @@ pagenotebooks.addEventListener(`click`,(e)=>{
             
             div.innerHTML = `
             <div class="product">
-                    <div class="image">
-                        <img src=${producto.img} alt= "">
-                    </div>
-                    <div class="info">
-                        <h3 class="product__title">${producto.nombre}</h3>
-                        <div class="main__price1">
-                            $${producto.precio}
-                            <span class="price__promo">$8.499</span>
-                        </div>
-                        <div>
-                            <div class="main__gitemcontainer1">
-                                        <div class="main__gitem1">
-                                                <span class="main__goutline1"><button class= "boton-comprar">Comprar</button></span>
-                                        </div>
-                                        <div class="main__gitem1">
-                                            <span class="main__goutline2"><i class="fas fa-shopping-cart" aria-hidden="true"></i><button id="agregar${producto.id}" class="boton-agregar">Agregar</button></span>
-                                        </div>
-                            </div>
-                        </div>
-                    </div>
-            
-            
+            <div class="image">
+                <a href="./paginas/gabineteproduct.html">
+                    <img src=${producto.img} alt= "">
+                </a>
             </div>
+            <div class="info">
+                <a href="./paginas/gabineteproduct.html">
+                    <h3 class="product__title">${producto.nombre}</h3>
+                </a>
+                <div class="main__price1">
+                    $${producto.precio}
+                    <span class="price__promo">$8.499</span>
+                </div>
+                <div>
+                    <div class="main__gitemcontainer1">
+                                <div class="main__gitem1">
+                                        <span class="main__goutline1"><button class= "boton-comprar">Comprar</button></span>
+                                </div>
+                                <div class="main__gitem1">
+                                    <span class="main__goutline2"><i class="fas fa-shopping-cart" aria-hidden="true"></i><button id="agregar${producto.id}" class="boton-agregar">Agregar</button></span>
+                                </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </div>
             `
             
             contenedorProductos.appendChild(div)
@@ -1109,6 +1141,7 @@ pageplacasdevideo.addEventListener(`click`,(e)=>{
     contenedorProductos.innerHTML=``;
     e.preventDefault()
     indexcontainer.classList.add(`d-none`);
+    busquedacontainer.classList.add('d-none');
     productoscontainer.classList.remove(`d-none`);
     divcarritocontainer.classList.add(`d-none`);
     fetchplacasdevideo();
