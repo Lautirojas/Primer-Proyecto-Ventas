@@ -523,6 +523,7 @@ carritoicon.addEventListener("click",(e)=>{
     e.preventDefault();
     indexcontainer.classList.add(`d-none`);
     productoscontainer.classList.add(`d-none`);
+    busquedacontainer.classList.add('d-none');
     divcarritocontainer.classList.remove(`d-none`);
 })
 
@@ -541,6 +542,7 @@ const headerproducts = document.querySelector("#headerproducts");
 const textvolverproductos = document.querySelector("#textvolverproductos");
 // VOLVER A PRODUCTOS DESDE EL PRODUCTO SELECCIONADO
 const volverproductos = document.querySelector("#volverproductos")
+
 // A DEL LOS LI DEL HEADER
 
 // SPAN INICIO
