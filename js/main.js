@@ -586,7 +586,7 @@ paginainicio.addEventListener(`click`,(e) => {
 
 
     div.innerHTML = `
-    <a href="../paginas/gabineteproduct.html" class="product">
+    <div class="product">
             <div class="image">
                 <img src=${producto.img} alt= "">
             </div>
@@ -609,7 +609,7 @@ paginainicio.addEventListener(`click`,(e) => {
             </div>
 
 
-    </a>
+    </div>
     `
 
     contenedorProductos.appendChild(div)
@@ -675,7 +675,7 @@ pageproductos.addEventListener('click',(e)=>{
     div.classList.add(`list__item`);
 
     div.innerHTML = `
-    <a href="../paginas/gabineteproduct.html" class="product">
+    <div class="product">
             <div class="image">
                 <img src=${producto.img} alt= "">
             </div>
@@ -698,7 +698,7 @@ pageproductos.addEventListener('click',(e)=>{
             </div>
 
 
-    </a>
+    </div>
     `
 
     contenedorProductos.appendChild(div)
@@ -766,7 +766,7 @@ pagemonitores.addEventListener(`click`,(e)=>{
     div.classList.add(`list__item`);
 
     div.innerHTML = `
-    <a href="../paginas/gabineteproduct.html" class="product">
+    <div class="product">
             <div class="image">
                 <img src=${producto.img} alt= "">
             </div>
@@ -789,7 +789,7 @@ pagemonitores.addEventListener(`click`,(e)=>{
             </div>
 
 
-    </a>
+    </div>
     `
 
     contenedorProductos.appendChild(div)
@@ -857,7 +857,7 @@ pageteclados.addEventListener(`click`,(e)=>{
     div.classList.add(`list__item`);
     
     div.innerHTML = `
-    <a href="../paginas/gabineteproduct.html" class="product">
+    <div class="product">
             <div class="image">
                 <img src=${producto.img} alt= "">
             </div>
@@ -880,7 +880,7 @@ pageteclados.addEventListener(`click`,(e)=>{
             </div>
     
     
-    </a>
+    </div>
     `
     
     contenedorProductos.appendChild(div)
@@ -947,7 +947,7 @@ pagemouse.addEventListener(`click`,(e)=>{
         div.classList.add(`list__item`);
         
         div.innerHTML = `
-        <a href="../paginas/gabineteproduct.html" class="product">
+        <div class="product">
                 <div class="image">
                     <img src=${producto.img} alt= "">
                 </div>
@@ -970,7 +970,7 @@ pagemouse.addEventListener(`click`,(e)=>{
                 </div>
         
         
-        </a>
+        </div>
         `
         
         contenedorProductos.appendChild(div)
@@ -1038,7 +1038,7 @@ pagenotebooks.addEventListener(`click`,(e)=>{
             div.classList.add(`list__item`);
             
             div.innerHTML = `
-            <a href="../paginas/gabineteproduct.html" class="product">
+            <div class="product">
                     <div class="image">
                         <img src=${producto.img} alt= "">
                     </div>
@@ -1061,7 +1061,7 @@ pagenotebooks.addEventListener(`click`,(e)=>{
                     </div>
             
             
-            </a>
+            </div>
             `
             
             contenedorProductos.appendChild(div)
